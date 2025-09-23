@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PlayStore</string>
+    <string name="bottom_tab_game">게임</string>
+    <string name="bottom_tab_app">앱</string>
+    <string name="bottom_tab_search">검색</string>
+    <string name="bottom_tab_book">도서</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

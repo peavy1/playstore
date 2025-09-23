@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/fragment_game"
+        android:title="@string/bottom_tab_game"
+        android:icon="@drawable/ic_game_with_padding"/>
+    <item android:id="@+id/fragment_app"
+        android:title="@string/bottom_tab_app"
+        android:icon="@drawable/ic_app_with_padding"/>
+    <item android:id="@+id/fragment_search"
+        android:title="@string/bottom_tab_search"
+        android:icon="@drawable/ic_search_wtih_padding"/>
+    <item android:id="@+id/fragment_book"
+        android:title="@string/bottom_tab_book"
+        android:icon="@drawable/ic_book_with_padding"/>
+</menu>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/fragment_game"
+        android:title="@string/bottom_tab_game"
+        android:icon="@drawable/ic_game"/>
+    <item android:id="@+id/fragment_app"
+        android:title="@string/bottom_tab_app"
+        android:icon="@drawable/ic_app"/>
+    <item android:id="@+id/fragment_search"
+        android:title="@string/bottom_tab_search"
+        android:icon="@drawable/ic_search"/>
+    <item android:id="@+id/fragment_book"
+        android:title="@string/bottom_tab_book"
+        android:icon="@drawable/ic_book"/>
+</menu>
+
+-->
+

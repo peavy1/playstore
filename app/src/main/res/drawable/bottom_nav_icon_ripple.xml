@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="20dp"
+    android:insetRight="20dp"
+    android:insetTop="4dp"
+    android:insetBottom="22dp">
+
+    <ripple android:color="?attr/colorControlHighlight">
+
+        <item android:drawable="@drawable/tab_indicator_selector" />
+
+        <item android:id="@android:id/mask">
+            <shape android:shape="rectangle">
+                <solid android:color="@android:color/white" />
+                <corners android:radius="100dp" />
+            </shape>
+        </item>
+
+    </ripple>
+</inset>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="20dp"
+    android:insetRight="20dp"
+    android:insetTop="4dp"
+    android:insetBottom="22dp">
+
+    <ripple android:color="?attr/colorControlHighlight">
+
+        <item android:drawable="@drawable/tab_indicator_selector" />
+
+        <item android:id="@android:id/mask">
+            <shape android:shape="rectangle">
+                <solid android:color="@android:color/white" />
+                <corners android:radius="100dp" />
+            </shape>
+        </item>
+
+    </ripple>
+</inset>
+-->
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="20dp"
+    android:insetRight="20dp"
+    android:insetTop="4dp"
+    android:insetBottom="20dp">
+
+    <ripple android:color="?attr/colorControlHighlight">
+        <item android:id="@android:id/mask">
+            <shape android:shape="rectangle">
+                <solid android:color="@android:color/white" />
+                <corners android:radius="100dp" />
+            </shape>
+        </item>
+    </ripple>
+</inset>
+-->
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="20dp"
+    android:insetRight="20dp"
+    android:insetTop="4dp"
+    android:insetBottom="20dp">
+
+    <ripple android:color="?attr/colorControlHighlight">
+
+        <item android:drawable="@drawable/tab_indicator_selector" />
+
+        <item android:id="@android:id/mask">
+            <shape android:shape="rectangle">
+                <solid android:color="@android:color/white" />
+                <corners android:radius="100dp" />
+            </shape>
+        </item>
+
+    </ripple>
+</inset>
+-->
+
+
