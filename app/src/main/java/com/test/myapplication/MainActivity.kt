@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.fragment_game, R.id.fragment_app, R.id.fragment_search, R.id.fragment_book
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
 
         applyItemForegroundRipple()
         suppressBottomNavLongClick()
@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 
 
     override fun onSupportNavigateUp(): Boolean {

@@ -1,0 +1,1101 @@
+[
+    {
+        "title": "ChatGPT",
+        "app_id": "com.openai.chatgpt",
+        "link": "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
+        "image_url": "https://play-lh.googleusercontent.com/lmG9HlI0awHie0cyBieWXeNjpyXvHPwDBb8MNOVIyp0P8VEh95AiBHtUZSDVR3HLe3A=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "TikTok Lite 포인트, 쿠폰, 영상",
+        "app_id": "com.ss.android.ugc.tiktok.lite",
+        "link": "https://play.google.com/store/apps/details?id=com.ss.android.ugc.tiktok.lite",
+        "image_url": "https://play-lh.googleusercontent.com/US0umGNKkd9riC6pi0TgcEDwvU3dzSVZLuwv1e8cBTC6wyWV8wU6Xsf3CNq8uWz-Qw=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "디지털온누리",
+        "app_id": "com.komsco.kpay",
+        "link": "https://play.google.com/store/apps/details?id=com.komsco.kpay",
+        "image_url": "https://play-lh.googleusercontent.com/TKeD-NZgw2Cr6PheWin_wECYSnQr2WJtiC0jvCm2U_iuTE2ixz9zy7OKSgo5g3NwIw=s256-rw",
+        "rating": "3.6"
+    },
+    {
+        "title": "Instagram",
+        "app_id": "com.instagram.android",
+        "link": "https://play.google.com/store/apps/details?id=com.instagram.android",
+        "image_url": "https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM=s256-rw",
+        "rating": "4.0"
+    },
+    {
+        "title": "Temu: 억만장자처럼 쇼핑하기",
+        "app_id": "com.einnovation.temu",
+        "link": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+        "image_url": "https://play-lh.googleusercontent.com/Nz5sdWyh7jn4eTy_GSaRBDgaKhLC1pvYywC6fklDOlPGbopmeFN9NkqgKGjsvJMbKVEI=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "TikTok 틱톡 - 숏폼 영상, 라이브, 영상 편집",
+        "app_id": "com.ss.android.ugc.trill",
+        "link": "https://play.google.com/store/apps/details?id=com.ss.android.ugc.trill",
+        "image_url": "https://play-lh.googleusercontent.com/Ui_-OW6UJI147ySDX9guWWDiCPSq1vtxoC-xG17BU2FpU0Fi6qkWwuLdpddmT9fqrA=s256-rw",
+        "rating": "3.9"
+    },
+    {
+        "title": "KB차차차 중고차매매, 내차팔기, 내차시세, 자동차금융",
+        "app_id": "kr.co.kbc.cha.android",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.kbc.cha.android",
+        "image_url": "https://play-lh.googleusercontent.com/fRgf1Il5enpfDssEI7G6TVAXKbklS810s1hteVhpVh2lpuMWUNaYAZOisHwVItfkSLg=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "제타(zeta) - 상상이 현실이 되는 AI 채팅",
+        "app_id": "com.scatterlab.messenger",
+        "link": "https://play.google.com/store/apps/details?id=com.scatterlab.messenger",
+        "image_url": "https://play-lh.googleusercontent.com/EJzMe-NDW6oX3AbUAaI7Rn7Fw_JFECJt-XPFGYT89xDP_rXgW3ELGh1DNq8gtmu6vlon=s256-rw",
+        "rating": "4.0"
+    },
+    {
+        "title": "카카오톡 KakaoTalk",
+        "app_id": "com.kakao.talk",
+        "link": "https://play.google.com/store/apps/details?id=com.kakao.talk",
+        "image_url": "https://play-lh.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd=s256-rw",
+        "rating": "3.8"
+    },
+    {
+        "title": "배달의민족",
+        "app_id": "com.sampleapp",
+        "link": "https://play.google.com/store/apps/details?id=com.sampleapp",
+        "image_url": "https://play-lh.googleusercontent.com/cobpXUHaqEFe7lVWHUh53L1FCoKNy5O0qvcySXC9edEfigaVXBY5VP0GgkK2lRbesJtxpBRb9TIoklu1FlIDif8=s256-rw",
+        "rating": "2.1"
+    },
+    {
+        "title": "당근 - 당신 근처의 지역 생활 커뮤니티",
+        "app_id": "com.towneers.www",
+        "link": "https://play.google.com/store/apps/details?id=com.towneers.www",
+        "image_url": "https://play-lh.googleusercontent.com/BOong9QWaqxHXY-YTxDDxgFMRPIYHu9i7G4a_dMXvXlDs25k4SeHImTNuYgypwY5lxOM=s256-rw",
+        "rating": "3.4"
+    },
+    {
+        "title": "쿠팡(Coupang)-모바일 쇼핑",
+        "app_id": "com.coupang.mobile",
+        "link": "https://play.google.com/store/apps/details?id=com.coupang.mobile",
+        "image_url": "https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=s256-rw",
+        "rating": "3.9"
+    },
+    {
+        "title": "네이버 - NAVER",
+        "app_id": "com.nhn.android.search",
+        "link": "https://play.google.com/store/apps/details?id=com.nhn.android.search",
+        "image_url": "https://play-lh.googleusercontent.com/gJZYXTPS_9AJYJfzRj1tT8IRMQ7rerhhlYmXSVyt8bV_gouL3kW46d_zY6VLnreyMA=s256-rw",
+        "rating": "3.5"
+    },
+    {
+        "title": "X",
+        "app_id": "com.twitter.android",
+        "link": "https://play.google.com/store/apps/details?id=com.twitter.android",
+        "image_url": "https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca=s256-rw",
+        "rating": "2.9"
+    },
+    {
+        "title": "쿠팡이츠 - 배달앱",
+        "app_id": "com.coupang.mobile.eats",
+        "link": "https://play.google.com/store/apps/details?id=com.coupang.mobile.eats",
+        "image_url": "https://play-lh.googleusercontent.com/VVxIA_jSqBzwzRSE9SXItUNLhT62QYdFNvCWT5msNIV_NXGJHi_C3GnyLvL14-niVQ=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "Google 드라이브",
+        "app_id": "com.google.android.apps.docs",
+        "link": "https://play.google.com/store/apps/details?id=com.google.android.apps.docs",
+        "image_url": "https://play-lh.googleusercontent.com/t-juVwXA8lDAk8uQ2L6d6K83jpgQoqmK1icB_l9yvhIAQ2QT_1XbRwg5IpY08906qEw=s256-rw",
+        "rating": "3.9"
+    },
+    {
+        "title": "네이버 지도, 내비게이션",
+        "app_id": "com.nhn.android.nmap",
+        "link": "https://play.google.com/store/apps/details?id=com.nhn.android.nmap",
+        "image_url": "https://play-lh.googleusercontent.com/BaWUhtRONqb2Tt0ESjnaEH9KiaAUnOlFJqGzGUYN6oPsEEpZhPwQeHZhuGcM1Y8g1Io=s256-rw",
+        "rating": "3.3"
+    },
+    {
+        "title": "YouTube Music",
+        "app_id": "com.google.android.apps.youtube.music",
+        "link": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music",
+        "image_url": "https://play-lh.googleusercontent.com/zD8UA5CRdiPzbvTwGKtzR4KjQpxqEK6X0tGDpzEaOo0xPEvG6HUiC_0qkpTfzpuMTqU=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "Google 포토",
+        "app_id": "com.google.android.apps.photos",
+        "link": "https://play.google.com/store/apps/details?id=com.google.android.apps.photos",
+        "image_url": "https://play-lh.googleusercontent.com/ZyWNGIfzUyoajtFcD7NhMksHEZh37f-MkHVGr5Yfefa-IX7yj9SMfI82Z7a2wpdKCA=s256-rw",
+        "rating": "4.3"
+    },
+    {
+        "title": "Google TV",
+        "app_id": "com.google.android.videos",
+        "link": "https://play.google.com/store/apps/details?id=com.google.android.videos",
+        "image_url": "https://play-lh.googleusercontent.com/qaXTXjbeuD0m-JDrJ2Y76_5Ghr_UDGQOJRmuYfLGekbMK0s5VXkGFjNCHS4tUJxumQ=s256-rw",
+        "rating": "3.8"
+    },
+    {
+        "title": "알바천국 - 모든 생애 모든 알바",
+        "app_id": "kr.co.alba.webappalba.m",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.alba.webappalba.m",
+        "image_url": "https://play-lh.googleusercontent.com/Zo9wQ8QbEvmRtwPUI-npIJqeQgFMEj8W5b2yjg2FRn3IvoZ1HaFi0ryN4uM06subXw=s256-rw",
+        "rating": "3.6"
+    },
+    {
+        "title": "사람인 - 취업 이직 커뮤니티 커리어의 모든 것",
+        "app_id": "kr.co.saramin.brandapp",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.saramin.brandapp",
+        "image_url": "https://play-lh.googleusercontent.com/4Muq5Rasesx7zNiZhafldugpN9Ec2U36ceSayMR4W-bBjcnVke4ZDp4_rk7HjAXAvQ=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "CJ온스타일",
+        "app_id": "com.cjoshppingphone",
+        "link": "https://play.google.com/store/apps/details?id=com.cjoshppingphone",
+        "image_url": "https://play-lh.googleusercontent.com/AfiJVZmpyHr_fWygYNVyxk5WyjPjOY0KbfCRvoWQaU8TMYHX6vUOvhZEadU-_L-FUw=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "숨고 - 이사, 청소, 취미, 인테리어 전문가 찾기",
+        "app_id": "com.soomgo",
+        "link": "https://play.google.com/store/apps/details?id=com.soomgo",
+        "image_url": "https://play-lh.googleusercontent.com/rJJDqtkZ15_Ck1RVggwdFsBwAZsA_tpqpd1a7e8XaTXrJehY9hTJVcgTSM9zrDxjh3s=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "신세계쇼핑",
+        "app_id": "kr.co.dreamshopping.mcapp",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.dreamshopping.mcapp",
+        "image_url": "https://play-lh.googleusercontent.com/p1ROM3uhh4hbq52H1n23uj_S1TdKSzY_abEyrrMWHFhwh3AQJ6IX2IizNrG6oIFfkoY=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "SSG.COM",
+        "app_id": "kr.co.ssg",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.ssg",
+        "image_url": "https://play-lh.googleusercontent.com/U4fk5FzvwR4bPYWeTPmYX_Lpm3ANMHTcMEQ9qbrWO-qucIPPA9olM1bIiAmdZLpEIPMg=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "블라인드",
+        "app_id": "com.teamblind.blind",
+        "link": "https://play.google.com/store/apps/details?id=com.teamblind.blind",
+        "image_url": "https://play-lh.googleusercontent.com/uB2a855FHrhuARMqykciLgh-NmngSS3gNA3XzhAiCJpiZ8QJo-hsrJC8asX31SNqdw=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "Microsoft Excel: Spreadsheets",
+        "app_id": "com.microsoft.office.excel",
+        "link": "https://play.google.com/store/apps/details?id=com.microsoft.office.excel",
+        "image_url": "https://play-lh.googleusercontent.com/37EzETO6gZyKmCg2kBIFX1e9gkubxZrVa5fHJ6yOaa7VvEShHjKv2RdtwnZt9Sk258s=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "이마트몰 – emart mall",
+        "app_id": "kr.co.emart.emartmall",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.emart.emartmall",
+        "image_url": "https://play-lh.googleusercontent.com/KzEyRi8mBs_4tU1EzwYr08WSn5kdHQh5nG9gBk996WX3qmWoqiJ1aRd3bP_ukCrSrr4=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "Microsoft Teams",
+        "app_id": "com.microsoft.teams",
+        "link": "https://play.google.com/store/apps/details?id=com.microsoft.teams",
+        "image_url": "https://play-lh.googleusercontent.com/jKU64njy8urP89V1O63eJxMtvWjDGETPlHVIhDv9WZAYzsSxRWyWZkUlBJZj_HbkHA=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "롯데하이마트 - 가전 쇼핑부터 홈 만능해결 서비스까지",
+        "app_id": "com.himart.main",
+        "link": "https://play.google.com/store/apps/details?id=com.himart.main",
+        "image_url": "https://play-lh.googleusercontent.com/_uH9WIQdMGBGMoq-IXWmgvGD0AU72NSy3aTWA6FTPCGJwUcv9DRAQjf4HR83gPdvMjY=s256-rw",
+        "rating": "2.9"
+    },
+    {
+        "title": "듀오링고(Duolingo): 언어 학습",
+        "app_id": "com.duolingo",
+        "link": "https://play.google.com/store/apps/details?id=com.duolingo",
+        "image_url": "https://play-lh.googleusercontent.com/Pz0Wcl2xmN8JxCKfeK1wYRgzbjQR4T9o0At1JX1ePtVNTV7YGW8hyxDbVp-Qvh2hesM7XXQ-Kmpod9qLOWLW=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "Spotify: 음악과 팟캐스트",
+        "app_id": "com.spotify.music",
+        "link": "https://play.google.com/store/apps/details?id=com.spotify.music",
+        "image_url": "https://play-lh.googleusercontent.com/7ynvVIRdhJNAngCg_GI7i8TtH8BqkJYmffeUHsG-mJOdzt1XLvGmbsKuc5Q1SInBjDKN=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "오늘의집 - 라이프스타일 슈퍼앱",
+        "app_id": "net.bucketplace",
+        "link": "https://play.google.com/store/apps/details?id=net.bucketplace",
+        "image_url": "https://play-lh.googleusercontent.com/4cS8aXSShTIbDAxCZmPAzea6jpsnV2rwAlDtIz72N0o7ecyWzN7mOtEaCUoLVvj5kkk=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "번개장터",
+        "app_id": "kr.co.quicket",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.quicket",
+        "image_url": "https://play-lh.googleusercontent.com/Y0h7JR5fo6zqAXMjSEbo4GidOzKJFasSqYxRhdNVxFzNltrOZDUxCZQIpjhoUI3c7TY=s256-rw",
+        "rating": "3.3"
+    },
+    {
+        "title": "컬리 - 마켓컬리, 뷰티컬리",
+        "app_id": "com.dbs.kurly.m2",
+        "link": "https://play.google.com/store/apps/details?id=com.dbs.kurly.m2",
+        "image_url": "https://play-lh.googleusercontent.com/gAN0wJssHIntylT3yT_EWZGf1aH3fIQGikusAFfv3fOnWMH3Oar28HJiHaKkQhqYwyFF=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "배달요기요 - 기다림 없는 맛집 배달앱",
+        "app_id": "com.fineapp.yogiyo",
+        "link": "https://play.google.com/store/apps/details?id=com.fineapp.yogiyo",
+        "image_url": "https://play-lh.googleusercontent.com/QBj-oJNVpWLdSvvCale321v4roPbhwrx8f7_cIFZJ8qnKEd2Ma5H2haKx4E5Vy8eg1I=s256-rw",
+        "rating": "4.3"
+    },
+    {
+        "title": "지그재그",
+        "app_id": "com.croquis.zigzag",
+        "link": "https://play.google.com/store/apps/details?id=com.croquis.zigzag",
+        "image_url": "https://play-lh.googleusercontent.com/UdBg9MSQgbZS4IJ7VJxdtMBgp2rLbh5fSWX6Aswrj6qgmuwZO2DIgjy_8nvM2gmlq00=s256-rw",
+        "rating": "4.2"
+    },
+    {
+        "title": "밀리의 서재 - 독서와 무제한 친해지리",
+        "app_id": "kr.co.millie.millieshelf",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.millie.millieshelf",
+        "image_url": "https://play-lh.googleusercontent.com/g0X1JyEwSdYwIMHN9KYiuewgS5TkKKXkUawu2Y4gr1MFObf0gxV3sFcJb3UveOF1yZph=s256-rw",
+        "rating": "3.6"
+    },
+    {
+        "title": "스카이스캐너 – 항공권 호텔 렌터카",
+        "app_id": "net.skyscanner.android.main",
+        "link": "https://play.google.com/store/apps/details?id=net.skyscanner.android.main",
+        "image_url": "https://play-lh.googleusercontent.com/TYlXNF1VlAvutAP8FtV6nePgECVcMG2g0siap0ymZl00007jgYkNRB7AvsGufvyfbA=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "화해 - 새로운 뷰티의 발견",
+        "app_id": "kr.co.company.hwahae",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.company.hwahae",
+        "image_url": "https://play-lh.googleusercontent.com/TV-LVbnwpHOrdtIir2-SisR8171Us1NE_YfYW1yLFB3jhfbG_lnBvd3o1Vm_jf6q1w=s256-rw",
+        "rating": "3.9"
+    },
+    {
+        "title": "Threads",
+        "app_id": "com.instagram.barcelona",
+        "link": "https://play.google.com/store/apps/details?id=com.instagram.barcelona",
+        "image_url": "https://play-lh.googleusercontent.com/G6jK9S77RN0laf9_6nhDo3AVxbRP9SgMmt8ZmQjKQ2hibn9xhOY-W5YFn_7stJD1CA=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "그립 Grip",
+        "app_id": "show.grip",
+        "link": "https://play.google.com/store/apps/details?id=show.grip",
+        "image_url": "https://play-lh.googleusercontent.com/L4ZfzA3v0g8RDlNsbU58VrQsgELOIuhavPQHd1HtZXBeAVYAFkJ5rHZCvi9JgZdsG3fgn7vPnIcK_ONHjaZY=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "Pinterest(핀터레스트)",
+        "app_id": "com.pinterest",
+        "link": "https://play.google.com/store/apps/details?id=com.pinterest",
+        "image_url": "https://play-lh.googleusercontent.com/iSkYY8DLDr8YRF4-eZI5PAwjpMiPpifMt7bEQuI02uC5041gCphofb8bM5g4DyAhg-K7=s256-rw",
+        "rating": "3.9"
+    },
+    {
+        "title": "네이버 MYBOX",
+        "app_id": "com.nhn.android.ndrive",
+        "link": "https://play.google.com/store/apps/details?id=com.nhn.android.ndrive",
+        "image_url": "https://play-lh.googleusercontent.com/1tXqfMVVjq0FkHA_a0jKC6Ebrq1W6p3DF2s8mWAJmqrisr8nkeh3SrxdXc2ZxJULZUY=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "비고 라이브 - 실시간 라이브 방송, 온라인 스트리밍",
+        "app_id": "sg.bigo.live",
+        "link": "https://play.google.com/store/apps/details?id=sg.bigo.live",
+        "image_url": "https://play-lh.googleusercontent.com/CydApfJP6lqM_No4g7V8e59RscTGDMz0ADV3NGvrCZPxPtTixAuYi7iU8DeSGgQT2Oc=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "뤼튼 - 매일 쓰는 AI",
+        "app_id": "com.wrtn.app",
+        "link": "https://play.google.com/store/apps/details?id=com.wrtn.app",
+        "image_url": "https://play-lh.googleusercontent.com/82-VToZj6I0uh0pC7xyU6-HosqvRFjzW6OIzhSrRPDMrgW9-ptbKpCIOFUYshXWHAA=s256-rw",
+        "rating": "3.7"
+    },
+    {
+        "title": "Microsoft OneDrive",
+        "app_id": "com.microsoft.skydrive",
+        "link": "https://play.google.com/store/apps/details?id=com.microsoft.skydrive",
+        "image_url": "https://play-lh.googleusercontent.com/6AWr-qrhGT0ohjw0koq3bM8GHEFg1gTurald4FjCDg2RulTp4y_VVsYWUtw7Fo6lsQo=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "Microsoft 365 Copilot",
+        "app_id": "com.microsoft.office.officehubrow",
+        "link": "https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow",
+        "image_url": "https://play-lh.googleusercontent.com/Cf6rGlvAZJx2iG4c5f5H5N5XWGKFk5XZ_uz0A0YIIyuFPFybIfQaxSlDIQyU2W8btfv6=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "Microsoft Outlook",
+        "app_id": "com.microsoft.office.outlook",
+        "link": "https://play.google.com/store/apps/details?id=com.microsoft.office.outlook",
+        "image_url": "https://play-lh.googleusercontent.com/Zk9elS0eGXDr0L4W6-Ey7YwHbRNjkyezHC8iCc8rWp64lNIjlByS8TDF9qDSZbiEWY4=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "Samsung Notes",
+        "app_id": "com.samsung.android.app.notes",
+        "link": "https://play.google.com/store/apps/details?id=com.samsung.android.app.notes",
+        "image_url": "https://play-lh.googleusercontent.com/ep8PY3MTizVLWMhvaQAS4EuTBd5NimoYBcIK-Ke9ncobb7wb9dV16zrmcWNyn4sh4hzV=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "Google Gemini",
+        "app_id": "com.google.android.apps.bard",
+        "link": "https://play.google.com/store/apps/details?id=com.google.android.apps.bard",
+        "image_url": "https://play-lh.googleusercontent.com/bTpNtZ6rYYX2SeI-wC4cnr7MJnOh2hjtgYu3UIrSxE09lM3GPl_Uhf9_Ih2Smje2bc0V=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "PDF Reader Zone",
+        "app_id": "com.pdfreader.zone",
+        "link": "https://play.google.com/store/apps/details?id=com.pdfreader.zone",
+        "image_url": "https://play-lh.googleusercontent.com/fio_MwxwFeCKSqJSTGxgVf-JSIfnHW2H-IwPdVctqgRFOGnEsT87ofOMfWQxucwuFQ=s256-rw",
+        "rating": "4.3"
+    },
+    {
+        "title": "Perplexity (퍼플렉시티) 무엇이든 물어보세요",
+        "app_id": "ai.perplexity.app.android",
+        "link": "https://play.google.com/store/apps/details?id=ai.perplexity.app.android",
+        "image_url": "https://play-lh.googleusercontent.com/6STp0lYx2ctvQ-JZpXA1LeAAZIlq6qN9gpy7swLPlRhmp-hfvZePcBxqwVkqN2BH1g=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "인공지능 챗봇 - 챗GPT 한글버전",
+        "app_id": "newway.open.chatgpt.ai.chat.bot.free",
+        "link": "https://play.google.com/store/apps/details?id=newway.open.chatgpt.ai.chat.bot.free",
+        "image_url": "https://play-lh.googleusercontent.com/5z5JrGi1nCyNjjVhGJx0xqc8JgvFm8S5SpuNkvhKhT2g2c-J2vkKkU2fnNHGklc3Gdc=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "Grok AI",
+        "app_id": "ai.x.grok",
+        "link": "https://play.google.com/store/apps/details?id=ai.x.grok",
+        "image_url": "https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI=s256-rw",
+        "rating": "4.9"
+    },
+    {
+        "title": "PDF용 Adobe Acrobat Reader",
+        "app_id": "com.adobe.reader",
+        "link": "https://play.google.com/store/apps/details?id=com.adobe.reader",
+        "image_url": "https://play-lh.googleusercontent.com/N0k5j-gnlNvmsl87nNKdeKMv1SH2T-PDE25W2KdQ5NCvC4XrS1ofkRJVBSsOAsbqFLLAe9Oa-LhotiR5DiJvDA=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "클로바노트 - 음성 그 이상의 기록",
+        "app_id": "com.naver.clova.minute",
+        "link": "https://play.google.com/store/apps/details?id=com.naver.clova.minute",
+        "image_url": "https://play-lh.googleusercontent.com/_BM6dUzSfzVJlnciabx084DEAIWdDd_DETHsTv1jJtNLT93o_LlWk3HaJOnXhtmHGkzI=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "Notion: 노트, 작업, AI",
+        "app_id": "notion.id",
+        "link": "https://play.google.com/store/apps/details?id=notion.id",
+        "image_url": "https://play-lh.googleusercontent.com/vaxxIC1qaXOd1q1hmL7c66N-Mp4LXuQIuBZGM0dPIbwmyWcJAXbhIIZ8hNBWvar54c_j=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "Facebook",
+        "app_id": "com.facebook.katana",
+        "link": "https://play.google.com/store/apps/details?id=com.facebook.katana",
+        "image_url": "https://play-lh.googleusercontent.com/KCMTYuiTrKom4Vyf0G4foetVOwhKWzNbHWumV73IXexAIy5TTgZipL52WTt8ICL-oIo=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "네이버 카페 - Naver Cafe",
+        "app_id": "com.nhn.android.navercafe",
+        "link": "https://play.google.com/store/apps/details?id=com.nhn.android.navercafe",
+        "image_url": "https://play-lh.googleusercontent.com/64zRHv-NopJPjMSyg1FEgQAL5AgV9GQRWeyERAouHbDoGHoFQP297-TRp5wMzSbWUoRi=s256-rw",
+        "rating": "3.2"
+    },
+    {
+        "title": "네이버 블로그 - Naver Blog",
+        "app_id": "com.nhn.android.blog",
+        "link": "https://play.google.com/store/apps/details?id=com.nhn.android.blog",
+        "image_url": "https://play-lh.googleusercontent.com/vh9R5EOEx7mk_YUM8gYgJF1GtlYrRwXu-QhIJ45rG5Y3_h640rYEFwH5d84yqGw7Xii1kzghygQZFTUY-uxS=s256-rw",
+        "rating": "2.5"
+    },
+    {
+        "title": "위피 - 가까운 동네친구, 설레는 소개팅",
+        "app_id": "net.nrise.wippy",
+        "link": "https://play.google.com/store/apps/details?id=net.nrise.wippy",
+        "image_url": "https://play-lh.googleusercontent.com/1xxDBZ0S2B9QTjEfjVecXadEyf1V70dv6WWbCXjSL-Gj1-NGFM0hOlZ5U2FLM8J0IX4=s256-rw",
+        "rating": "3.0"
+    },
+    {
+        "title": "스푼: 오디오 라이브",
+        "app_id": "co.spoonme",
+        "link": "https://play.google.com/store/apps/details?id=co.spoonme",
+        "image_url": "https://play-lh.googleusercontent.com/MFxOl03eDZoLCWjvk_xk3f_SmleI3Tlu1WlRRhzMznbbvI7424z7Jrp-No8HfTWcWw=s256-rw",
+        "rating": "3.4"
+    },
+    {
+        "title": "올리브영",
+        "app_id": "com.oliveyoung",
+        "link": "https://play.google.com/store/apps/details?id=com.oliveyoung",
+        "image_url": "https://play-lh.googleusercontent.com/0wpYfhH5VQprQGLqC5wT6ieowMfW9n8Oae3goG0uKozq3FZYyzl4CJL5sgznUBGHErhe=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "AliExpress",
+        "app_id": "com.alibaba.aliexpresshd",
+        "link": "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd",
+        "image_url": "https://play-lh.googleusercontent.com/luLha_idSPcj2X1lF0GvIOuf4ODegCSuSDbPBSc2DXxrwaXCLRc5sWDZteSH0I44gmdG=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "SHEIN-온라인 쇼핑",
+        "app_id": "com.zzkko",
+        "link": "https://play.google.com/store/apps/details?id=com.zzkko",
+        "image_url": "https://play-lh.googleusercontent.com/ResrWBDXfRegdQDSA2MP6bxiYlyfucHymWBW4yy2M7YetU3SCCZuLmFhwpeVFMFGQA=s256-rw",
+        "rating": "2.5"
+    },
+    {
+        "title": "퀸잇, 멋진 어른들의 라이프스타일링샵",
+        "app_id": "kr.rapportlabs.damoa",
+        "link": "https://play.google.com/store/apps/details?id=kr.rapportlabs.damoa",
+        "image_url": "https://play-lh.googleusercontent.com/ElFTg8KmEqCwyOfRZuRV1c2MxPRQ9oeTshlXPBDgK0eY3hCoZGXfjUGy1F_g3H8A3n_a=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "11번가",
+        "app_id": "com.elevenst",
+        "link": "https://play.google.com/store/apps/details?id=com.elevenst",
+        "image_url": "https://play-lh.googleusercontent.com/mDRElv4fVO0cB38Dxqur-ec1CiGQW-B36n4CmJ6nmgfiad25bfLrI4lQqCCiADxzPW4=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "온라인 패션 스토어 무신사",
+        "app_id": "com.musinsa.store",
+        "link": "https://play.google.com/store/apps/details?id=com.musinsa.store",
+        "image_url": "https://play-lh.googleusercontent.com/tpVqfbSuwBddaawaAaJk6dN5V33fHTYimH0kayNG9H3PicmqKEuHwVtdGsrWFqT3MSc=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "에이블리 - 초개인화 AI 쇼핑",
+        "app_id": "com.banhala.android",
+        "link": "https://play.google.com/store/apps/details?id=com.banhala.android",
+        "image_url": "https://play-lh.googleusercontent.com/QtgW1o5zt3Z3gQedik_iYGcgz4pQhe41cZ2Lisp9PT7zV46AfQmXeS1ljbY9Ss2CnzY=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "KREAM (크림)",
+        "app_id": "com.fstudio.kream",
+        "link": "https://play.google.com/store/apps/details?id=com.fstudio.kream",
+        "image_url": "https://play-lh.googleusercontent.com/Gh73JjkOE27zN6F8l4tWqlzgpHMEyEZJLOOg8-RQfYtPBAwsSCWNcqvdhgTaqGSOLA=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "포켓CU",
+        "app_id": "com.bgfcu.membership",
+        "link": "https://play.google.com/store/apps/details?id=com.bgfcu.membership",
+        "image_url": "https://play-lh.googleusercontent.com/dipiXa5mekfIkjxfIGz00vdupS7Mh_9m3LnwP393wBSNmwWQYW-1junU4LT--ZoEtgtM=s256-rw",
+        "rating": "3.4"
+    },
+    {
+        "title": "중고나라 - 안심되는 중고거래",
+        "app_id": "com.elz.secondhandstore",
+        "link": "https://play.google.com/store/apps/details?id=com.elz.secondhandstore",
+        "image_url": "https://play-lh.googleusercontent.com/RPajIscMGbsmkWV1oj8pcUAA5M5sQK8WXPXUSJ6ItIHTWRTVkZ7TbwIcS2hy5hE_mbE=s256-rw",
+        "rating": "4.0"
+    },
+    {
+        "title": "NS홈쇼핑",
+        "app_id": "com.nsmobilehub",
+        "link": "https://play.google.com/store/apps/details?id=com.nsmobilehub",
+        "image_url": "https://play-lh.googleusercontent.com/t9eDyql1Tn4K0izPIqxN6ePZlUfZiexGh4aR6YfMRn0qkR6gQL0caJSw-ro2e4qi-ufS=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "Nike:나이키 신발, 스포츠 패션, 스트리트웨어 쇼핑",
+        "app_id": "com.nike.omega",
+        "link": "https://play.google.com/store/apps/details?id=com.nike.omega",
+        "image_url": "https://play-lh.googleusercontent.com/xW4Qb1KvvxoJc6fDR0GTlGPPD0DHRnHEt8vNGH1syTNSJ4U-YUNuwVgCKAkUgrcOeU8=s256-rw",
+        "rating": "3.7"
+    },
+    {
+        "title": "이마트 - 매장쇼핑 전 필수!",
+        "app_id": "com.emart.today",
+        "link": "https://play.google.com/store/apps/details?id=com.emart.today",
+        "image_url": "https://play-lh.googleusercontent.com/tYKOTSxHqEIUhmh8JY9ILBRnBhfwnSpyPT_MvHx0b6d9ryoJKCufj3V7DYEdzcp8Qg=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "GS SHOP",
+        "app_id": "gsshop.mobile.v2",
+        "link": "https://play.google.com/store/apps/details?id=gsshop.mobile.v2",
+        "image_url": "https://play-lh.googleusercontent.com/g527agFcY1RSXrdX-jmoOSxclgh4JthR5rB-7qA_zm-urB2f2K6F4rM9hm1nVNQrPWyq3Mf7swHDG_td4wkzPQ=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "NH올원뱅크(농협은행 대표 플랫폼)",
+        "app_id": "com.nonghyup.nhallonebank",
+        "link": "https://play.google.com/store/apps/details?id=com.nonghyup.nhallonebank",
+        "image_url": "https://play-lh.googleusercontent.com/dcSpNj4GuqdXd7lpMuZj2q6Nxr3g_juX9_qKvuzB5X-ud4dT09GYjqUKJTdLd1g2r8c=s256-rw",
+        "rating": "3.4"
+    },
+    {
+        "title": "카카오페이",
+        "app_id": "com.kakaopay.app",
+        "link": "https://play.google.com/store/apps/details?id=com.kakaopay.app",
+        "image_url": "https://play-lh.googleusercontent.com/W43xj43ErMIs5BQgCdMKEa0NXCoUUW8DjQc5SxcDfLrC26H8sHDmoFIUWLYmsQahpo0=s256-rw",
+        "rating": "3.8"
+    },
+    {
+        "title": "업비트 - 가장 신뢰받는 디지털 자산(비트코인) 거래소",
+        "app_id": "com.dunamu.exchange",
+        "link": "https://play.google.com/store/apps/details?id=com.dunamu.exchange",
+        "image_url": "https://play-lh.googleusercontent.com/JfJIcttruxG2ehGJnqIbjtr5NwBux2Gvl3ILh8hP4wJkgVNy4gsQ0zmIdJJl1blkDuk=s256-rw",
+        "rating": "3.5"
+    },
+    {
+        "title": "Samsung Wallet (삼성 월렛)",
+        "app_id": "com.samsung.android.spay",
+        "link": "https://play.google.com/store/apps/details?id=com.samsung.android.spay",
+        "image_url": "https://play-lh.googleusercontent.com/A-0v5grI3FkAMEvGmV-h08S9xqtmF4_2wlp3IfXalQPO2ViC6U_A-I0dQ6mTVeSkQl0=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "빗썸 - 가상자산 거래소(비트코인, 이더리움, 리플)",
+        "app_id": "com.btckorea.bithumb",
+        "link": "https://play.google.com/store/apps/details?id=com.btckorea.bithumb",
+        "image_url": "https://play-lh.googleusercontent.com/uRBFujo333TV_278f9-2lrGA6-7azsWNtJainC2lQBVsxypixlUvrFGJf1YdpMhd-CHH=s256-rw",
+        "rating": "3.2"
+    },
+    {
+        "title": "하나머니(트래블로그)",
+        "app_id": "kr.co.hanamembers.hmscustomer",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.hanamembers.hmscustomer",
+        "image_url": "https://play-lh.googleusercontent.com/9wv87doe76r4dVwqs2miY39EjbEarkaw7SvBNW8A9OMMBB1H25qoOM0U51RuOBw2n08W=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "미래에셋증권 M-STOCK",
+        "app_id": "com.miraeasset.trade",
+        "link": "https://play.google.com/store/apps/details?id=com.miraeasset.trade",
+        "image_url": "https://play-lh.googleusercontent.com/hkna_7u_EWuNFX4CE_e4VYy5UOQcsaSjUcrpvINSJk9DdfhdDILkfdZT6dN_41G2rPMC=s256-rw",
+        "rating": "4.0"
+    },
+    {
+        "title": "Binance: Buy Bitcoin & Crypto",
+        "app_id": "com.binance.dev",
+        "link": "https://play.google.com/store/apps/details?id=com.binance.dev",
+        "image_url": "https://play-lh.googleusercontent.com/T1_WHAGs5WZePQejNSqqrxZah4uhBvYr698nTCFhXMjMZo5oSCoko5yW2wtmeO1ClRU=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "Bybit: Buy Bitcoin & Crypto",
+        "app_id": "com.bybit.app",
+        "link": "https://play.google.com/store/apps/details?id=com.bybit.app",
+        "image_url": "https://play-lh.googleusercontent.com/SJxOSA2a2WY2RYQKv99kKCQVVqA5tmgw2VHn_YY0gL4riv7eDDjZ46X5_6Jge-Ur8uo=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "World App - Real Human Network",
+        "app_id": "com.worldcoin",
+        "link": "https://play.google.com/store/apps/details?id=com.worldcoin",
+        "image_url": "https://play-lh.googleusercontent.com/dcw7_J7eFq0lpmYU7wezaI1NcdCbJDDtoxAzw87MShxOPYwrzdexrfcFBZJUnRGmVg=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "한투-한국투자증권,주식,MTS,증권,주식어플,해외주식",
+        "app_id": "com.truefriend.neosmartarenewal",
+        "link": "https://play.google.com/store/apps/details?id=com.truefriend.neosmartarenewal",
+        "image_url": "https://play-lh.googleusercontent.com/nUFxjtsZ6smp_0jn29eJV-3yXmZZCtMQ86A33d2yPq3oC22sG91mPH_4sXNzHFoGHg=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "트래블월렛 – travel Pay",
+        "app_id": "com.mobiletoong.travelwallet",
+        "link": "https://play.google.com/store/apps/details?id=com.mobiletoong.travelwallet",
+        "image_url": "https://play-lh.googleusercontent.com/TY35smjFWw5LEJLYJ2lv4I_7eqkV9EBHff53N9c13cWwhbMIwQaUisECxC7YAGM44Ht6=s256-rw",
+        "rating": "4.9"
+    },
+    {
+        "title": "SSF SHOP",
+        "app_id": "com.ssfshop.app",
+        "link": "https://play.google.com/store/apps/details?id=com.ssfshop.app",
+        "image_url": "https://play-lh.googleusercontent.com/BqHpOcTXlzkO6olPzsILVfaXbLPe6zbJQbnRatoYPIWoP8BU9-_a6f6kS37MHlnFOopmwwDYjKYaDyfpIO13qg=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "29CM - 감도 깊은 취향 셀렉트샵",
+        "app_id": "com.the29cm.app29cm",
+        "link": "https://play.google.com/store/apps/details?id=com.the29cm.app29cm",
+        "image_url": "https://play-lh.googleusercontent.com/3yR4NWxLSdHa4zoEf9QwvuZyWyscbtPv8y0YGhEx4heDMQI-y7ZSCj9KtPLnNcQoqmo=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "DramaBox - 미니시리즈 스트리밍 플레이어",
+        "app_id": "com.storymatrix.drama",
+        "link": "https://play.google.com/store/apps/details?id=com.storymatrix.drama",
+        "image_url": "https://play-lh.googleusercontent.com/dYAF42EhNGgGhC7nLHNSZkWs11W5Dv0mRWZBv6IgLDTh3l8eolsjeAVGg-HVHt9YWyA=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "Netflix(넷플릭스)",
+        "app_id": "com.netflix.mediaclient",
+        "link": "https://play.google.com/store/apps/details?id=com.netflix.mediaclient",
+        "image_url": "https://play-lh.googleusercontent.com/bLa8CrWrVqw2q9U2beRVUJK5fN-ZgtmVdPZdvkEn3BWe7AeDGAsk_NQNFrK7tIkR8QJ3=s256-rw",
+        "rating": "3.6"
+    },
+    {
+        "title": "TVING",
+        "app_id": "net.cj.cjhv.gs.tving",
+        "link": "https://play.google.com/store/apps/details?id=net.cj.cjhv.gs.tving",
+        "image_url": "https://play-lh.googleusercontent.com/eG3T5rqaV3ifl3MKV0fMi4V161wdhghpmqOMq-KYXOCN7Qy98yZhSsIj1gUBQ6YQqRg=s256-rw",
+        "rating": "2.7"
+    },
+    {
+        "title": "DramaWave -인기 단편/한일 드라마, 역전극!",
+        "app_id": "com.dramawave.app",
+        "link": "https://play.google.com/store/apps/details?id=com.dramawave.app",
+        "image_url": "https://play-lh.googleusercontent.com/hSwIMx7TncjcuaC-6u0Szk4Ujgpvnuz4unuqsMHt-SPecnwNv3MJOy2DrdC-wxtppJ4=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "메가박스",
+        "app_id": "com.megabox.mop",
+        "link": "https://play.google.com/store/apps/details?id=com.megabox.mop",
+        "image_url": "https://play-lh.googleusercontent.com/H0_8A4AeQkGtwfv0lYdeaxBMlGPR5ZfKQSG18zy8oOG5PXoS4YLNFcpBb1C-AwqcaHc=s256-rw",
+        "rating": "3.0"
+    },
+    {
+        "title": "Disney+",
+        "app_id": "com.disney.disneyplus",
+        "link": "https://play.google.com/store/apps/details?id=com.disney.disneyplus",
+        "image_url": "https://play-lh.googleusercontent.com/gXHdyj_9Dbyz3uJy1EnmLHMUpU33VeD0n6kObv6tzvBveWKDFZQt7yGrnM-L4FW-5P4=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "카카오페이지 KakaoPage",
+        "app_id": "com.kakao.page",
+        "link": "https://play.google.com/store/apps/details?id=com.kakao.page",
+        "image_url": "https://play-lh.googleusercontent.com/41iW640PxKoS880AfgX55EQrzI7jO-SEkUt8tK-KUJrSn2f1784QoJZ8WSRpGmMsGcU=s256-rw",
+        "rating": "2.6"
+    },
+    {
+        "title": "ZEPETO: 아바타, 채팅, 라이브",
+        "app_id": "me.zepeto.main",
+        "link": "https://play.google.com/store/apps/details?id=me.zepeto.main",
+        "image_url": "https://play-lh.googleusercontent.com/EwN12x-sr1KVCpHYyG4kFE2NMH5ZdXStj5e5eHAFfyxNTcXRoUs4DxyJyvkBeeqY76k=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "SOOP (숲)",
+        "app_id": "kr.co.nowcom.mobile.afreeca",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.nowcom.mobile.afreeca",
+        "image_url": "https://play-lh.googleusercontent.com/p9zXgkP4pkCDVR-dQ2HfcHyD5vg9MTjDLFVpckObdHI9dGiiMO9TldFJ7kc5bgEGwYjo=s256-rw",
+        "rating": "2.9"
+    },
+    {
+        "title": "WePlay - 파티게임",
+        "app_id": "com.wejoy.weplay.kr",
+        "link": "https://play.google.com/store/apps/details?id=com.wejoy.weplay.kr",
+        "image_url": "https://play-lh.googleusercontent.com/EyjAkO-0zwnPY3xP_3McAQu8mmLNLbtz0XZWROyWmfdC_tF1Eu-GkHfhSo6Ye4VXpusHIwP5Gu1Xh8YaFVylAg=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "미스트플레이 – 게임 플레이하고 리워드까지 받으세요",
+        "app_id": "com.mistplay.mistplay",
+        "link": "https://play.google.com/store/apps/details?id=com.mistplay.mistplay",
+        "image_url": "https://play-lh.googleusercontent.com/YnJRqe2U3TLnKZi9BZjuK37amYOuehB2_rWiR0sgfo22yndf4wKwPABajsa9IqTU14s=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "ShortMax: 쇼츠 드라마, 즐거운 이야기 정기",
+        "app_id": "live.shorttv.apps",
+        "link": "https://play.google.com/store/apps/details?id=live.shorttv.apps",
+        "image_url": "https://play-lh.googleusercontent.com/SlEgJNvtiGu3ca5SWtZNKGBaPSz0dd-F4Up6UYrvAE0H8bML6LqyE2L6DWgbblxckg=s256-rw",
+        "rating": "4.0"
+    },
+    {
+        "title": "FlickReels -단편 드라마를 즐기세요",
+        "app_id": "com.zyhwplatform.shortplay",
+        "link": "https://play.google.com/store/apps/details?id=com.zyhwplatform.shortplay",
+        "image_url": "https://play-lh.googleusercontent.com/xYmNeaSM9O3lH95lnWBdIOKGPDg-EB6yGMCBli3XwmVCTSOEsyNqyWSvwnoZl6bfNF8=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "Wavve(웨이브)",
+        "app_id": "kr.co.captv.pooqV2",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.captv.pooqV2",
+        "image_url": "https://play-lh.googleusercontent.com/7cuI7bdCeZbmc9anRXqpmxZPH92t5NEEbhTnj5by6skhZK_dlUg9kx--gqtLf-8c2K12=s256-rw",
+        "rating": "3.2"
+    },
+    {
+        "title": "노래방 어플(스타메이커): 노래방 노래 부르기",
+        "app_id": "com.starmakerinteractive.starmaker",
+        "link": "https://play.google.com/store/apps/details?id=com.starmakerinteractive.starmaker",
+        "image_url": "https://play-lh.googleusercontent.com/9DoQErUXxe6CsoIBf_XtBMJJgBGEcJfHGDUR-pZzlERhugfsTj6WGWBZn3mym4z5eg=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "카카오스토리 KakaoStory",
+        "app_id": "com.kakao.story",
+        "link": "https://play.google.com/store/apps/details?id=com.kakao.story",
+        "image_url": "https://play-lh.googleusercontent.com/uuMycs_Rzw5GosOvHGqX30ie1OYaeHUVP0OAgfYNFDZ-Rg1dJHgcBTnDQpr1sGs5Eh4=s256-rw",
+        "rating": "4.0"
+    },
+    {
+        "title": "지니뮤직 - genie",
+        "app_id": "com.ktmusic.geniemusic",
+        "link": "https://play.google.com/store/apps/details?id=com.ktmusic.geniemusic",
+        "image_url": "https://play-lh.googleusercontent.com/gSjYDowrYi_BIdXKIsxhc4Y3Zj5zGA3os_SCm8cqWWCrXQYejcmser-UOEM-PnCGRgk=s256-rw",
+        "rating": "2.6"
+    },
+    {
+        "title": "Steam",
+        "app_id": "com.valvesoftware.android.steam.community",
+        "link": "https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community",
+        "image_url": "https://play-lh.googleusercontent.com/52_DMY5417awaEgJf3_9mWgEuO2t1JfkGab8kM-LD6l5u6cGm_1-GsoQ_IyWFHdbkA=s256-rw",
+        "rating": "1.9"
+    },
+    {
+        "title": "맥도날드",
+        "app_id": "com.mcdonalds.mobileapp",
+        "link": "https://play.google.com/store/apps/details?id=com.mcdonalds.mobileapp",
+        "image_url": "https://play-lh.googleusercontent.com/0loj-whL4XSeF4v5W3d213b1pH0RRTQUlmK1VESE-Rsydp06rVyPTq_Hwpwm1avB8URL=s256-rw",
+        "rating": "2.1"
+    },
+    {
+        "title": "캐치테이블",
+        "app_id": "co.kr.catchtable.android.catchtable_app",
+        "link": "https://play.google.com/store/apps/details?id=co.kr.catchtable.android.catchtable_app",
+        "image_url": "https://play-lh.googleusercontent.com/Cpc1omIHIzV9kGE2LjnYHNbXoyue74OX0j_uwuw-f6cJpi0edzNrBjNDmQb5iz4Y302_=s256-rw",
+        "rating": "4.9"
+    },
+    {
+        "title": "스타벅스",
+        "app_id": "com.starbucks.co",
+        "link": "https://play.google.com/store/apps/details?id=com.starbucks.co",
+        "image_url": "https://play-lh.googleusercontent.com/Cwfy02UAtHpNdJczuZXUgQ7LikGGBuv8CxIfL9utjcEcGz7_9j1fItnQSxW_w9WahNw=s256-rw",
+        "rating": "2.8"
+    },
+    {
+        "title": "테이블링",
+        "app_id": "com.mealant.tabling",
+        "link": "https://play.google.com/store/apps/details?id=com.mealant.tabling",
+        "image_url": "https://play-lh.googleusercontent.com/zNiak7RA9JZlYxvavdVcFI3dbSlbQrLFuZMl6Rv7jIJ-75lwUnVSKTvl4WFIw3BYh0Y=s256-rw",
+        "rating": "4.9"
+    },
+    {
+        "title": "Grab: 택시 및 음식 배달",
+        "app_id": "com.grabtaxi.passenger",
+        "link": "https://play.google.com/store/apps/details?id=com.grabtaxi.passenger",
+        "image_url": "https://play-lh.googleusercontent.com/lUb-D8akcMtF46SvrCnmLiH8-2BpfJB3GEubptM7jBXJZKPCrmw7YZH8WzX7Yt1WoA=s256-rw",
+        "rating": "4.9"
+    },
+    {
+        "title": "홈플러스 – 마트에서 직접오는 신선한 장보기",
+        "app_id": "com.socialapps.homeplus",
+        "link": "https://play.google.com/store/apps/details?id=com.socialapps.homeplus",
+        "image_url": "https://play-lh.googleusercontent.com/BWvu0YqXPtR6uiMFHyNuO0cBN_WlHfr1W-cSAj7t1_dS1O6VhePFO4zZ5l5PjpXdgA=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "패스오더 - 카페 가는 길, 미리주문",
+        "app_id": "com.paytalab.mkseo.passorder",
+        "link": "https://play.google.com/store/apps/details?id=com.paytalab.mkseo.passorder",
+        "image_url": "https://play-lh.googleusercontent.com/r4U_wXcWZJ6osJAR1AEao2ADVsMT-28JP5K3629VSiJzy9__Jrw3cPwPnLw4KCv4IYw=s256-rw",
+        "rating": "4.9"
+    },
+    {
+        "title": "마이 홈플러스",
+        "app_id": "com.homeplus.myhomeplus",
+        "link": "https://play.google.com/store/apps/details?id=com.homeplus.myhomeplus",
+        "image_url": "https://play-lh.googleusercontent.com/geOHN028FsO7IgbBElVJS7yR8emiLM8NAW87DFovVpSSuyIYiX8brvIe9-T24H13DQ=s256-rw",
+        "rating": "3.7"
+    },
+    {
+        "title": "라인 LINE",
+        "app_id": "jp.naver.line.android",
+        "link": "https://play.google.com/store/apps/details?id=jp.naver.line.android",
+        "image_url": "https://play-lh.googleusercontent.com/74iMObG1vsR3Kfm82RjERFhf99QFMNIY211oMvN636_gULghbRBMjpVFTjOK36oxCbs=s256-rw",
+        "rating": "3.8"
+    },
+    {
+        "title": "Samsung Internet 브라우저",
+        "app_id": "com.sec.android.app.sbrowser",
+        "link": "https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser",
+        "image_url": "https://play-lh.googleusercontent.com/WW5DkF_uytqj4_kY-YJJ0M8zoTqowXSjsSc_oUh08kyxPXuUCtYp_AUn37zGMPdevLbQ=s256-rw",
+        "rating": "4.1"
+    },
+    {
+        "title": "Brave - 비공개 브라우저, 검색 엔진, VPN 등",
+        "app_id": "com.brave.browser",
+        "link": "https://play.google.com/store/apps/details?id=com.brave.browser",
+        "image_url": "https://play-lh.googleusercontent.com/aP7LHNpjMJJxoR8jRPPdVPlISDNNkFBKKmdODDp0uRNlL3YTugEdNEcHJgKBeRV8eeuU=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "Discord - 대화, 플레이, 어울리기",
+        "app_id": "com.discord",
+        "link": "https://play.google.com/store/apps/details?id=com.discord",
+        "image_url": "https://play-lh.googleusercontent.com/bgOeh2FL7VDOE_cqjxuOGb33ksluOa0q5soAYY64O6TEexR_QxMRDWd_fGgeNiXDhv0=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "Zoom Workplace",
+        "app_id": "us.zoom.videomeetings",
+        "link": "https://play.google.com/store/apps/details?id=us.zoom.videomeetings",
+        "image_url": "https://play-lh.googleusercontent.com/yZsmiNjmji3ZoOuLthoVvptLB9cZ0vCmitcky4OUXNcEFV3IEQkrBD2uu5kuWRF5_ERA=s256-rw",
+        "rating": "3.9"
+    },
+    {
+        "title": "WhatsApp Messenger",
+        "app_id": "com.whatsapp",
+        "link": "https://play.google.com/store/apps/details?id=com.whatsapp",
+        "image_url": "https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "Messenger",
+        "app_id": "com.facebook.orca",
+        "link": "https://play.google.com/store/apps/details?id=com.facebook.orca",
+        "image_url": "https://play-lh.googleusercontent.com/JfQNUnohpuq5IP65WN9C109VjLjDEj2tZYlPtComLznQfGeeoesubOaHGBcpZdXKuHU=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "WeChat",
+        "app_id": "com.tencent.mm",
+        "link": "https://play.google.com/store/apps/details?id=com.tencent.mm",
+        "image_url": "https://play-lh.googleusercontent.com/QbSSiRcodmWx6HlezOtNu3vmZeuFqkQZQQO5Y2-Zg_jBRm-mXjhlXX5yFj8iphfqzQ=s256-rw",
+        "rating": "3.8"
+    },
+    {
+        "title": "카카오맵 - 지도 / 내비게이션 / 길찾기 / 위치공유",
+        "app_id": "net.daum.android.map",
+        "link": "https://play.google.com/store/apps/details?id=net.daum.android.map",
+        "image_url": "https://play-lh.googleusercontent.com/pPTTNz433EYFurg2j__bFU5ONdMoU_bs_-yS2JLZriua3iHrksGP6XBPF5VtDPlpGcW4=s256-rw",
+        "rating": "4.0"
+    },
+    {
+        "title": "카카오내비 - 주차,발렛,전기차충전,세차,보험,중고차",
+        "app_id": "com.locnall.KimGiSa",
+        "link": "https://play.google.com/store/apps/details?id=com.locnall.KimGiSa",
+        "image_url": "https://play-lh.googleusercontent.com/tmKbM_kM31bRZoU1SkKw2LB30CFdm-MZYP0XBxlJzhYuJfbulrMi_P88VOxuZszXhPk=s256-rw",
+        "rating": "3.8"
+    },
+    {
+        "title": "호갱노노 - 아파트 실거래가 조회 부동산앱",
+        "app_id": "com.hogangnono.hogangnono",
+        "link": "https://play.google.com/store/apps/details?id=com.hogangnono.hogangnono",
+        "image_url": "https://play-lh.googleusercontent.com/M_lYCDV46uoTV2CF4A5C90GdF-dxYBtKp-od1b2RIpl1U_eIAO8L1caoKtVGp73usOAC=s256-rw",
+        "rating": "3.9"
+    },
+    {
+        "title": "에버랜드",
+        "app_id": "com.samsung.everland.android.mobileApp",
+        "link": "https://play.google.com/store/apps/details?id=com.samsung.everland.android.mobileApp",
+        "image_url": "https://play-lh.googleusercontent.com/qpvJzWzhBDDdbnK3OLaIrWh1TBnZZ-1jyzDZ0u3g1EklcMON52zKV4ym95H4CTTLL8QB=s256-rw",
+        "rating": "3.3"
+    },
+    {
+        "title": "카카오버스 - 버스 지하철 대중교통 실시간 정보",
+        "app_id": "com.astroframe.seoulbus",
+        "link": "https://play.google.com/store/apps/details?id=com.astroframe.seoulbus",
+        "image_url": "https://play-lh.googleusercontent.com/-aW4PDSH3gI8d2I7zKdYkhrWcRema_GRaov0PnDs15W9FHrzFL5FpN85MNJ1EHzpnCc=s256-rw",
+        "rating": "1.5"
+    },
+    {
+        "title": "지하철 종결자 – Smarter Subway",
+        "app_id": "teamDoppelGanger.SmarterSubway",
+        "link": "https://play.google.com/store/apps/details?id=teamDoppelGanger.SmarterSubway",
+        "image_url": "https://play-lh.googleusercontent.com/LfLhZWM2SJAMmgbndtPodg-09CvX_L58AjnrFX0ZDpE7zPNxjS8A0hhJ6XwL_vo4cg=s256-rw",
+        "rating": "3.9"
+    },
+    {
+        "title": "라프텔",
+        "app_id": "laftel.net.laftel",
+        "link": "https://play.google.com/store/apps/details?id=laftel.net.laftel",
+        "image_url": "https://play-lh.googleusercontent.com/w8xd-eZ2_G9YnS4q6ITfoCzWOnXTE2gNqje5j8j_GQVAB6l7Mnr20mfCwi92dLa7cQ=s256-rw",
+        "rating": "4.6"
+    },
+    {
+        "title": "NOL(야놀자)",
+        "app_id": "com.cultsotry.yanolja.nativeapp",
+        "link": "https://play.google.com/store/apps/details?id=com.cultsotry.yanolja.nativeapp",
+        "image_url": "https://play-lh.googleusercontent.com/2Twlv9p5h5reqt_DezC_JqxsRx5BdsTMKuBSeZT0oF1zwIuFAI39phwIdLay_fqVMPeN=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "Trip.com 트립닷컴 - 호텔, 항공권, 기차",
+        "app_id": "ctrip.english",
+        "link": "https://play.google.com/store/apps/details?id=ctrip.english",
+        "image_url": "https://play-lh.googleusercontent.com/XP13OLtNtCincmIUiQmuHUhoq1RwkCaN9uV9zafCOhXrxFSTMPLTUpChh3P9yfbGBg=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "여기어때: 호텔, 모텔, 숙소, 항공권, 여행, 패키지",
+        "app_id": "kr.goodchoice.abouthere",
+        "link": "https://play.google.com/store/apps/details?id=kr.goodchoice.abouthere",
+        "image_url": "https://play-lh.googleusercontent.com/6A-iaIqXD-HbulwwLeisCd7Ew95RBOvWStAf0twFmPxaRIxePEDGAtylfwonmv-R1lAm=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "코레일톡",
+        "app_id": "com.korail.talk",
+        "link": "https://play.google.com/store/apps/details?id=com.korail.talk",
+        "image_url": "https://play-lh.googleusercontent.com/yxGaVmpwCZ9OKgK0MxgeqdQku9zgO5WRN8MjpuycD5BNdfcGSvu8iEB1gERiFBePP2A=s256-rw",
+        "rating": "3.8"
+    },
+    {
+        "title": "아고다: 모텔, 호텔, 항공권 특가",
+        "app_id": "com.agoda.mobile.consumer",
+        "link": "https://play.google.com/store/apps/details?id=com.agoda.mobile.consumer",
+        "image_url": "https://play-lh.googleusercontent.com/QFl5RnJnCaApuwSY5GkyPk1YqFRdeq-64EHaeNeYId3HwY9Uqjf5JkRVeATZxuuKez5o=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "Airbnb (에어비앤비) - 색다른 숙소 특별한 여행",
+        "app_id": "com.airbnb.android",
+        "link": "https://play.google.com/store/apps/details?id=com.airbnb.android",
+        "image_url": "https://play-lh.googleusercontent.com/5ZOQbuxacVOWK6AM4Env-adyEWRUCJt0VrUl9bWKW4Z4qLSjJUBuMP8-dALMy9oWu530=s256-rw",
+        "rating": "4.4"
+    },
+    {
+        "title": "Uber Taxi(우버 택시) - 택시 호출 플랫폼",
+        "app_id": "com.ubercab",
+        "link": "https://play.google.com/store/apps/details?id=com.ubercab",
+        "image_url": "https://play-lh.googleusercontent.com/tnBRfWvuhaTZoWuoSh1F2QAMpuDjy-PnqQme-w3Cvo4bP6v_0Pks3g3XFGyCKiOZdg=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "대한항공 My",
+        "app_id": "com.koreanair.passenger",
+        "link": "https://play.google.com/store/apps/details?id=com.koreanair.passenger",
+        "image_url": "https://play-lh.googleusercontent.com/AqwhyDJsr5qJVEkDPWtxqNxBxb2r3YFt6SX1xQaFoda1GQQny8b_Oo-FYzmS9iLXjw=s256-rw",
+        "rating": "4.9"
+    },
+    {
+        "title": "하나투어 – 특가 찬스부터 추천 일정까지",
+        "app_id": "com.hanatour.dotcom",
+        "link": "https://play.google.com/store/apps/details?id=com.hanatour.dotcom",
+        "image_url": "https://play-lh.googleusercontent.com/kO4Qg-SUIHoTX7IYIPRVOTFNylC-oltFhfH5JC0Ibo5rV41lU9ivSJxaVxbOtOm2SOE=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "마이리얼트립 - 진짜 나다운 여행",
+        "app_id": "com.mrt.ducati",
+        "link": "https://play.google.com/store/apps/details?id=com.mrt.ducati",
+        "image_url": "https://play-lh.googleusercontent.com/42QL6XcXMx-9CdjB3Fyz7kdACcQI1XZFhCQn_4fGL3oIduGCX6fLSJM-HuQ8dX8u1q0-=s256-rw",
+        "rating": "4.9"
+    },
+    {
+        "title": "클룩 KLOOK: 여행, 투어, 렌트카, 호텔 예약",
+        "app_id": "com.klook",
+        "link": "https://play.google.com/store/apps/details?id=com.klook",
+        "image_url": "https://play-lh.googleusercontent.com/X-f2QRLYPVzZE_a6i5mEhd6ArUbXfAmc9yOY3znkMh8bF_JfueH4iHG9QAUfwINyGw=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "제주항공",
+        "app_id": "com.parksmt.jejuair.android16",
+        "link": "https://play.google.com/store/apps/details?id=com.parksmt.jejuair.android16",
+        "image_url": "https://play-lh.googleusercontent.com/PFT7kxvtQjze4d33OjISshRO6LsuxscsYeTBAJp4nrwhMdokyaNhUl18dVeUW1klEWA=s256-rw",
+        "rating": "3.0"
+    },
+    {
+        "title": "아시아나항공",
+        "app_id": "com.ssm.asiana",
+        "link": "https://play.google.com/store/apps/details?id=com.ssm.asiana",
+        "image_url": "https://play-lh.googleusercontent.com/t1T-RmmROlriS65rK50MEe0WC0_QEJzyP8tahEjEg_PYNxtyGdsna2Hm45qQVmDQl00=s256-rw",
+        "rating": "4.3"
+    },
+    {
+        "title": "NOL 인터파크투어",
+        "app_id": "com.interpark.tour.mobile.main",
+        "link": "https://play.google.com/store/apps/details?id=com.interpark.tour.mobile.main",
+        "image_url": "https://play-lh.googleusercontent.com/tx1sENDvsSrDvOLfO4pgzue-iMdLWHY9adEGTEcKhp4qzICsrHuLmkcVWEphDEzxM4I=s256-rw",
+        "rating": "2.8"
+    },
+    {
+        "title": "유니콘 HTTPS - 속도저하 없이 안전한 사이트 접속",
+        "app_id": "kr.co.lylstudio.httpsguard",
+        "link": "https://play.google.com/store/apps/details?id=kr.co.lylstudio.httpsguard",
+        "image_url": "https://play-lh.googleusercontent.com/uFT53RIauEtp-kRsQZypNZ8dqa5rwDtEOGVOCo_R_6dutzQgzjeoTX_nagBFmFemWrfm=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "음성 녹음",
+        "app_id": "com.sec.android.app.voicenote",
+        "link": "https://play.google.com/store/apps/details?id=com.sec.android.app.voicenote",
+        "image_url": "https://play-lh.googleusercontent.com/T-9dIAcgxJFOmb8BBycR8xPZjbq4G_O71SirF0rZM0z2TUU6rzLtneU3jzanmJX51I0=s256-rw",
+        "rating": "4.3"
+    },
+    {
+        "title": "Galaxy Wearable",
+        "app_id": "com.samsung.android.app.watchmanager",
+        "link": "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager",
+        "image_url": "https://play-lh.googleusercontent.com/1xxrwpeVEnRmvkOvaqPgtP-yAMr6U08-yPKkTfSYKzer4swG-SogeM5hYxQeBxDM_g=s256-rw",
+        "rating": "4.3"
+    },
+    {
+        "title": "SmartThings",
+        "app_id": "com.samsung.android.oneconnect",
+        "link": "https://play.google.com/store/apps/details?id=com.samsung.android.oneconnect",
+        "image_url": "https://play-lh.googleusercontent.com/gNIBE2TncHLd3gyW3XLQaqj2d8N4Q8jnGb9ze7fKKiKA2ZfSrLFB9fYOmQgIbOdegw=s256-rw",
+        "rating": "4.8"
+    },
+    {
+        "title": "Google 번역",
+        "app_id": "com.google.android.apps.translate",
+        "link": "https://play.google.com/store/apps/details?id=com.google.android.apps.translate",
+        "image_url": "https://play-lh.googleusercontent.com/ZrNeuKthBirZN7rrXPN1JmUbaG8ICy3kZSHt-WgSnREsJzo2txzCzjIoChlevMIQEA=s256-rw",
+        "rating": "4.1"
+    },
+    {
+        "title": "말하는 번역기 - 실시간 초간편 번역, 통역, 회화",
+        "app_id": "com.translate.talkingtranslator",
+        "link": "https://play.google.com/store/apps/details?id=com.translate.talkingtranslator",
+        "image_url": "https://play-lh.googleusercontent.com/3EBaEOASaFfzoOvnQTzNJlbBtCKWlrd9waD94Qifm3LcM9WAvHk5W3KbW_lU1v4N7A=s256-rw",
+        "rating": "4.7"
+    },
+    {
+        "title": "Good Lock",
+        "app_id": "com.samsung.android.goodlock",
+        "link": "https://play.google.com/store/apps/details?id=com.samsung.android.goodlock",
+        "image_url": "https://play-lh.googleusercontent.com/HGqf2L_Nb7O5Kp-jh34J_YZ9FlQbHKrP0kLJzwJ6b-LfOzW7IEJV_JR8BdAKfLrem3Q=s256-rw",
+        "rating": "4.0"
+    },
+    {
+        "title": "비디오 플레이어 - 자막",
+        "app_id": "maxplayer.mediaplayer.videoplayer",
+        "link": "https://play.google.com/store/apps/details?id=maxplayer.mediaplayer.videoplayer",
+        "image_url": "https://play-lh.googleusercontent.com/9HKhqsvKKDKpD7_N7AbowO69s0wX2COAKwtTCL6a8ojaKuGjwPcPVAqBKIq9sBvv--s=s256-rw",
+        "rating": "4.1"
+    },
+    {
+        "title": "디자인키보드 -폰트, 테마, 이모티콘, 맞춤법",
+        "app_id": "com.designkeyboard.keyboard",
+        "link": "https://play.google.com/store/apps/details?id=com.designkeyboard.keyboard",
+        "image_url": "https://play-lh.googleusercontent.com/3kpqt1DVkjEr-VryGIYs9oqq3arJCQr2Q41YgbcGlR9Qx9ORPSfAxyKf_Naos6xI-6p7=s256-rw",
+        "rating": "4.5"
+    },
+    {
+        "title": "Microsoft Authenticator",
+        "app_id": "com.azure.authenticator",
+        "link": "https://play.google.com/store/apps/details?id=com.azure.authenticator",
+        "image_url": "https://play-lh.googleusercontent.com/_1CV99jklLbXuun-6E7eCPR-sKKeZc602rhw_QHZz-qm7xrPdgWsJVc7NtFkkliI8No=s256-rw",
+        "rating": "4.8"
+    }
+]

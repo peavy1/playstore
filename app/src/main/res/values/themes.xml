@@ -21,10 +21,20 @@
         <item name="android:navigationBarColor">@color/my_light_gray</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
         <item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
-    <style name="Widget.App.BottomNavigationView.TextAppearance" parent="TextAppearance.AppCompat.Caption">
+    <style name="BottomNavigationViewTextView" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TabLayoutTextView" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
     <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
@@ -32,8 +42,9 @@
         <item name="itemIconSize">24dp</item>
         <item name="itemPaddingTop">6dp</item>
         <item name="itemPaddingBottom">10dp</item>
-        <item name="itemTextAppearanceInactive">@style/Widget.App.BottomNavigationView.TextAppearance</item>
-        <item name="itemTextAppearanceActive">@style/Widget.App.BottomNavigationView.TextAppearance</item>
+        <item name="itemTextColor">@color/black</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationViewTextView</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationViewTextView</item>
     </style>
 
 

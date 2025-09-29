@@ -17,5 +17,8 @@
     <color name="click_circle">#200A30FF</color>
 
     <color name="my_light_gray">#F5F5F5</color>
+    <color name="select_tab">#0B57D0</color>
+    <color name="select_font_color">#444746</color>
+    <color name="select_indicator">#2744E6</color>
 
 </resources>
