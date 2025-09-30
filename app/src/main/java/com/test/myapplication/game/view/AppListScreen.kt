@@ -47,11 +47,9 @@ import com.test.myapplication.model.AppItem
 fun MyComposeListScreen() {
     val items = (1..100).map { "아이템 #$it" }
 
-    // ⭐️⭐️⭐️ 핵심: LazyColumn에 nestedScroll Modifier 추가 ⭐️⭐️⭐️
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            // 이 한 줄이 컴포즈의 스크롤을 바깥 XML의 CoordinatorLayout과 연결해줍니다.
             .nestedScroll(rememberNestedScrollInteropConnection())
     ) {
         items(items) { item ->
@@ -144,7 +142,7 @@ fun ListItem(index: Int, appItem: AppItem) {
             )
 
             Text(
-                text = appItem.rating.toString(),
+                text = appItem.rating,
                 color = Color.Black
             )
         }

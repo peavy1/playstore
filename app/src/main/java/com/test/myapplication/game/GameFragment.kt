@@ -57,6 +57,7 @@ class GameFragment : Fragment() {
 
         val viewPager = binding.viewPager
         viewPager.adapter = GameViewPagerAdapter(requireActivity())
+        viewPager.isUserInputEnabled = false
 
 //        viewPager.offscreenPageLimit = tabTitles.size
 

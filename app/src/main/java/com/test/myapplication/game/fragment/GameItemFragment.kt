@@ -45,9 +45,9 @@ private val sharedViewModel: GameSharedViewModel by activityViewModels()
 
                 val appList by sharedViewModel.appList.collectAsStateWithLifecycle(initialValue = emptyList())
 
-                LaunchedEffect(true) {
-                    sharedViewModel.loadDataIfNeeded(requireContext())
-                }
+//                LaunchedEffect(true) {
+//                  sharedViewModel.loadDataIfNeeded(requireContext())
+//                }
                 AppListScreen(appList)
 //                MyComposeListScreen()
             }
