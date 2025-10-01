@@ -48,106 +48,107 @@ fun RankView(
     appList3: List<List<AppItem>>
 ) {
 
-     Column(
-         modifier = Modifier.padding(top = 34.dp, bottom = 10.dp)
-     ) {
+    Column(
+        modifier = Modifier.padding(top = 34.dp, bottom = 10.dp)
+    ) {
 
-         var type1 by remember { mutableStateOf(true) }
-         var type2 by remember { mutableStateOf(false) }
-         var type3 by remember { mutableStateOf(false) }
+        var type1 by remember { mutableStateOf(true) }
+        var type2 by remember { mutableStateOf(false) }
+        var type3 by remember { mutableStateOf(false) }
 
-         Text(
-             text = if(type1) "인기 무료" else if(type2) "최고 매출" else "인기 유료",
-             fontSize = 15.sp,
-             fontFamily = FontFamily.Cursive,
-             color = Color.Black,
-             modifier = Modifier.padding(start = 28.dp)
-         )
+        Text(
+            text = if(type1) "인기 무료" else if(type2) "최고 매출" else "인기 유료",
+            fontSize = 15.sp,
+            fontFamily = FontFamily.Cursive,
+            color = Color.Black,
+            modifier = Modifier.padding(start = 28.dp)
+        )
 
-         Spacer(modifier = Modifier.height(10.dp))
+        // .background(if (type1) Color(0xFFF7EFEF) else Color(0xFFCFD5DD))
+        Spacer(modifier = Modifier.height(10.dp))
 
-         Row(
-             modifier = Modifier.padding(start = 28.dp)
-         ) {
-             Row(
-                 modifier = Modifier
-                     .clip(RoundedCornerShape(12.dp))
+        Row(
+            modifier = Modifier.padding(start = 28.dp)
+        ) {
+            Row(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(12.dp))
 //                                .background(Color(0xFFEEEEEE))
 //                     .background(Color(0xFFF7EFEF))
-                     .background(if (type1) Color(0xFFF7EFEF) else Color(0xFFCFD5DD))
-                     .padding(horizontal = 10.dp, vertical = 6.dp)
-                     .clickable {
-                         type1 = true
-                         type2 = false
-                         type3 = false
-                     },
-                 verticalAlignment = Alignment.CenterVertically
-             ) {
-                 Text(
-                     text = "인기 무료",
-                     fontSize = 13.sp,
-                     fontFamily = FontFamily.SansSerif,
-                     color = Color.DarkGray,
-                 )
-             }
+                    .background(if (type1) Color(0xFFCFD5DD) else Color(0xFFF7EFEF))
+                    .padding(horizontal = 10.dp, vertical = 6.dp)
+                    .clickable {
+                        type1 = true
+                        type2 = false
+                        type3 = false
+                    },
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "인기 무료",
+                    fontSize = 13.sp,
+                    fontFamily = FontFamily.SansSerif,
+                    color = Color.DarkGray,
+                )
+            }
 
-             Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.width(8.dp))
 
-             Row(
-                 modifier = Modifier
-                     .clip(RoundedCornerShape(12.dp))
-                     .background(if (type2) Color(0xFFF7EFEF) else Color(0xFFCFD5DD))
-                     .padding(horizontal = 10.dp, vertical = 6.dp)
-                     .clickable {
-                         type1 = false
-                         type2 = true
-                         type3 = false
-                     },
-                 verticalAlignment = Alignment.CenterVertically
-             ) {
-                 Text(
-                     text = "최고 매출",
-                     fontSize = 13.sp,
-                     fontFamily = FontFamily.SansSerif,
-                     color = Color.DarkGray,
-                 )
-             }
+            Row(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(if (type2) Color(0xFFCFD5DD) else Color(0xFFF7EFEF))
+                    .padding(horizontal = 10.dp, vertical = 6.dp)
+                    .clickable {
+                        type1 = false
+                        type2 = true
+                        type3 = false
+                    },
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "최고 매출",
+                    fontSize = 13.sp,
+                    fontFamily = FontFamily.SansSerif,
+                    color = Color.DarkGray,
+                )
+            }
 
-             Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.width(8.dp))
 
-             Row(
-                 modifier = Modifier
-                     .clip(RoundedCornerShape(12.dp))
-                     .background(if (type3) Color(0xFFF7EFEF) else Color(0xFFCFD5DD))
-                     .padding(horizontal = 10.dp, vertical = 6.dp)
-                     .clickable {
-                         type1 = false
-                         type2 = false
-                         type3 = true
-                     },
-                 verticalAlignment = Alignment.CenterVertically
-             ) {
-                 Text(
-                     text = "인기 유료",
-                     fontSize = 13.sp,
-                     fontFamily = FontFamily.SansSerif,
-                     color = Color.DarkGray,
-                 )
-             }
-         }
+            Row(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(if (type3) Color(0xFFCFD5DD) else Color(0xFFF7EFEF))
+                    .padding(horizontal = 10.dp, vertical = 6.dp)
+                    .clickable {
+                        type1 = false
+                        type2 = false
+                        type3 = true
+                    },
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "인기 유료",
+                    fontSize = 13.sp,
+                    fontFamily = FontFamily.SansSerif,
+                    color = Color.DarkGray,
+                )
+            }
+        }
 
-         //
-         Spacer(modifier = Modifier.height(10.dp))
+        //
+        Spacer(modifier = Modifier.height(10.dp))
 
 
-         if(type1) {
-             RankList(appList1)
-         } else if(type2) {
-             RankList(appList2)
-         } else if(type3) {
-             RankList(appList3)
-         }
-     }
+        if(type1) {
+            RankList(appList1)
+        } else if(type2) {
+            RankList(appList2)
+        } else if(type3) {
+            RankList(appList3)
+        }
+    }
 
 
 }
@@ -219,14 +220,34 @@ fun RankList(
                         ) {
                             Text(
                                 text = it.title,
+                                fontSize = 14.sp,
+                                fontFamily = FontFamily.SansSerif,
                                 color = Color.Black,
-                                modifier = Modifier.width(200.dp)
+                                modifier = Modifier
+                                    .width(200.dp)
+                                    .padding(top = 10.dp, bottom = 5.dp)
                             )
-
-                            Text(
-                                text = it.rating,
-                                color = Color.Black
-                            )
+                            Row(
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(8.dp))
+//                                .background(Color(0xFFEEEEEE))
+                                    .background(Color(0xFFF7EFEF))
+                                    .padding(horizontal = 6.dp, vertical = 2.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = it.rating,
+                                    fontSize = 10.sp,
+                                    fontFamily = FontFamily.SansSerif,
+                                    color = Color.DarkGray,
+                                )
+                                Spacer(modifier = Modifier.width(2.dp))
+                                Image(
+                                    painterResource(id = R.drawable.baseline_star_24),
+                                    contentDescription = "",
+                                    modifier = Modifier.size(10.dp),
+                                )
+                            }
                         }
 
                     }

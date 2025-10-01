@@ -11,8 +11,10 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.test.myapplication.game.view.randomApp
 import com.test.myapplication.model.AppItem
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.shareIn
@@ -23,8 +25,16 @@ class GameSharedViewModel(application: Application): AndroidViewModel(applicatio
     private val _appList = MutableStateFlow<List<AppItem>>(emptyList())
     val appList = _appList.asStateFlow()
 
+    private val _appRankList = MutableStateFlow<List<AppItem>>(emptyList())
+    val appRankList = _appRankList.asStateFlow()
+
+    private val _isLoading = MutableStateFlow(false)
+    val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
+
     var appListData = mutableListOf<AppItem>()
-    private var cachedAppList: List<AppItem>? = null
+    var page = 1
+    private var offset = 10
+    private var isListEnd = false
 
     lateinit var chuckList1: List<List<AppItem>>
     lateinit var chuckList2: List<List<AppItem>>
@@ -44,7 +54,7 @@ class GameSharedViewModel(application: Application): AndroidViewModel(applicatio
         }
     }
 
-    fun loadDataIfNeeded(context: Context) {
+//    fun loadDataIfNeeded(context: Context) {
 
 //        viewModelScope.launch {
 //            val jsonData = getJsonFromAssets(context, "list_data.json")
@@ -58,6 +68,38 @@ class GameSharedViewModel(application: Application): AndroidViewModel(applicatio
 //        viewModelScope.launch {
 //            _appList.emit(appListData)
 //        }
+//    }
+
+    fun loadNextPage() {
+
+        if (_isLoading.value || isListEnd) return
+
+        viewModelScope.launch {
+            // 1. 로딩 상태를 true로 설정
+            _isLoading.value = true
+
+
+            if (_appRankList.value.isNotEmpty()) {
+                delay(500)
+            }
+
+            val startIndex = (page - 1) * offset
+            var endIndex = startIndex + offset
+            if (endIndex > appListData.size) {
+                endIndex = appListData.size
+                isListEnd = true
+            }
+
+
+            if (startIndex < endIndex) {
+                val newItems = appListData.subList(startIndex, endIndex)
+                _appRankList.value = _appRankList.value + newItems
+                page++
+            }
+
+
+            _isLoading.value = false
+        }
     }
 
 

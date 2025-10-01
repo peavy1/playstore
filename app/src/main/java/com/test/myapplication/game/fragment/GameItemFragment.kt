@@ -14,7 +14,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.test.myapplication.databinding.FragmentGameItemBinding
 import com.test.myapplication.game.view.AppListScreen
-import com.test.myapplication.game.view.MyComposeListScreen
 import com.test.myapplication.game.viewmodel.GameSharedViewModel
 import kotlinx.coroutines.delay
 

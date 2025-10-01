@@ -1,4 +1,6 @@
 package com.test.myapplication.game.fragment
 
-class GamePopularFragment {
+import androidx.fragment.app.Fragment
+
+class GamePopularFragment: Fragment() {
 }
