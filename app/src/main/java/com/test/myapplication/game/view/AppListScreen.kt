@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.compose.AsyncImagePainter
 import coil.request.ImageRequest
+import com.test.myapplication.game.viewmodel.GameSharedViewModel
 import com.test.myapplication.model.AppItem
 
 
@@ -60,7 +61,7 @@ fun MyComposeListScreen() {
 
 
 @Composable
-fun AppListScreen(appList: List<AppItem>) {
+fun AppListScreen(sharedViewModel: GameSharedViewModel) {
 
     LazyColumn(
         modifier = Modifier
@@ -72,7 +73,7 @@ fun AppListScreen(appList: List<AppItem>) {
 //        }
 //
 
-        itemsIndexed(appList) { index, item ->
+        itemsIndexed(sharedViewModel.appListData) { index, item ->
             ListItem(index, item)
         }
     }

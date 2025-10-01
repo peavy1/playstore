@@ -47,7 +47,7 @@ class GameRecommendFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        sharedViewModel.loadDataIfNeeded(requireContext())
+//        sharedViewModel.loadDataIfNeeded(requireContext())
 
         return ComposeView(requireContext()).apply {
             setContent {
@@ -66,10 +66,12 @@ class GameRecommendFragment: Fragment() {
 
                         CarouselPagerSample()
 
-                        val chuckList1 = randomApp(sharedViewModel.appList.value, 30).chunked(3)
-                        val chuckList2 = randomApp(sharedViewModel.appList.value, 30).chunked(3)
-                        val chuckList3 = randomApp(sharedViewModel.appList.value, 30).chunked(3)
-                        RankView(chuckList1, chuckList2, chuckList3)
+//                        val chuckList1 = randomApp(sharedViewModel.appListData, 30).chunked(3)
+//                        val chuckList2 = randomApp(sharedViewModel.appListData, 30).chunked(3)
+//                        val chuckList3 = randomApp(sharedViewModel.appListData, 30).chunked(3)
+//                        RankView(chuckList1, chuckList2, chuckList3)
+
+                        RankView(sharedViewModel.chuckList1, sharedViewModel.chuckList2, sharedViewModel.chuckList3)
 
                         SimpleLazyRow(sharedViewModel)
 
