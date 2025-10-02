@@ -7,8 +7,8 @@ import com.test.myapplication.game.fragment.GameItemFragment
 import com.test.myapplication.game.fragment.GamePopularFragment
 import com.test.myapplication.game.fragment.GameRecommendFragment
 
-class GameViewPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
-    override fun getItemCount(): Int = 5 // 탭 개수
+class GameViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
+    override fun getItemCount(): Int = 5
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {

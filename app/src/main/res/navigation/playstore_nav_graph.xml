@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_game" />
     <fragment
         android:id="@+id/fragment_app"
-        android:name="com.test.myapplication.AppFragment"
+        android:name="com.test.myapplication.app.AppFragment"
         android:label="@string/bottom_tab_app"
         tools:layout="@layout/fragment_app" />
     <fragment

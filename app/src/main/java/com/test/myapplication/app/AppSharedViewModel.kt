@@ -1,27 +1,20 @@
-package com.test.myapplication.game.viewmodel
+package com.test.myapplication.app
 
 import android.app.Application
-import android.content.Context
-import android.util.Log
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.test.myapplication.AppUtil.getJsonFromAssets
+import com.test.myapplication.AppUtil
 import com.test.myapplication.game.view.randomApp
 import com.test.myapplication.model.AppItem
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.shareIn
 import kotlinx.coroutines.launch
 
-class GameSharedViewModel(application: Application): AndroidViewModel(application) {
+class AppSharedViewModel(application: Application): AndroidViewModel(application) {
 
     private val _appList = MutableStateFlow<List<AppItem>>(emptyList())
     val appList = _appList.asStateFlow()
@@ -43,7 +36,7 @@ class GameSharedViewModel(application: Application): AndroidViewModel(applicatio
 
     init {
         viewModelScope.launch {
-            val jsonData = getJsonFromAssets(application, "game_list_data.json")
+            val jsonData = AppUtil.getJsonFromAssets(application, "list_data.json")
             jsonData?.let {
                 val listType = object : TypeToken<List<AppItem>>() {}.type
                 gameListData = Gson().fromJson(jsonData, listType)

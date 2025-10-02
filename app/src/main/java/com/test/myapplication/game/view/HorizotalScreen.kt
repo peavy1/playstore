@@ -40,7 +40,7 @@ import com.test.myapplication.game.viewmodel.GameSharedViewModel
 import com.test.myapplication.model.AppItem
 
 @Composable
-fun SimpleLazyRow(sharedViewModel: GameSharedViewModel) {
+fun SimpleLazyRow(dataList: List<AppItem>) {
 
 
 //    val categories = listOf(
@@ -67,7 +67,7 @@ fun SimpleLazyRow(sharedViewModel: GameSharedViewModel) {
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 contentPadding = PaddingValues(horizontal = 28.dp)
             ) {
-                items(randomApp(sharedViewModel.appListData, 5)) { appItem ->
+                items(randomApp(dataList, 5)) { appItem ->
                     Column {
                         AsyncImage(
                             model = appItem.imageUrl,

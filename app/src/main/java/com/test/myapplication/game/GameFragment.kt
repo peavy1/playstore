@@ -51,10 +51,10 @@ class GameFragment : Fragment() {
     }
 
     private fun setTabLayout() {
-        val tabTitles = listOf("추천", "인기차트", "업무용 앱", "키즈", "카테고리")
+        val tabTitles = listOf("추천", "인기 차트", "키즈", "신규", "카테고리")
 
         val viewPager = binding.viewPager
-        viewPager.adapter = GameViewPagerAdapter(requireActivity())
+        viewPager.adapter = GameViewPagerAdapter(this)
         viewPager.isUserInputEnabled = false
 
 //        viewPager.offscreenPageLimit = tabTitles.size

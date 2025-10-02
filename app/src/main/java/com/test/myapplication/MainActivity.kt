@@ -15,6 +15,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import com.test.myapplication.app.AppSharedViewModel
 import com.test.myapplication.databinding.ActivityMainBinding
 import com.test.myapplication.game.viewmodel.GameSharedViewModel
 import com.test.myapplication.model.SlideItem
@@ -25,7 +26,8 @@ class MainActivity : AppCompatActivity() {
     }
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private val gameSharedViewModel : GameSharedViewModel by viewModels()
+//    private val gameSharedViewModel : GameSharedViewModel by viewModels()
+//    private val appSharedViewModel : AppSharedViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
