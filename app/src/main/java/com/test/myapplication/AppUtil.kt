@@ -1,6 +1,9 @@
 package com.test.myapplication
 
 import android.content.Context
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Dp
 
 object AppUtil {
 
@@ -11,6 +14,11 @@ object AppUtil {
             e.printStackTrace()
             null
         }
+    }
+
+    @Composable
+    fun Dp.toPx(): Int {
+        return with(LocalDensity.current) { this@toPx.toPx() }.toInt()
     }
 
 }

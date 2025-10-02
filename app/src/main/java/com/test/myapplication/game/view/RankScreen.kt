@@ -37,6 +37,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.compose.AsyncImagePainter
 import coil.request.ImageRequest
+import com.test.myapplication.AppUtil.toPx
 import com.test.myapplication.R
 import com.test.myapplication.game.viewmodel.GameSharedViewModel
 import com.test.myapplication.model.AppItem

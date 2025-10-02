@@ -25,7 +25,7 @@ class AppItemFragment: Fragment() {
         return ComposeView(requireContext()).apply {
 
             setContent {
-
+                AppListScreen(sharedViewModel = sharedViewModel)
             }
         }
     }
