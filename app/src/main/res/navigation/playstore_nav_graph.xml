@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_app" />
     <fragment
         android:id="@+id/fragment_search"
-        android:name="com.test.myapplication.SearchFragment"
+        android:name="com.test.myapplication.search.SearchFragment"
         android:label="@string/bottom_tab_search"
         tools:layout="@layout/fragment_search" />
     <fragment

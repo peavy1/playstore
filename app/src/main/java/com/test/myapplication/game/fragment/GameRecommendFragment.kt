@@ -39,21 +39,15 @@ class GameRecommendFragment: Fragment() {
 
     private var _binding: FragmentGameItemBinding? = null
     private val binding get() = _binding!!
-
     private val sharedViewModel: GameSharedViewModel by activityViewModels()
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        sharedViewModel.loadDataIfNeeded(requireContext())
-
         return ComposeView(requireContext()).apply {
             setContent {
-
-
                 LazyColumn(
                     modifier = Modifier
                         .fillMaxSize()
@@ -64,24 +58,13 @@ class GameRecommendFragment: Fragment() {
                         Spacer(modifier = Modifier
                             .height(16.dp)
                         )
-
                         CarouselPagerSample()
-
-//                        val chuckList1 = randomApp(sharedViewModel.gameListData, 30).chunked(3)
-//                        val chuckList2 = randomApp(sharedViewModel.gameListData, 30).chunked(3)
-//                        val chuckList3 = randomApp(sharedViewModel.gameListData, 30).chunked(3)
-//                        RankView(chuckList1, chuckList2, chuckList3)
-
                         RankView(sharedViewModel.chuckList1, sharedViewModel.chuckList2, sharedViewModel.chuckList3)
-
                         SimpleLazyRow(sharedViewModel.gameListData)
-
                         Spacer(modifier = Modifier
                             .height(16.dp)
                         )
                     }
-
-
                 }
             }
         }

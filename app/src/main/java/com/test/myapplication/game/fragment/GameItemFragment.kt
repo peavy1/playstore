@@ -22,18 +22,9 @@ class GameItemFragment: Fragment() {
 
     private var _binding: FragmentGameItemBinding? = null
     private val binding get() = _binding!!
-
-//    private val sharedViewModel: GameSharedViewModel by viewModels({ requireParentFragment() })
 private val sharedViewModel: GameSharedViewModel by activityViewModels()
 
-       /*  override fun onCreateView(
-             inflater: LayoutInflater,
-             container: ViewGroup?,
-             savedInstanceState: Bundle?
-         ): View {
-             _binding = FragmentGameItemBinding.inflate(inflater,container,false)
-             return binding.root
-         }*/
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,19 +33,10 @@ private val sharedViewModel: GameSharedViewModel by activityViewModels()
         return ComposeView(requireContext()).apply {
 
             setContent {
-
-//                val appList by sharedViewModel.appList.collectAsStateWithLifecycle(initialValue = emptyList())
-
-//                LaunchedEffect(true) {
-//                  sharedViewModel.loadDataIfNeeded(requireContext())
-//                }
                 GameListScreen(sharedViewModel)
-//                MyComposeListScreen()
+
             }
         }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
 }

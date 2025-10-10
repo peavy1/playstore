@@ -34,11 +34,6 @@ class GameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 //        gameSharedViewModel.loadDataIfNeeded(requireContext())
-
-
-
-
-
         setTabLayout()
 
 //        val jsonData = getJsonFromAssets("list_data.json")
@@ -46,8 +41,6 @@ class GameFragment : Fragment() {
 //            val listType = object : TypeToken<List<AppItem>>() {}.type
 //            val appList: List<AppItem> = Gson().fromJson(jsonData, listType)
 //        }
-
-
     }
 
     private fun setTabLayout() {
@@ -64,16 +57,6 @@ class GameFragment : Fragment() {
             tab.text = tabTitles[position]
         }.attach()
     }
-
-    private fun getJsonFromAssets(fileName: String): String? {
-        return try {
-            requireContext().assets.open(fileName).bufferedReader().use { it.readText() }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            null
-        }
-    }
-
     override fun onDestroyView() {
         _binding = null
         super.onDestroyView()
