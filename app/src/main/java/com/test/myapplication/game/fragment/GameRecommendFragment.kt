@@ -30,8 +30,7 @@ import com.test.myapplication.databinding.FragmentGameItemBinding
 import com.test.myapplication.game.view.AppListScreen
 import com.test.myapplication.game.view.CarouselPagerSample
 import com.test.myapplication.game.view.RankView
-import com.test.myapplication.game.view.SimpleLazyRow
-import com.test.myapplication.game.view.randomApp
+import com.test.myapplication.game.view.RecommendLazyRow
 import com.test.myapplication.game.viewmodel.GameSharedViewModel
 
 
@@ -60,7 +59,7 @@ class GameRecommendFragment: Fragment() {
                         )
                         CarouselPagerSample()
                         RankView(sharedViewModel.chuckList1, sharedViewModel.chuckList2, sharedViewModel.chuckList3)
-                        SimpleLazyRow(sharedViewModel.gameListData)
+                        RecommendLazyRow(sharedViewModel.gameListData)
                         Spacer(modifier = Modifier
                             .height(16.dp)
                         )

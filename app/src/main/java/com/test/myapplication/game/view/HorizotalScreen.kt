@@ -35,22 +35,23 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.compose.AsyncImagePainter
 import coil.size.Size
+import com.test.myapplication.AppUtil.randomApp
 import com.test.myapplication.R
 import com.test.myapplication.game.viewmodel.GameSharedViewModel
 import com.test.myapplication.model.AppItem
 
 @Composable
-fun SimpleLazyRow(dataList: List<AppItem>) {
+fun RecommendLazyRow(dataList: List<AppItem>) {
 
-
-//    val categories = listOf(
-//        "맞춤 추천", "도서/참고자료", "생산성", "인기 앱", "멋진 사진 촬영하기",
-//        "데이트 앱", "Innovation Corner", "연결되어 있음", "에디터 추천 앱"
-//    )
 
     val categories = listOf(
-        "맞춤 추천", "도서/참고자료"
+        "맞춤 추천", "도서/참고자료", "생산성", "인기 앱", "멋진 사진 촬영하기",
+        "데이트 앱", "Innovation Corner", "연결되어 있음", "에디터 추천 앱"
     )
+
+//    val categories = listOf(
+//        "맞춤 추천", "도서/참고자료", "생산성"
+//    )
 
     categories.forEach {
 
@@ -116,8 +117,6 @@ fun SimpleLazyRow(dataList: List<AppItem>) {
 }
 
 
-fun randomApp(list: List<AppItem>, count: Int): List<AppItem> {
-    return list.shuffled().take(count)
-}
+
 
 

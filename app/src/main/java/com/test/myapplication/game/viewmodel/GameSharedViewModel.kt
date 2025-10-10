@@ -10,7 +10,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.test.myapplication.AppUtil.getJsonFromAssets
-import com.test.myapplication.game.view.randomApp
+import com.test.myapplication.AppUtil.randomApp
 import com.test.myapplication.model.AppItem
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.tabs.TabLayoutMediator
+import com.test.myapplication.CommonData.tabTitles
 import com.test.myapplication.R
 import com.test.myapplication.databinding.FragmentAppBinding
 import com.test.myapplication.game.GameViewPagerAdapter
@@ -30,8 +31,6 @@ class AppFragment : Fragment() {
     }
 
     private fun setTabLayout() {
-        val tabTitles = listOf("추천", "인기차트", "업무용 앱", "키즈", "카테고리")
-
         val viewPager = binding.viewPager
         viewPager.adapter = AppViewPagerAdapter(this)
         viewPager.isUserInputEnabled = false

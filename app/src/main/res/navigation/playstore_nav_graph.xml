@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/fragment_book"
-        android:name="com.test.myapplication.BookFragment"
+        android:name="com.test.myapplication.book.BookFragment"
         android:label="@string/bottom_tab_book"
         tools:layout="@layout/fragment_book" />
 </navigation>

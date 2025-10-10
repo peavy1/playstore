@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.test.myapplication.AppUtil
-import com.test.myapplication.game.view.randomApp
+import com.test.myapplication.AppUtil.randomApp
 import com.test.myapplication.model.AppItem
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -25,7 +25,7 @@ class AppSharedViewModel(application: Application): AndroidViewModel(application
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
-    var gameListData = mutableListOf<AppItem>()
+    var appListData = mutableListOf<AppItem>()
     var page = 1
     private var offset = 10
     private var isListEnd = false
@@ -39,12 +39,12 @@ class AppSharedViewModel(application: Application): AndroidViewModel(application
             val jsonData = AppUtil.getJsonFromAssets(application, "list_data.json")
             jsonData?.let {
                 val listType = object : TypeToken<List<AppItem>>() {}.type
-                gameListData = Gson().fromJson(jsonData, listType)
+                appListData = Gson().fromJson(jsonData, listType)
             }
 
-            chuckList1 = randomApp(gameListData, 30).chunked(3)
-            chuckList2 = randomApp(gameListData, 30).chunked(3)
-            chuckList3 = randomApp(gameListData, 30).chunked(3)
+            chuckList1 = randomApp(appListData, 30).chunked(3)
+            chuckList2 = randomApp(appListData, 30).chunked(3)
+            chuckList3 = randomApp(appListData, 30).chunked(3)
         }
     }
 
@@ -62,14 +62,14 @@ class AppSharedViewModel(application: Application): AndroidViewModel(application
 
             val startIndex = (page - 1) * offset
             var endIndex = startIndex + offset
-            if (endIndex > gameListData.size) {
-                endIndex = gameListData.size
+            if (endIndex > appListData.size) {
+                endIndex = appListData.size
                 isListEnd = true
             }
 
 
             if (startIndex < endIndex) {
-                val newItems = gameListData.subList(startIndex, endIndex)
+                val newItems = appListData.subList(startIndex, endIndex)
                 _appRankList.value = _appRankList.value + newItems
                 page++
             }

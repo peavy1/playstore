@@ -81,15 +81,14 @@ fun SearchHeader() {
 fun ProfileIcon() {
     Card(
         modifier = Modifier.size(35.dp),
-        shape = CircleShape, // cardCornerRadius를 원형으로 처리
+        shape = CircleShape,
         colors = CardDefaults.cardColors(
-            containerColor = Color(0xFF7E57C2) // cardBackgroundColor
+            containerColor = Color(0xFF7E57C2)
         ),
         elevation = CardDefaults.cardElevation(
-            defaultElevation = 0.dp // cardElevation
+            defaultElevation = 0.dp
         )
     ) {
-        // TextView와 gravity="center"를 구현
         Box(
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
@@ -97,7 +96,7 @@ fun ProfileIcon() {
             Text(
                 text = "P",
                 color = Color.White,
-                fontSize = 20.sp // sp 단위를 사용하는 것을 권장
+                fontSize = 20.sp
             )
         }
     }

@@ -42,7 +42,7 @@ import com.test.myapplication.CommonData.searchGame
 import com.test.myapplication.R
 
 @Composable
-fun SearchGameSection() {
+fun SearchSection() {
     Column {
         Text(
             text = "게임 검색",
@@ -85,8 +85,6 @@ fun searchRecommend() {
             color = Color.Black,
             modifier = Modifier.padding(bottom = 12.dp)
         )
-
-        // https://play-lh.googleusercontent.com/bpiLHv_Nvsa4Iv_KIfboxKBtKM6B5n19ftEdLq8iPFvSLSvgS_xjTrf4GMMmVE28hQ=s256-rw
         Row(
             modifier = Modifier
                 .fillMaxWidth()
