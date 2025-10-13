@@ -6,10 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.tabs.TabLayoutMediator
-import com.test.myapplication.CommonData.tabTitles
-import com.test.myapplication.R
 import com.test.myapplication.databinding.FragmentAppBinding
-import com.test.myapplication.game.GameViewPagerAdapter
 
 
 class AppFragment : Fragment() {
@@ -31,15 +28,13 @@ class AppFragment : Fragment() {
     }
 
     private fun setTabLayout() {
+        val appViewPagerAdapter = AppViewPagerAdapter(this)
         val viewPager = binding.viewPager
-        viewPager.adapter = AppViewPagerAdapter(this)
+        viewPager.adapter = appViewPagerAdapter
         viewPager.isUserInputEnabled = false
-
-//        viewPager.offscreenPageLimit = tabTitles.size
-
         val tabLayout = binding.tabLayout
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = tabTitles[position]
+            tab.setText(appViewPagerAdapter.getTitle(position))
         }.attach()
     }
 

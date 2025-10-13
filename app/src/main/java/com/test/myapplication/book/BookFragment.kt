@@ -18,7 +18,7 @@ import com.test.myapplication.search.view.SearchHeader
 
 class BookFragment : Fragment() {
 
-    private val sharedViewModel: BookSharedViewModel by activityViewModels()
+    private val sharedViewModel: BookViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

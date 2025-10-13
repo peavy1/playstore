@@ -7,6 +7,18 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="game_tab_recommend">추천</string>
+    <string name="game_tab_popular">인기 차트</string>
+    <string name="game_tab_kids">키즈</string>
+    <string name="game_tab_new">신규</string>
+    <string name="game_tab_category">카테고리</string>
+
+    <string name="app_tab_recommend">추천</string>
+    <string name="app_tab_popular">인기 차트</string>
+    <string name="app_tab_work">업무용 앱</string>
+    <string name="app_tab_kids">키즈</string>
+    <string name="app_tab_category">카테고리</string>
+
     <string name="long_scrollable_text">
         스크롤 테스트를 위한 텍스트입니다. \n\n
         CoordinatorLayout은 자식 뷰 간의 복잡한 상호작용을 쉽게 만들어 줍니다.\n

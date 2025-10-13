@@ -1,9 +1,7 @@
-package com.test.myapplication.game.view
+package com.test.myapplication.view
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,7 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -37,9 +34,8 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.compose.AsyncImagePainter
 import coil.request.ImageRequest
-import com.test.myapplication.AppUtil.toPx
+import com.test.myapplication.util.AppUtil.toPx
 import com.test.myapplication.R
-import com.test.myapplication.game.viewmodel.GameSharedViewModel
 import com.test.myapplication.model.AppItem
 
 @Composable

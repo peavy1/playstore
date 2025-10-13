@@ -3,9 +3,6 @@ package com.test.myapplication
 import com.test.myapplication.model.SlideItem
 
 object CommonData {
-
-    val tabTitles = listOf("추천", "인기차트", "업무용 앱", "키즈", "카테고리")
-
     val items = listOf(
         SlideItem(
             slideImage = "https://play-lh.googleusercontent.com/AzvDWq-V8Uep8kqaaSq-ZEFqKn2F-MWBu_gaw0yD7g6TQtaFsW7SxCU_48_SREuX5ZuXXM4_uRo=w648-h364-rw",

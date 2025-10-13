@@ -1,20 +1,21 @@
-package com.test.myapplication.app
+package com.test.myapplication.game
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.test.myapplication.AppUtil
-import com.test.myapplication.AppUtil.randomApp
+import com.test.myapplication.util.AppUtil.getJsonFromAssets
+import com.test.myapplication.util.AppUtil.randomApp
 import com.test.myapplication.model.AppItem
+import com.test.myapplication.util.Constants.GAME_LIST_JSON
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class AppSharedViewModel(application: Application): AndroidViewModel(application) {
+class GameSViewModel(application: Application): AndroidViewModel(application) {
 
     private val _appList = MutableStateFlow<List<AppItem>>(emptyList())
     val appList = _appList.asStateFlow()
@@ -25,26 +26,26 @@ class AppSharedViewModel(application: Application): AndroidViewModel(application
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
-    var appListData = mutableListOf<AppItem>()
+    var allGameApps = mutableListOf<AppItem>()
     var page = 1
     private var offset = 10
     private var isListEnd = false
 
-    lateinit var chuckList1: List<List<AppItem>>
-    lateinit var chuckList2: List<List<AppItem>>
-    lateinit var chuckList3: List<List<AppItem>>
+    lateinit var popularFreeApps: List<List<AppItem>>
+    lateinit var highestSales: List<List<AppItem>>
+    lateinit var popularPaidApps: List<List<AppItem>>
 
     init {
         viewModelScope.launch {
-            val jsonData = AppUtil.getJsonFromAssets(application, "list_data.json")
+            val jsonData = getJsonFromAssets(application, GAME_LIST_JSON)
             jsonData?.let {
                 val listType = object : TypeToken<List<AppItem>>() {}.type
-                appListData = Gson().fromJson(jsonData, listType)
+                allGameApps = Gson().fromJson(jsonData, listType)
             }
 
-            chuckList1 = randomApp(appListData, 30).chunked(3)
-            chuckList2 = randomApp(appListData, 30).chunked(3)
-            chuckList3 = randomApp(appListData, 30).chunked(3)
+            popularFreeApps = randomApp(allGameApps, 20).chunked(3)
+            highestSales = randomApp(allGameApps, 20).chunked(3)
+            popularPaidApps = randomApp(allGameApps, 20).chunked(3)
         }
     }
 
@@ -62,14 +63,14 @@ class AppSharedViewModel(application: Application): AndroidViewModel(application
 
             val startIndex = (page - 1) * offset
             var endIndex = startIndex + offset
-            if (endIndex > appListData.size) {
-                endIndex = appListData.size
+            if (endIndex > allGameApps.size) {
+                endIndex = allGameApps.size
                 isListEnd = true
             }
 
 
             if (startIndex < endIndex) {
-                val newItems = appListData.subList(startIndex, endIndex)
+                val newItems = allGameApps.subList(startIndex, endIndex)
                 _appRankList.value = _appRankList.value + newItems
                 page++
             }

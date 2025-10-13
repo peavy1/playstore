@@ -1,4 +1,4 @@
-package com.test.myapplication
+package com.test.myapplication.util
 
 import android.content.Context
 import androidx.compose.runtime.Composable
@@ -22,7 +22,7 @@ object AppUtil {
         return with(LocalDensity.current) { this@toPx.toPx() }.toInt()
     }
 
-    fun randomApp(list: List<AppItem>, count: Int): List<AppItem> {
+    fun <T> randomApp(list: List<T>, count: Int): List<T> {
         return list.shuffled().take(count)
     }
 

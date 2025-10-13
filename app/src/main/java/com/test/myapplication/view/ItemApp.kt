@@ -1,4 +1,4 @@
-package com.test.myapplication.game.view
+package com.test.myapplication.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

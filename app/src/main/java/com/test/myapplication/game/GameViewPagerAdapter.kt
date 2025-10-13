@@ -1,23 +1,29 @@
 package com.test.myapplication.game
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.test.myapplication.game.fragment.GameItemFragment
-import com.test.myapplication.game.fragment.GamePopularFragment
-import com.test.myapplication.game.fragment.GameRecommendFragment
 
 class GameViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
-    override fun getItemCount(): Int = 5
+
+    private val tabs = listOf(
+        GameTab.Recommend(),
+        GameTab.Rank(),
+        GameTab.Work(),
+        GameTab.New(),
+        GameTab.Category()
+    )
+
+    private val fragments = tabs.map { tab -> tab.getFragment() }
+
+    override fun getItemCount(): Int = tabs.size
 
     override fun createFragment(position: Int): Fragment {
-        return when (position) {
-            0 -> GameRecommendFragment()
-            1 -> GameItemFragment()
-            2 -> GamePopularFragment()
-            3 -> GamePopularFragment()
-            4 -> GamePopularFragment()
-            else -> throw IllegalArgumentException("Invalid position: $position")
-        }
+       return fragments[position]
     }
+
+    fun getTitle(position: Int): Int {
+        return tabs[position].titleId
+    }
+
 }
+
