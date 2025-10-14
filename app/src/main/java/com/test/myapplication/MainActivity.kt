@@ -2,14 +2,18 @@ package com.test.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import com.test.myapplication.api.RetrofitInstance.api
 import com.test.myapplication.databinding.ActivityMainBinding
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {
@@ -21,7 +25,77 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupJetpackNavigation()
+//        fetchAppDetails("com.kakao.talk")
     }
+
+
+    fun fetchAppDetails(appId: String) {
+        // viewModelScope를 사용해 Coroutine 실행 (비동기 처리)
+        lifecycleScope.launch {
+            try {
+                val details = api.getAppDetails(appId)
+                Log.d("peavyaaa", details.toString())
+            } catch (e: Exception) {
+                Log.d("peavyaaa", "fail")
+            }
+        }
+
+        lifecycleScope.launch {
+            try {
+                val result = api.searchApps("지하철")
+                Log.d("peavybbb", result.toString())
+            } catch (e: Exception) {
+                Log.d("peavybbb", "fail")
+            }
+
+        }
+
+        lifecycleScope.launch {
+            try {
+                val editorsChoiceList = api.getEditorsChoice()
+                Log.d("peavyddd", editorsChoiceList.toString())
+            } catch (e: Exception) {
+                Log.d("peavyddd", "fail")
+            }
+        }
+
+
+        lifecycleScope.launch {
+            try {
+                val appList = api.getAppsByCategory("뷰티")
+                // 받아온 앱 목록을 LiveData에 담아서 RecyclerView 등에 표시
+                Log.d("peavyeee", appList.toString())
+            } catch (e: Exception) {
+
+            }
+        }
+
+        lifecycleScope.launch {
+            try {
+                val appList = api.getTopChartByCategory("소셜", "free")
+                // 받아온 앱 목록을 LiveData에 담아서 RecyclerView 등에 표시
+                Log.d("peavyfff", appList.toString())
+            } catch (e: Exception) {
+
+            }
+        }
+
+
+        fetchTopCharts("grossing")
+    }
+
+    // MainViewModel.kt
+    fun fetchTopCharts(chartType: String) {
+        lifecycleScope.launch {
+            try {
+                val chartList = api.getTopCharts(chartType)
+                Log.d("peavycc", chartList.toString())
+            } catch (e: Exception) {
+                Log.d("peavycc", "fail")
+            }
+        }
+    }
+
 
     private fun setupJetpackNavigation() {
         val host = supportFragmentManager
