@@ -4,7 +4,6 @@
     <string name="bottom_tab_app">앱</string>
     <string name="bottom_tab_search">검색</string>
     <string name="bottom_tab_book">도서</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="game_tab_recommend">추천</string>
@@ -18,6 +17,32 @@
     <string name="app_tab_work">업무용 앱</string>
     <string name="app_tab_kids">키즈</string>
     <string name="app_tab_category">카테고리</string>
+
+    <string name="containsAds">광고 포함</string>
+    <string name="inAppPurchases">인앱 구매</string>
+    <string name="download">다운로드</string>
+    <string name="age_all">전체이용가</string>
+    <string name="age_strict">청소년이용불가</string>
+    <string name="age_strict_num">19</string>
+    <string name="review">"리뷰 "</string>
+    <string name="quantity">개</string>
+    <string name="quantity_ten_thousand">만개</string>
+
+    <string name="billion_100">100억회 이상</string>
+    <string name="billion_50">50억회 이상</string>
+    <string name="billion_10">10억회 이상</string>
+    <string name="billion_5">5억회 이상</string>
+    <string name="billion_1">1억회 이상</string>
+    <string name="million_50">5천만회 이상</string>
+    <string name="million_10">1천만회 이상</string>
+    <string name="million_5">500만회 이상</string>
+    <string name="million_1">100만회 이상</string>
+    <string name="five_hs">50만회 이상</string>
+    <string name="one_hs">10만회 이상</string>
+    <string name="fifty_t">5만회 이상</string>
+    <string name="ten_t">1만회 이상</string>
+    <string name="etc_count">회 이상</string>
+    <string name="none_count">0회</string>
 
     <string name="long_scrollable_text">
         스크롤 테스트를 위한 텍스트입니다. \n\n

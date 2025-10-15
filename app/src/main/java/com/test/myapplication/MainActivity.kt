@@ -30,10 +30,10 @@ class MainActivity : AppCompatActivity() {
 
 
     fun fetchAppDetails(appId: String) {
-        // viewModelScope를 사용해 Coroutine 실행 (비동기 처리)
         lifecycleScope.launch {
             try {
                 val details = api.getAppDetails(appId)
+                details.icon
                 Log.d("peavyaaa", details.toString())
             } catch (e: Exception) {
                 Log.d("peavyaaa", "fail")
@@ -73,7 +73,6 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 val appList = api.getTopChartByCategory("소셜", "free")
-                // 받아온 앱 목록을 LiveData에 담아서 RecyclerView 등에 표시
                 Log.d("peavyfff", appList.toString())
             } catch (e: Exception) {
 

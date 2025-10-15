@@ -1,7 +1,12 @@
 package com.test.myapplication.view
 
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -22,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
@@ -31,13 +37,35 @@ import coil.compose.AsyncImage
 import coil.compose.AsyncImagePainter
 import coil.request.ImageRequest
 import com.test.myapplication.R
+import com.test.myapplication.detail.DetailActivity
 import com.test.myapplication.model.AppItem
+import com.test.myapplication.util.Constants.EXTRA_APP_ID
+
 
 @Composable
-fun ItemApp(index: Int, appItem: AppItem) {
+fun ItemApp(index: Int,
+            appItem: AppItem
+) {
+
+    val context = LocalContext.current
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .pointerInput(Unit) {
+                detectTapGestures(
+                    onPress = { offset ->
+
+                    },
+                    onTap = { _ ->
+                        val intent = Intent(context, DetailActivity::class.java).apply {
+                            putExtra(EXTRA_APP_ID, appItem.appId)
+                        }
+                        context.startActivity(intent)
+
+                    }
+                )
+            }
             .padding(vertical = 15.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -60,8 +88,6 @@ fun ItemApp(index: Int, appItem: AppItem) {
             )
             .clip(RoundedCornerShape(16.dp))
 
-
-        val context = LocalContext.current
         val imageRequest = remember(appItem.imageUrl) {
             ImageRequest.Builder(context)
                 .data(appItem.imageUrl)
@@ -69,7 +95,6 @@ fun ItemApp(index: Int, appItem: AppItem) {
                 .allowRgb565(true)
                 .build()
         }
-
 
         AsyncImage(
             model = imageRequest,
