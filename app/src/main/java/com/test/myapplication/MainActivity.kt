@@ -26,8 +26,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupJetpackNavigation()
 //        fetchAppDetails("com.kakao.talk")
+//        fetchReviews("com.kakao.talk")
     }
 
+
+    fun fetchReviews(appId: String) {
+        lifecycleScope.launch {
+            try {
+                val response = api.getReviews(appId = appId, sortBy = "newest", count = 100)
+                Log.d("peavyfffff", response.toString())
+            } catch (e: Exception) {
+                // 에러 처리
+                Log.d("peavyfffff", "fail")
+            }
+        }
+    }
 
     fun fetchAppDetails(appId: String) {
         lifecycleScope.launch {

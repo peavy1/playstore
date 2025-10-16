@@ -33,6 +33,7 @@ import com.test.myapplication.CommonData.items
 import com.test.myapplication.R
 import com.test.myapplication.model.AppDetails
 import com.test.myapplication.util.Constants.EXTRA_APP_ID
+import com.test.myapplication.view.detail.AppInfoSection
 import com.test.myapplication.view.detail.TopSection
 import com.test.myapplication.view.detail.TopSubSection
 
@@ -83,7 +84,7 @@ fun CollapsingToolbarScreen(details: AppDetails?) {
                     IconButton(onClick = {   }) {
                         Icon(
                             painter = painterResource(id = R.drawable.baseline_arrow_back_24),
-                            contentDescription = "뒤로 가기"
+                            contentDescription = ""
                         )
                     }
                 },
@@ -117,6 +118,7 @@ fun CollapsingToolbarScreen(details: AppDetails?) {
             item {
                 TopSection(details)
                 TopSubSection(details)
+                AppInfoSection(details)
             }
         }
     }
