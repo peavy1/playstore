@@ -3,8 +3,13 @@ package com.test.myapplication.util
 import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.sp
 import com.test.myapplication.model.AppItem
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 object AppUtil {
 
@@ -24,6 +29,25 @@ object AppUtil {
 
     fun <T> randomApp(list: List<T>, count: Int): List<T> {
         return list.shuffled().take(count)
+    }
+
+    fun createLineSpacingExtraStyle(fontSize: TextUnit, extraSpacing: TextUnit): TextStyle {
+        return TextStyle(
+            fontSize = fontSize,
+            lineHeight = (fontSize.value + extraSpacing.value).sp
+        )
+    }
+
+    fun score(score: Double): String {
+        val decimalFormat = DecimalFormat("#.0")
+        decimalFormat.roundingMode = RoundingMode.FLOOR
+        return decimalFormat.format(score)
+    }
+
+    fun ratingCount(rating: Int): String {
+        val formatter = DecimalFormat("#,###")
+        val formattedString = formatter.format(rating)
+        return formattedString
     }
 
 }

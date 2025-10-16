@@ -34,6 +34,7 @@ import com.test.myapplication.R
 import com.test.myapplication.model.AppDetails
 import com.test.myapplication.util.Constants.EXTRA_APP_ID
 import com.test.myapplication.view.detail.AppInfoSection
+import com.test.myapplication.view.detail.ReviewSection
 import com.test.myapplication.view.detail.TopSection
 import com.test.myapplication.view.detail.TopSubSection
 
@@ -45,7 +46,7 @@ class DetailActivity : ComponentActivity() {
         setContent {
             val appId = intent.getStringExtra(EXTRA_APP_ID) ?: ""
             val viewModel = DetailViewModel()
-            viewModel.getDetail(appId)
+//            viewModel.getDetail(appId)
 
             DetailScreen(
                 appId = appId,
@@ -119,6 +120,7 @@ fun CollapsingToolbarScreen(details: AppDetails?) {
                 TopSection(details)
                 TopSubSection(details)
                 AppInfoSection(details)
+                ReviewSection(details)
             }
         }
     }

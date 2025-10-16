@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
@@ -39,6 +38,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
@@ -46,6 +46,8 @@ import coil.compose.AsyncImagePainter
 import coil.request.ImageRequest
 import com.test.myapplication.R
 import com.test.myapplication.model.AppDetails
+import androidx.compose.ui.text.TextStyle
+import com.test.myapplication.util.AppUtil.createLineSpacingExtraStyle
 
 @Composable
 fun AppInfoSection(details: AppDetails) {
@@ -71,7 +73,7 @@ fun AppInfo(context: Context, summary: String) {
             modifier = Modifier.padding(top = 24.dp, bottom = 12.dp),
             fontSize = 20.sp,
             fontFamily = FontFamily.SansSerif,
-            fontWeight = FontWeight.Medium,
+            fontWeight = FontWeight.W200,
             color = Color.Black,
         )
 
@@ -100,7 +102,7 @@ fun SecurityInfo(context: Context) {
         Text(
             text = context.getString(R.string.security_info),
             fontSize = 14.sp,
-            letterSpacing = 0.6.sp,
+            style = createLineSpacingExtraStyle(fontSize = 14.sp, extraSpacing = 4.sp),
             color = Color.Black,
         )
     }
@@ -149,6 +151,5 @@ fun Install(context: Context) {
             fontSize = 14.sp
         )
     }
-
-
 }
+

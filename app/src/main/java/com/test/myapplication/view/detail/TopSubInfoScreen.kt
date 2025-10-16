@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.test.myapplication.R
 import com.test.myapplication.model.AppDetails
+import com.test.myapplication.util.AppUtil.score
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
@@ -147,11 +148,6 @@ fun TopSubSection(details: AppDetails) {
     }
 }
 
-fun score(score: Double): String {
-    val decimalFormat = DecimalFormat("#.0")
-    decimalFormat.roundingMode = RoundingMode.FLOOR
-    return decimalFormat.format(score)
-}
 
 fun Int.toManFormat(context: Context): String {
     val formatter = DecimalFormat("###,###")

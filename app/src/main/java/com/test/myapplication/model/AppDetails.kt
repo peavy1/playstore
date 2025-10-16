@@ -62,18 +62,8 @@ data class AppDetails(
     val containsAds: Boolean,
 
     @SerializedName("offersIAP")   // 인앱 구매 여부를 나타내는 Boolean 값
-    val offersInAppPurchases: Boolean
-) {
-   /* val purchaseInfoText: String
-        get() = buildList {
-            if (containsAds) add("광고 포함")
-            if (offersInAppPurchases) add("인앱 구매")
-        }.joinToString(separator = " • ")*/
+    val offersInAppPurchases: Boolean,
 
-
-    val purchaseInfoText: String
-        get() = buildList {
-            if (containsAds) add(R.string.containsAds)
-            if (offersInAppPurchases) add(R.string.inAppPurchases)
-        }.joinToString(separator = " • ")
-}
+    @SerializedName("histogram")
+    val histogram: List<Int>
+)
