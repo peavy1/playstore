@@ -1,7 +1,6 @@
-package com.test.myapplication.view.detail
+package com.test.myapplication.detail.view
 
 import android.content.Context
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,12 +14,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -34,14 +30,12 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.AsyncImagePainter.State.Empty.painter
-import coil.size.Size
 import com.test.myapplication.R
 import com.test.myapplication.model.AppDetails
 import com.test.myapplication.util.AppUtil.createLineSpacingExtraStyle
-import com.test.myapplication.util.AppUtil.ratingCount
-import com.test.myapplication.util.AppUtil.score
-import java.text.DecimalFormat
+import com.test.myapplication.util.Constants.STAR_COUNT
+import com.test.myapplication.util.Formatters.ratingCount
+import com.test.myapplication.util.Formatters.score
 import kotlin.math.ceil
 import kotlin.math.floor
 
@@ -61,7 +55,7 @@ fun ReviewSection(details: AppDetails) {
 fun RatingBar(
     modifier: Modifier = Modifier,
     rating: Float,
-    stars: Int = 5
+    stars: Int = STAR_COUNT
 ) {
     val filledStars = floor(rating).toInt()
     val halfStar = rating % 1 != 0.0f

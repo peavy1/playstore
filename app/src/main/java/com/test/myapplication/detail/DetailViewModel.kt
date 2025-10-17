@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.test.myapplication.api.RetrofitInstance.api
 import com.test.myapplication.model.AppDetails
+import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -14,10 +15,23 @@ class DetailViewModel: ViewModel() {
     private val _appDetails = MutableStateFlow<AppDetails?>(null)
     val appDetails = _appDetails.asStateFlow()
 
+//    fun getDetail(appId: String) {
+//        viewModelScope.launch {
+//            val details = api.getAppDetails(appId)
+//            _appDetails.value = details
+//        }
+//    }
+
     fun getDetail(appId: String) {
         viewModelScope.launch {
-            val details = api.getAppDetails(appId)
-            _appDetails.value = details
+            val infoDeferred = async { api.getAppDetails(appId) }
+            val reviewDeferred = async { api.getReviews(appId = appId, sortBy = "rating", count = 100) }
+            val infoResult = infoDeferred.await()
+            val reviewResult = reviewDeferred.await()
+
+            // helpfulness
+            _appDetails.value = infoResult
+
         }
     }
 

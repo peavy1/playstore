@@ -121,7 +121,6 @@ fun ItemApp(index: Int,
             Row(
                 modifier = Modifier
                     .clip(RoundedCornerShape(8.dp))
-//                                .background(Color(0xFFEEEEEE))
                     .background(Color(0xFFF7EFEF))
                     .padding(horizontal = 6.dp, vertical = 2.dp),
                 verticalAlignment = Alignment.CenterVertically

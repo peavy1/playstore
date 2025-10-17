@@ -38,16 +38,12 @@ object AppUtil {
         )
     }
 
-    fun score(score: Double): String {
-        val decimalFormat = DecimalFormat("#.0")
-        decimalFormat.roundingMode = RoundingMode.FLOOR
-        return decimalFormat.format(score)
+    fun String.extractLeadingNumber(): String {
+        val numberPart = this.takeWhile { it.isDigit() }
+        return numberPart.ifEmpty {
+            this
+        }
     }
 
-    fun ratingCount(rating: Int): String {
-        val formatter = DecimalFormat("#,###")
-        val formattedString = formatter.format(rating)
-        return formattedString
-    }
 
 }

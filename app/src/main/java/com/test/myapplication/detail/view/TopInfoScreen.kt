@@ -1,4 +1,4 @@
-package com.test.myapplication.view.detail
+package com.test.myapplication.detail.view
 
 import android.content.Context
 import androidx.compose.animation.core.animateDpAsState
@@ -47,7 +47,7 @@ fun TopSection(details: AppDetails) {
                 durationMillis = 50,
                 delayMillis = 100
             ),
-            label = "elevationAnimation"
+            label = ""
         )
 
         val imageModifier = Modifier

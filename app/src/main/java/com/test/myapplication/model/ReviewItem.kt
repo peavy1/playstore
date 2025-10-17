@@ -1,11 +1,17 @@
 package com.test.myapplication.model
 
-// ReviewItem.kt
 import com.google.gson.annotations.SerializedName
 
 data class ReviewItem(
+
+    @SerializedName("reviewId")
+    val reviewId: String,
+
     @SerializedName("userName")
     val userName: String,
+
+    @SerializedName("userImage")
+    val userImage: String,
 
     @SerializedName("content")
     val content: String,
@@ -13,7 +19,22 @@ data class ReviewItem(
     @SerializedName("score")
     val score: Int,
 
-    @SerializedName("at") // 리뷰 작성 시간 (타임스탬프)
-    val timestamp: Long
-)
+    @SerializedName("thumbsUpCount")
+    val thumbsUpCount: Int,
 
+    @SerializedName("at")
+    val at: String,
+
+    @SerializedName("replyContent")
+    val replyContent: String?,
+
+    @SerializedName("repliedAt")
+    val repliedAt: String?,
+
+    @SerializedName("appVersion")
+    val appVersion: String,
+
+    @SerializedName("reviewCreatedVersion")
+    val reviewCreatedVersion: String
+
+)

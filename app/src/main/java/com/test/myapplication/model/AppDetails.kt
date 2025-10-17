@@ -5,63 +5,63 @@ import com.test.myapplication.R
 
 data class AppDetails(
     @SerializedName("title")
-    val title: String, // 앱 제목
+    val title: String,
 
     @SerializedName("description")
-    val description: String, // 전체 상세 설명
+    val description: String,
 
     @SerializedName("summary")
-    val summary: String, // 한 줄 요약
+    val summary: String,
 
     @SerializedName("icon")
-    val icon: String, // 아이콘 이미지 URL
+    val icon: String,
 
     @SerializedName("headerImage")
-    val headerImage: String, // 헤더 배너 이미지 URL
+    val headerImage: String,
 
     @SerializedName("screenshots")
-    val screenshots: List<String>, // 스크린샷 이미지 URL 리스트!
+    val screenshots: List<String>,
 
     @SerializedName("score")
-    val score: Double, // 평균 평점 (예: 4.5)
+    val score: Double,
 
     @SerializedName("ratings")
-    val ratings: Int, // 평점 개수 (예: 12345)
+    val ratings: Int,
 
     @SerializedName("reviews")
-    val reviews: Int, // 리뷰 개수 (예: 5432)
+    val reviews: Int,
 
     @SerializedName("installs")
-    val installs: String, // 설치 수 (문자열, 예: "1,000,000+")
+    val installs: String,
 
     @SerializedName("minInstalls")
     val minInstalls: Long,
 
     @SerializedName("realInstalls")
-    val realInstalls: Long, // 실제 설치 수 (숫자)
+    val realInstalls: Long,
 
     @SerializedName("developer")
-    val developer: String, // 개발사 이름
+    val developer: String,
 
     @SerializedName("genre")
-    val genre: String, // 앱 장르
+    val genre: String,
 
     @SerializedName("released")
-    val released: String?, // 출시일
+    val released: String?,
 
     @SerializedName("updated")
-    val updated: Long, // 마지막 업데이트 타임스탬프 (숫자)
+    val updated: Long,
 
     @SerializedName("version")
-    val version: String?, // 앱 버전 (예: "1.2.3")
+    val version: String?,
 
     @SerializedName("contentRating")
-    val contentRating: String, // 연령 등급 (예: "전체이용가")
+    val contentRating: String,
 
-    @SerializedName("adSupported")  // 광고 포함 여부를 나타내는 Boolean 값
+    @SerializedName("adSupported")
     val containsAds: Boolean,
 
-    @SerializedName("offersIAP")   // 인앱 구매 여부를 나타내는 Boolean 값
+    @SerializedName("offersIAP")
     val offersInAppPurchases: Boolean,
 
     @SerializedName("histogram")

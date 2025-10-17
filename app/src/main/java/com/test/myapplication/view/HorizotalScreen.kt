@@ -25,25 +25,14 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
+import com.test.myapplication.CommonData.recommendCategory
 import com.test.myapplication.util.AppUtil.randomApp
 import com.test.myapplication.R
 import com.test.myapplication.model.AppItem
 
 @Composable
 fun RecommendLazyRow(dataList: List<AppItem>) {
-
-
-    val categories = listOf(
-        "맞춤 추천", "도서/참고자료", "생산성", "인기 앱", "멋진 사진 촬영하기",
-        "데이트 앱", "Innovation Corner", "연결되어 있음", "에디터 추천 앱"
-    )
-
-//    val categories = listOf(
-//        "맞춤 추천", "도서/참고자료", "생산성"
-//    )
-
-    categories.forEach {
-
+    recommendCategory.forEach {
         Column {
             Text(
                 text = it,
@@ -79,7 +68,6 @@ fun RecommendLazyRow(dataList: List<AppItem>) {
                         Row(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(8.dp))
-//                                .background(Color(0xFFEEEEEE))
                                 .background(Color(0xFFF7EFEF))
                                 .padding(horizontal = 6.dp, vertical = 2.dp),
                             verticalAlignment = Alignment.CenterVertically

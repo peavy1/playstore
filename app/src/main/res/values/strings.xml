@@ -4,7 +4,6 @@
     <string name="bottom_tab_app">앱</string>
     <string name="bottom_tab_search">검색</string>
     <string name="bottom_tab_book">도서</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="game_tab_recommend">추천</string>
     <string name="game_tab_popular">인기 차트</string>
@@ -50,6 +49,18 @@
     <string name="security_info">보안은 개발자가 데이터를 수집 및 공유하는 방식을 파악하는 것에서 시작됩니다. 데이터 개인 정보 보호 및 보안 관행은 사용자의 앱 사용, 지역, 연령에 따라 다를 수 있습니다. 다음은 개발자가 제공한 정보이며 추후 업데이트될 수 있습니다</string>
     <string name="review_title">평점 및 리뷰</string>
     <string name="review_info">Google에서 검증한 평점 및 리뷰로 나와 동일한 유형의 기기 사용자가 게시한 것입니다.</string>
+
+    <string name="popular_free">인기 무료</string>
+    <string name="highest_sales">최고 매출</string>
+    <string name="popular_paid">인기 유료</string>
+
+
+
+
+
+
+
+
 
     <string name="long_scrollable_text">
         스크롤 테스트를 위한 텍스트입니다. \n\n

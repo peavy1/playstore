@@ -1,4 +1,4 @@
-package com.test.myapplication.view.detail
+package com.test.myapplication.detail.view
 
 import android.content.Context
 import androidx.compose.foundation.Image
@@ -9,33 +9,29 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.test.myapplication.R
 import com.test.myapplication.model.AppDetails
-import com.test.myapplication.util.AppUtil.score
-import java.math.RoundingMode
+import com.test.myapplication.util.AppUtil.extractLeadingNumber
+import com.test.myapplication.util.Formatters.score
+import com.test.myapplication.util.Formatters.toDownloadTier
 import java.text.DecimalFormat
 
 @Composable
@@ -65,7 +61,7 @@ fun TopSubSection(details: AppDetails) {
                 Image(
                     painterResource(id = R.drawable.baseline_star_24),
                     contentDescription = "",
-                    modifier = Modifier.size(10.dp),
+                    modifier = Modifier.size(14.dp),
                 )
             }
             Spacer(modifier = Modifier.height(4.dp))
@@ -161,33 +157,6 @@ fun Int.toManFormat(context: Context): String {
     }
 }
 
-fun Long.toDownloadTier(context: Context): String {
-    val formatter = DecimalFormat("#,###")
-    return when {
-        this >= 10_000_000_000L -> context.getString(R.string.billion_100)
-        this >= 5_000_000_000L -> context.getString(R.string.billion_50)
-        this >= 1_000_000_000L -> context.getString(R.string.billion_10)
-        this >= 500_000_000L -> context.getString(R.string.billion_5)
-        this >= 100_000_000L -> context.getString(R.string.billion_1)
-        this >= 50_000_000L -> context.getString(R.string.million_50)
-        this >= 10_000_000L -> context.getString(R.string.million_10)
-        this >= 5_000_000L -> context.getString(R.string.million_5)
-        this >= 1_000_000L -> context.getString(R.string.million_1)
-        this >= 500_000L -> context.getString(R.string.five_hs)
-        this >= 100_000L -> context.getString(R.string.one_hs)
-        this >= 50_000L -> context.getString(R.string.fifty_t)
-        this >= 10_000L -> context.getString(R.string.ten_t)
-        this >= 5_000L -> "${formatter.format(5_000)}${context.getString(R.string.etc_count)}"
-        this >= 1_000L -> "${formatter.format(1_000)}${context.getString(R.string.etc_count)}"
-        this >= 500L -> "${formatter.format(500)}${context.getString(R.string.etc_count)}"
-        this >= 100L -> "${formatter.format(100)}${context.getString(R.string.etc_count)}"
-        this >= 10L -> "${formatter.format(10)}${context.getString(R.string.etc_count)}"
-        this >= 5L -> "${formatter.format(5)}${context.getString(R.string.etc_count)}"
-        this >= 1L -> "${formatter.format(1)}${context.getString(R.string.etc_count)}"
-        else -> context.getString(R.string.none_count)
-    }
-}
-
 
 @Composable
 fun AgeRatingIcon(context: Context, rating: String, age: (String) -> Unit) {
@@ -199,7 +168,6 @@ fun AgeRatingIcon(context: Context, rating: String, age: (String) -> Unit) {
     }
 
     val isDigit = contentRating.any { it.isDigit() }
-
     age.invoke(rating)
 
     if(isDigit) {
@@ -234,11 +202,5 @@ fun AgeRatingIcon(context: Context, rating: String, age: (String) -> Unit) {
 
 }
 
-fun String.extractLeadingNumber(): String {
-    val numberPart = this.takeWhile { it.isDigit() }
-    return numberPart.ifEmpty {
-        this
-    }
-}
 
 

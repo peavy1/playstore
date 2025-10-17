@@ -40,49 +40,53 @@ import com.test.myapplication.model.AppItem
 
 @Composable
 fun RankView(
-    appList1: List<List<AppItem>>,
-    appList2: List<List<AppItem>>,
-    appList3: List<List<AppItem>>
+    popularFreeApps: List<List<AppItem>>,
+    highestSales: List<List<AppItem>>,
+    popularPaidApps: List<List<AppItem>>
 ) {
+
+    val context = LocalContext.current
 
     Column(
         modifier = Modifier.padding(top = 34.dp, bottom = 10.dp)
     ) {
 
-        var type1 by remember { mutableStateOf(true) }
-        var type2 by remember { mutableStateOf(false) }
-        var type3 by remember { mutableStateOf(false) }
+        var buttonFree by remember { mutableStateOf(true) }
+        var buttonHighest by remember { mutableStateOf(false) }
+        var buttonPaid by remember { mutableStateOf(false) }
 
         Text(
-            text = if(type1) "인기 무료" else if(type2) "최고 매출" else "인기 유료",
+            text =
+            if(buttonFree)
+                context.getString(R.string.popular_free)
+            else if(buttonHighest)
+                context.getString(R.string.highest_sales)
+            else
+                context.getString(R.string.popular_paid),
             fontSize = 15.sp,
             fontFamily = FontFamily.Cursive,
             color = Color.Black,
             modifier = Modifier.padding(start = 28.dp)
         )
 
-        // .background(if (type1) Color(0xFFF7EFEF) else Color(0xFFCFD5DD))
         Spacer(modifier = Modifier.height(10.dp))
-
         Row(
             modifier = Modifier.padding(start = 28.dp)
         ) {
             Row(
                 modifier = Modifier
                     .clip(RoundedCornerShape(12.dp))
-//                                .background(Color(0xFFEEEEEE))
-//                     .background(Color(0xFFF7EFEF))
-                    .background(if (type1) Color(0xFFCFD5DD) else Color(0xFFF7EFEF))
+                    .background(if (buttonFree) Color(0xFFCFD5DD) else Color(0xFFF7EFEF))
                     .padding(horizontal = 10.dp, vertical = 6.dp)
                     .clickable {
-                        type1 = true
-                        type2 = false
-                        type3 = false
+                        buttonFree = true
+                        buttonHighest = false
+                        buttonPaid = false
                     },
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "인기 무료",
+                    text = context.getString(R.string.popular_free),
                     fontSize = 13.sp,
                     fontFamily = FontFamily.SansSerif,
                     color = Color.DarkGray,
@@ -94,17 +98,17 @@ fun RankView(
             Row(
                 modifier = Modifier
                     .clip(RoundedCornerShape(12.dp))
-                    .background(if (type2) Color(0xFFCFD5DD) else Color(0xFFF7EFEF))
+                    .background(if (buttonHighest) Color(0xFFCFD5DD) else Color(0xFFF7EFEF))
                     .padding(horizontal = 10.dp, vertical = 6.dp)
                     .clickable {
-                        type1 = false
-                        type2 = true
-                        type3 = false
+                        buttonFree = false
+                        buttonHighest = true
+                        buttonPaid = false
                     },
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "최고 매출",
+                    text = context.getString(R.string.highest_sales),
                     fontSize = 13.sp,
                     fontFamily = FontFamily.SansSerif,
                     color = Color.DarkGray,
@@ -116,17 +120,17 @@ fun RankView(
             Row(
                 modifier = Modifier
                     .clip(RoundedCornerShape(12.dp))
-                    .background(if (type3) Color(0xFFCFD5DD) else Color(0xFFF7EFEF))
+                    .background(if (buttonPaid) Color(0xFFCFD5DD) else Color(0xFFF7EFEF))
                     .padding(horizontal = 10.dp, vertical = 6.dp)
                     .clickable {
-                        type1 = false
-                        type2 = false
-                        type3 = true
+                        buttonFree = false
+                        buttonHighest = false
+                        buttonPaid = true
                     },
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "인기 유료",
+                    text = context.getString(R.string.popular_paid),
                     fontSize = 13.sp,
                     fontFamily = FontFamily.SansSerif,
                     color = Color.DarkGray,
@@ -137,13 +141,12 @@ fun RankView(
         //
         Spacer(modifier = Modifier.height(10.dp))
 
-
-        if(type1) {
-            RankList(appList1)
-        } else if(type2) {
-            RankList(appList2)
-        } else if(type3) {
-            RankList(appList3)
+        if(buttonFree) {
+            RankList(popularFreeApps)
+        } else if(buttonHighest) {
+            RankList(highestSales)
+        } else if(buttonPaid) {
+            RankList(popularPaidApps)
         }
     }
 
@@ -155,10 +158,7 @@ fun RankList(
     appList: List<List<AppItem>>,
 ) {
 
-    LazyRow(
-
-    ) {
-
+    LazyRow {
         itemsIndexed(appList) {columnIndex, chunked ->
             Column {
                 chunked.forEachIndexed { rowIndex, it ->
@@ -227,7 +227,6 @@ fun RankList(
                             Row(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(8.dp))
-//                                .background(Color(0xFFEEEEEE))
                                     .background(Color(0xFFF7EFEF))
                                     .padding(horizontal = 6.dp, vertical = 2.dp),
                                 verticalAlignment = Alignment.CenterVertically
