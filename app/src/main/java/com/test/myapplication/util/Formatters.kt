@@ -4,6 +4,9 @@ import android.content.Context
 import com.test.myapplication.R
 import java.math.RoundingMode
 import java.text.DecimalFormat
+import java.time.ZoneId
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
 
 object Formatters {
     fun score(score: Double): String {
@@ -43,5 +46,11 @@ object Formatters {
             this >= 1L -> "${formatter.format(1)}${context.getString(R.string.etc_count)}"
             else -> context.getString(R.string.none_count)
         }
+    }
+
+    fun getDate(at: String): String {
+        return ZonedDateTime.parse(at, DateTimeFormatter.RFC_1123_DATE_TIME)
+            .withZoneSameInstant(ZoneId.of("Asia/Seoul"))
+            .format(DateTimeFormatter.ofPattern("yy/MM/dd"))
     }
 }

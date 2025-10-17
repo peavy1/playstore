@@ -25,9 +25,11 @@ import com.test.myapplication.R
 import com.test.myapplication.model.AppDetails
 import com.test.myapplication.util.Constants.EXTRA_APP_ID
 import com.test.myapplication.detail.view.AppInfoSection
+import com.test.myapplication.detail.view.ReviewListSection
 import com.test.myapplication.detail.view.ReviewSection
 import com.test.myapplication.detail.view.TopSection
 import com.test.myapplication.detail.view.TopSubSection
+import com.test.myapplication.model.ReviewItem
 
 
 class DetailActivity : ComponentActivity() {
@@ -53,14 +55,17 @@ fun DetailScreen(
     appId: String,
     viewModel: DetailViewModel
 ) {
-    val appDetails by viewModel.appDetails.collectAsState()
-    viewModel.getDetail(appId)
-    CollapsingToolbarScreen(details = appDetails)
+    val appData by viewModel.appData.collectAsState()
+    LaunchedEffect(key1 = appId) {
+        viewModel.getData(appId)
+    }
+    LoadDetailView(details = appData?.appDetails, reviewList = appData?.reviewList ?: emptyList())
 }
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CollapsingToolbarScreen(details: AppDetails?) {
+fun LoadDetailView(details: AppDetails?, reviewList: List<ReviewItem>) {
     if(details == null) return
 
     Scaffold(
@@ -91,6 +96,7 @@ fun CollapsingToolbarScreen(details: AppDetails?) {
                 TopSubSection(details)
                 AppInfoSection(details)
                 ReviewSection(details)
+                ReviewListSection(reviewList)
             }
         }
     }

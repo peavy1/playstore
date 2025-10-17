@@ -71,7 +71,7 @@ class AppViewModel(application: Application): AndroidViewModel(application) {
 
             if (startIndex < endIndex) {
                 val newItems = appListData.subList(startIndex, endIndex)
-                _appRankList.value = _appRankList.value + newItems
+                _appRankList.value += newItems
                 page++
             }
 

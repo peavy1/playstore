@@ -16,8 +16,6 @@ interface PlayStoreApi {
 
     @GET("reviews")
     suspend fun getReviews(
-        @Query("id") appId: String,
-        @Query("sort") sortBy: String = "newest", // 'newest', 'rating', 'helpful'
-        @Query("count") count: Int = 100
+        @Query("id") appId: String
     ): ReviewsResponse
 }
