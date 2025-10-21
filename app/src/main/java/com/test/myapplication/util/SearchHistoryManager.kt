@@ -35,7 +35,7 @@ class SearchHistoryManager(context: Context) {
             historyList.add(0, term)
 
             val updatedList = historyList.take(MAX_HISTORY_SIZE)
- 
+
             preferences[HISTORY_KEY] = Json.encodeToString(updatedList)
         }
     }
