@@ -37,11 +37,11 @@ class DetailActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val appId = intent.getStringExtra(EXTRA_APP_ID) ?: ""
             val viewModel = DetailViewModel()
+            val appId = intent.getStringExtra(EXTRA_APP_ID) ?: ""
+            viewModel.appId = appId
 
             DetailScreen(
-                appId = appId,
                 viewModel = viewModel
             )
 
@@ -52,12 +52,11 @@ class DetailActivity : ComponentActivity() {
 
 @Composable
 fun DetailScreen(
-    appId: String,
     viewModel: DetailViewModel
 ) {
     val appData by viewModel.appData.collectAsState()
-    LaunchedEffect(key1 = appId) {
-        viewModel.getData(appId)
+    LaunchedEffect(key1 = Unit) {
+        viewModel.getData()
     }
     LoadDetailView(details = appData?.appDetails, reviewList = appData?.reviewList ?: emptyList())
 }

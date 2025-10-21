@@ -1,7 +1,10 @@
 package com.test.myapplication.search.view
 
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -20,20 +23,49 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.test.myapplication.R
+import com.test.myapplication.detail.DetailActivity
+import com.test.myapplication.searchresult.SearchActivity
+import com.test.myapplication.util.Constants.EXTRA_APP_ID
 
 
 @Composable
+fun SearchHeader() {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        SearchBar(modifier = Modifier.weight(1f))
+
+        Spacer(modifier = Modifier.width(16.dp))
+
+        ProfileIcon()
+    }
+}
+
+@Composable
 fun SearchBar(modifier: Modifier = Modifier) {
+    val context = LocalContext.current
     Row(
         modifier = modifier
             .clip(RoundedCornerShape(18.dp))
             .background(Color(0xFFF7EFEF))
-            .padding(horizontal = 12.dp, vertical = 14.dp),
+            .padding(horizontal = 12.dp, vertical = 14.dp).pointerInput(Unit) {
+                detectTapGestures(
+                    onTap = { _ ->
+                        val intent = Intent(context, SearchActivity::class.java)
+                        context.startActivity(intent)
+                    }
+                )
+            },
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
@@ -55,24 +87,6 @@ fun SearchBar(modifier: Modifier = Modifier) {
             contentDescription = "음성 검색 아이콘",
             modifier = Modifier.size(20.dp),
         )
-    }
-}
-
-
-
-@Composable
-fun SearchHeader() {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        SearchBar(modifier = Modifier.weight(1f))
-
-        Spacer(modifier = Modifier.width(16.dp))
-
-        ProfileIcon()
     }
 }
 

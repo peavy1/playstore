@@ -12,7 +12,7 @@ interface PlayStoreApi {
     suspend fun getAppDetails(@Query("id") appId: String): AppDetails
 
     @GET("search")
-    suspend fun searchApps(@Query("q") query: String): List<AppSummary> // AppSummary의 리스트를 반환
+    suspend fun searchApps(@Query("q") query: String): List<AppSummary>
 
     @GET("reviews")
     suspend fun getReviews(

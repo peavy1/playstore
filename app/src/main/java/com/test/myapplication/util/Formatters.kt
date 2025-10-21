@@ -1,6 +1,8 @@
 package com.test.myapplication.util
 
 import android.content.Context
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.test.myapplication.R
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -48,6 +50,7 @@ object Formatters {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun getDate(at: String): String {
         return ZonedDateTime.parse(at, DateTimeFormatter.RFC_1123_DATE_TIME)
             .withZoneSameInstant(ZoneId.of("Asia/Seoul"))

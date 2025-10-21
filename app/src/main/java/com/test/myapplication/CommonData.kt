@@ -21,8 +21,7 @@ object CommonData {
     )
 
     val recommendCategory = listOf(
-        "맞춤 추천", "도서/참고자료", "생산성", "인기 앱", "멋진 사진 촬영하기",
-        "데이트 앱", "Innovation Corner", "연결되어 있음", "에디터 추천 앱"
+        "맞춤 추천", "도서/참고자료", "생산성"
     )
 
     val searchGame = listOf(

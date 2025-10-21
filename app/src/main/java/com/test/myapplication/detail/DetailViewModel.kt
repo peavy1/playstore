@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.supervisorScope
 
 data class AppData(
     val appDetails: AppDetails,
@@ -19,21 +20,31 @@ data class AppData(
 
 class DetailViewModel: ViewModel() {
 
+    var appId: String = ""
+
     private val _appData = MutableStateFlow<AppData?>(null)
     val appData = _appData.asStateFlow()
 
 
-    fun getData(appId: String) {
+    fun getData() {
         viewModelScope.launch {
-            val infoDeferred = async { api.getAppDetails(appId) }
-            val reviewDeferred = async { api.getReviews(appId = appId) }
-            val infoResult = infoDeferred.await()
-            val reviewResult = reviewDeferred.await()
+            try {
+                supervisorScope {
+                    val infoDeferred = async { api.getAppDetails(appId) }
+                    val reviewDeferred = async { api.getReviews(appId = appId) }
+                    val infoResult = infoDeferred.await()
+                    val reviewResult = reviewDeferred.await()
 
-            _appData.value = AppData(
-                infoResult,
-                reviewResult.reviews
-            )
+                    _appData.value = AppData(
+                        infoResult,
+                        reviewResult.reviews
+                    )
+                }
+            } catch (e: Exception) {
+                Log.d("peavyeeeesc", "알 수 없는 에러 발생: ${e.message}")
+                getData()
+            }
+
         }
     }
 

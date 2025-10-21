@@ -26,6 +26,7 @@
         </activity>
 
         <activity android:name=".detail.DetailActivity"/>
+        <activity android:name=".searchresult.SearchActivity"/>
     </application>
 
 </manifest>

@@ -14,5 +14,17 @@ data class AppSummary(
     val icon: String,
 
     @SerializedName("score")
-    val score: Double
+    val score: Double,
+
+    @SerializedName("developer")
+    val developer: String,
+
+    @SerializedName("genre")
+    val genre: String,
+
+    @SerializedName("installs")
+    val installs: String,
+
+    @SerializedName("screenshots")
+    val screenshots: List<String>
 )
