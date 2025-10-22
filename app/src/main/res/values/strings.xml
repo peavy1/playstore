@@ -42,6 +42,7 @@
     <string name="ten_t">1만회 이상</string>
     <string name="etc_count">회 이상</string>
     <string name="none_count">0회</string>
+    <string name="one_count">1회</string>
 
     <string name="install">설치</string>
     <string name="app_info">앱 정보</string>
@@ -54,8 +55,11 @@
     <string name="highest_sales">최고 매출</string>
     <string name="popular_paid">인기 유료</string>
 
-
-
+    <string name="search_placeholder">앱 및 게임 검색</string>
+    <string name="search_request_error">검색 중 오류가 발생했습니다.</string>
+    <string name="search_page_input">input</string>
+    <string name="search_page_result">result</string>
+    <string name="search_page_screen">screen</string>
 
 
 

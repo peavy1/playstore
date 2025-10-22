@@ -34,6 +34,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -44,13 +45,13 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import com.test.myapplication.R
 import com.test.myapplication.searchresult.SearchPageType
-import com.test.myapplication.searchresult.SearchResultViewModel
+import com.test.myapplication.searchresult.SearchPageViewModel
 import com.test.myapplication.searchresult.autoFocusOnShow
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchInPut(
-    viewModel: SearchResultViewModel,
+    viewModel: SearchPageViewModel,
     navController: NavHostController
 ) {
     var searchText by remember { mutableStateOf("") }
@@ -76,7 +77,7 @@ fun SearchInPut(
                         value = searchText,
                         textStyle = TextStyle(fontSize = 18.sp),
                         onValueChange = { searchText = it },
-                        placeholder = { Text("앱 및 게임 검색") },
+                        placeholder = { Text(LocalContext.current.getString(R.string.search_placeholder)) },
                         singleLine = true,
                         colors = TextFieldDefaults.colors(
                             focusedContainerColor = Color.Transparent,
@@ -91,12 +92,12 @@ fun SearchInPut(
                 },
                 actions = {
                     IconButton(onClick = {
-                        viewModel.query = searchText
+                        viewModel.search(searchText)
                         navController.navigate(SearchPageType.Result.route)
                     }) {
                         Icon(
                             imageVector = Icons.Default.Search,
-                            contentDescription = "검색"
+                            contentDescription = ""
                         )
                     }
                 }
@@ -111,9 +112,8 @@ fun SearchInPut(
                 modifier = Modifier.fillMaxWidth().height(0.5.dp).background(Color.Black)
             ) {  }
 
-            LazyColumn(
+            LazyColumn{
 
-            ) {
                 items(history) { query ->
                     Row(
                         modifier = Modifier
@@ -124,7 +124,7 @@ fun SearchInPut(
                                     color = Color.Gray.copy(alpha = 0.1f)
                                 ),
                                 onClick = {
-                                    viewModel.query = query
+                                    viewModel.search(query)
                                     navController.navigate(SearchPageType.Result.route)
                                 }
                             )

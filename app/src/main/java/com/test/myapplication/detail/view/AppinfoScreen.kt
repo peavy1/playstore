@@ -39,7 +39,7 @@ fun AppInfoSection(details: AppDetails) {
         Spacer(modifier = Modifier.height(4.dp))
         Install(context)
         Spacer(modifier = Modifier.height(14.dp))
-        screenShot(context, details.screenshots.take(6))
+        screenShot(details.screenshots.take(6))
         AppInfo(context, details.summary)
         SecurityInfo(context)
     }
@@ -93,7 +93,7 @@ fun SecurityInfo(context: Context) {
 
 
 @Composable
-fun screenShot(context: Context, screenList: List<String>) {
+fun screenShot(screenList: List<String>) {
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         contentPadding = PaddingValues(horizontal = 28.dp)

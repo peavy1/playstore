@@ -1,27 +1,27 @@
 package com.test.myapplication.searchresult
 
-import android.content.Intent
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.test.myapplication.api.RetrofitInstance.api
-import com.test.myapplication.model.AppSummary
+import com.test.myapplication.model.SearchUiState
 import com.test.myapplication.util.SearchHistoryManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-class SearchResultViewModel(
+class SearchPageViewModel(
     private val historyManager: SearchHistoryManager
 ): ViewModel() {
 
-    private val _searchApps = MutableStateFlow<List<AppSummary>>(emptyList())
-    val searchApps : StateFlow<List<AppSummary>> = _searchApps.asStateFlow()
+    private val _uiState = MutableStateFlow<SearchUiState>(SearchUiState.Loading)
+    val uiState: StateFlow<SearchUiState> = _uiState
 
     var query: String = ""
+
+    var selectedImageUrl = ""
+    var selectedImageRatio = 0f
 
     val searchHistory: StateFlow<List<String>> = historyManager.searchHistoryFlow
         .stateIn(
@@ -31,16 +31,17 @@ class SearchResultViewModel(
         )
 
     fun search(input: String) {
-        Log.d("peavyfffc", input)
         if(input.isBlank()) return
+        _uiState.value = SearchUiState.Loading
         query = input
         viewModelScope.launch {
-            historyManager.addSearchTerm(query)
-            _searchApps.value = api.searchApps(input)
-        }
-    }
+            try {
+                historyManager.addSearchTerm(input)
+                _uiState.value = SearchUiState.Success(api.searchApps(input))
+            } catch (e: Exception) {
+                _uiState.value = SearchUiState.Error
+            }
 
-    fun clearResults() {
-        _searchApps.value = emptyList()
+        }
     }
 }

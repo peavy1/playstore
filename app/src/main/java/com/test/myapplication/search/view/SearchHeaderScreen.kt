@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.test.myapplication.R
 import com.test.myapplication.detail.DetailActivity
-import com.test.myapplication.searchresult.SearchActivity
+import com.test.myapplication.searchresult.SearchPageActivity
 import com.test.myapplication.util.Constants.EXTRA_APP_ID
 
 
@@ -61,7 +61,7 @@ fun SearchBar(modifier: Modifier = Modifier) {
             .padding(horizontal = 12.dp, vertical = 14.dp).pointerInput(Unit) {
                 detectTapGestures(
                     onTap = { _ ->
-                        val intent = Intent(context, SearchActivity::class.java)
+                        val intent = Intent(context, SearchPageActivity::class.java)
                         context.startActivity(intent)
                     }
                 )

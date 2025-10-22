@@ -2,7 +2,6 @@ package com.test.myapplication.searchresult.view
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -12,7 +11,6 @@ import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -25,7 +23,6 @@ import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,27 +36,29 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.test.myapplication.R
 import com.test.myapplication.detail.DetailActivity
-import com.test.myapplication.detail.view.purchaseInfo
-import com.test.myapplication.detail.view.screenShot
 import com.test.myapplication.model.AppSummary
+import com.test.myapplication.searchresult.SearchPageViewModel
 import com.test.myapplication.util.Constants.EXTRA_APP_ID
-import com.test.myapplication.util.Formatters.ratingCount
 import com.test.myapplication.util.Formatters.score
 import com.test.myapplication.util.Formatters.toDownloadTier
 
 @Composable
-fun SearchItem(appSummary: AppSummary, context: Context) {
+fun SearchItem(
+    appSummary: AppSummary,
+    context: Context,
+    navController: NavHostController,
+    viewModel: SearchPageViewModel
+) {
 
     var expanded by rememberSaveable { mutableStateOf(false) }
 
@@ -194,7 +193,7 @@ fun SearchItem(appSummary: AppSummary, context: Context) {
         }
 
         if (expanded) {
-            screenShot(context, appSummary.screenshots.take(6))
+            SearchResultScreenShotScreen(appSummary.screenshots.take(6), navController, viewModel)
         }
 
 
@@ -203,7 +202,7 @@ fun SearchItem(appSummary: AppSummary, context: Context) {
 }
 
 fun downloadData(installs: String, context: Context): String {
-    if(installs.isEmpty()) return "1회 이상"
+    if(installs.isEmpty()) return context.getString(R.string.one_count)
     return installs
         .replace("+", "")
         .replace(",", "")
