@@ -1,11 +1,14 @@
 package com.test.myapplication.searchresult.view
 
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -34,6 +37,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -45,9 +49,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.test.myapplication.R
+import com.test.myapplication.detail.DetailActivity
 import com.test.myapplication.detail.view.purchaseInfo
 import com.test.myapplication.detail.view.screenShot
 import com.test.myapplication.model.AppSummary
+import com.test.myapplication.util.Constants.EXTRA_APP_ID
 import com.test.myapplication.util.Formatters.ratingCount
 import com.test.myapplication.util.Formatters.score
 import com.test.myapplication.util.Formatters.toDownloadTier
@@ -68,7 +74,22 @@ fun SearchItem(appSummary: AppSummary, context: Context) {
             )
     ) {
         Row(
-            modifier = Modifier.padding(start = 24.dp, end = 16.dp, top = 16.dp, bottom = 16.dp)
+            modifier = Modifier
+                .padding(start = 24.dp, end = 16.dp, top = 16.dp, bottom = 16.dp)
+                .pointerInput(Unit) {
+                    detectTapGestures(
+                        onPress = { offset ->
+
+                        },
+                        onTap = { _ ->
+                            val intent = Intent(context, DetailActivity::class.java).apply {
+                                putExtra(EXTRA_APP_ID, appSummary.appId)
+                            }
+                            context.startActivity(intent)
+
+                        }
+                    )
+                }
         ) {
 
             AsyncImage(

@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -50,6 +51,7 @@ import com.test.myapplication.R
 import com.test.myapplication.searchresult.SearchPageType
 import com.test.myapplication.searchresult.SearchResultViewModel
 import com.test.myapplication.searchresult.autoFocusOnShow
+import androidx.compose.material3.CircularProgressIndicator
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -57,12 +59,6 @@ fun SearchResultScreen(
     viewModel: SearchResultViewModel,
     navController: NavHostController
 ) {
-
-    DisposableEffect(Unit) {
-        onDispose {
-            viewModel.clearResults()
-        }
-    }
 
     val history by viewModel.searchHistory.collectAsStateWithLifecycle()
     val searchResult by viewModel.searchApps.collectAsState()
@@ -103,20 +99,11 @@ fun SearchResultScreen(
                         ),
                         modifier = Modifier.autoFocusOnShow()
                     )
-                },
-                actions = {
-                    IconButton(onClick = {
-
-                    }) {
-                        Icon(
-                            imageVector = Icons.Default.Search,
-                            contentDescription = "검색"
-                        )
-                    }
                 }
             )
         },
     ) { innerPadding ->
+
 
         val context = LocalContext.current
 
@@ -128,5 +115,11 @@ fun SearchResultScreen(
             }
         }
 
+    }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            viewModel.clearResults()
+        }
     }
 }

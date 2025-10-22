@@ -107,7 +107,7 @@ fun screenShot(context: Context, screenList: List<String>) {
                 modifier = Modifier
                     .width(90.dp)
 //                    .shadow(2.dp, RoundedCornerShape(9.dp))
-                    .aspectRatio(1.0f / 2f)
+                    .aspectRatio(1.1f / 2f)
                     .clip(RoundedCornerShape(8.dp))
             )
         }

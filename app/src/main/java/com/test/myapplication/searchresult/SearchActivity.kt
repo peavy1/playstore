@@ -19,6 +19,7 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.test.myapplication.model.AppSummary
 import com.test.myapplication.searchresult.view.SearchInPut
 import com.test.myapplication.searchresult.view.SearchResultScreen
 import com.test.myapplication.util.Constants.EXTRA_QUERY
@@ -56,6 +57,8 @@ fun Modifier.autoFocusOnShow(): Modifier = composed {
     }
     this.focusRequester(focusRequester)
 }
+
+
 
 
 
