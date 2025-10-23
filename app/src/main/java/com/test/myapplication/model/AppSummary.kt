@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class AppSummary(
     @SerializedName("appId")
-    val appId: String,
+    val appId: String?,
 
     @SerializedName("title")
     val title: String,
