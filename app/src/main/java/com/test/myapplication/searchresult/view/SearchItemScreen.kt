@@ -2,12 +2,15 @@ package com.test.myapplication.searchresult.view
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,9 +28,12 @@ import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -36,6 +42,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -55,12 +62,14 @@ import com.test.myapplication.util.Formatters.toDownloadTier
 @Composable
 fun SearchItem(
     appSummary: AppSummary,
-    context: Context,
-    navController: NavHostController,
-    viewModel: SearchPageViewModel
+    searchAppType: String,
+    score: String,
+    downloadData: String,
+    expanded: Boolean,
+    onItemClick: (String) -> Unit,
+    onExpandClick: () -> Unit,
+    onScreenshotClick: (Int) -> Unit // SearchResultScreenShotScreen 대신 람다를 받음
 ) {
-
-    var expanded by rememberSaveable { mutableStateOf(false) }
 
     Column(
         modifier = Modifier
@@ -75,19 +84,13 @@ fun SearchItem(
         Row(
             modifier = Modifier
                 .padding(start = 24.dp, end = 16.dp, top = 16.dp, bottom = 16.dp)
-                .pointerInput(Unit) {
-                    detectTapGestures(
-                        onPress = { offset ->
-
-                        },
-                        onTap = { _ ->
-                            val intent = Intent(context, DetailActivity::class.java).apply {
-                                putExtra(EXTRA_APP_ID, appSummary.appId)
-                            }
-                            context.startActivity(intent)
-
-                        }
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = ripple(
+                        color = Color.White
                     )
+                ) {
+                    onItemClick(appSummary.appId ?: "")
                 }
         ) {
 
@@ -117,7 +120,7 @@ fun SearchItem(
                 )
 
                 Text(
-                    text = searchAppType(appSummary.developer, appSummary.genre),
+                    text = searchAppType,
                     fontSize = 12.sp,
                     fontFamily = FontFamily.SansSerif,
                     fontWeight = FontWeight.W300,
@@ -139,7 +142,7 @@ fun SearchItem(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = score(appSummary.score),
+                            text = score,
                             fontSize = 10.sp,
                             fontFamily = FontFamily.SansSerif,
                             color = Color.DarkGray,
@@ -166,7 +169,7 @@ fun SearchItem(
                         )
                         Spacer(modifier = Modifier.width(2.dp))
                         Text(
-                            text = downloadData(appSummary.installs, context),
+                            text = downloadData,
                             fontSize = 10.sp,
                             fontFamily = FontFamily.SansSerif,
                             color = Color.DarkGray,
@@ -177,7 +180,7 @@ fun SearchItem(
 
 
             FilledIconButton(
-                onClick = { expanded = !expanded },
+                onClick = { onExpandClick.invoke() },
                 colors = IconButtonDefaults.filledIconButtonColors(
                     containerColor = Color(0xFFEEEBF1)
                 ),
@@ -189,11 +192,13 @@ fun SearchItem(
                     modifier = Modifier.size(16.dp)
                 )
             }
-
         }
 
         if (expanded) {
-            SearchResultScreenShotScreen(appSummary.screenshots.take(6), navController, viewModel)
+            SearchResultScreenShotScreen(
+                screenList = appSummary.screenshots.take(6),
+                onScreenshotClick = onScreenshotClick
+            )
         }
 
 
@@ -201,18 +206,4 @@ fun SearchItem(
 
 }
 
-fun downloadData(installs: String, context: Context): String {
-    if(installs.isEmpty()) return context.getString(R.string.one_count)
-    return installs
-        .replace("+", "")
-        .replace(",", "")
-        .toLong()
-        .toDownloadTier(context)
-}
 
-fun searchAppType(developer: String, genre: String): String {
-    return  buildList {
-         add(developer)
-         add(genre)
-    }.joinToString(separator = " • ")
-}
