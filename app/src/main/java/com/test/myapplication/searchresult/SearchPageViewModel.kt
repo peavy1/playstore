@@ -20,8 +20,8 @@ class SearchPageViewModel(
 
     var query: String = ""
 
-    var selectedImageUrl = ""
-    var selectedImageRatio = 0f
+    var screenList: List<String> = emptyList()
+    var screenShotIndex = 0
 
     val searchHistory: StateFlow<List<String>> = historyManager.searchHistoryFlow
         .stateIn(

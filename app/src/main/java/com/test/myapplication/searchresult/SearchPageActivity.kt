@@ -17,6 +17,7 @@ import androidx.navigation.compose.rememberNavController
 import com.test.myapplication.searchresult.view.PinchZoom
 import com.test.myapplication.searchresult.view.SearchInPut
 import com.test.myapplication.searchresult.view.SearchResultScreen
+import com.test.myapplication.searchresult.view.SearchScreenShotSlide
 import com.test.myapplication.util.SearchHistoryManager
 import kotlinx.coroutines.delay
 
@@ -36,10 +37,10 @@ class SearchPageActivity: ComponentActivity() {
 @Composable
 fun Navigation(viewModel: SearchPageViewModel) {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = SearchPageType.Home.route) {
-        composable(route = SearchPageType.Home.route) {  SearchInPut(viewModel, navController) }
+    NavHost(navController = navController, startDestination = SearchPageType.Input.route) {
+        composable(route = SearchPageType.Input.route) {  SearchInPut(viewModel, navController) }
         composable(route = SearchPageType.Result.route) {  SearchResultScreen(viewModel, navController)  }
-        composable(route = SearchPageType.Screen.route) {   PinchZoom(viewModel.selectedImageUrl, viewModel.selectedImageRatio)  }
+        composable(route = SearchPageType.Screen.route) {   SearchScreenShotSlide(viewModel.screenList, viewModel.screenShotIndex)  }
     }
 }
 

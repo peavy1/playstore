@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -33,7 +34,8 @@ fun SearchResultScreenShotScreen (
         contentPadding = PaddingValues(horizontal = 28.dp)
     ) {
 
-        items(screenList) { imageUrl ->
+
+        itemsIndexed(screenList) { index, imageUrl ->
             val placeholderRatio = 16f / 9f
             var imageRatio by remember { mutableStateOf(placeholderRatio) }
 
@@ -49,8 +51,8 @@ fun SearchResultScreenShotScreen (
                     .clip(RoundedCornerShape(8.dp))
                     .clickable {
                         navController?.let {
-                            viewModel?.selectedImageUrl = imageUrl
-                            viewModel?.selectedImageRatio = imageRatio
+                            viewModel?.screenList = screenList
+                            viewModel?.screenShotIndex = index
                             navController.navigate(SearchPageType.Screen.route)
                         }
                     },

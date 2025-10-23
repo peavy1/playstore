@@ -1,35 +1,23 @@
 package com.test.myapplication.searchresult
 
+import com.test.myapplication.util.Constants.INPUT
+import com.test.myapplication.util.Constants.RESULT
+import com.test.myapplication.util.Constants.SCREEN
+
 
 sealed class SearchPageType(
     val route: String
 ) {
-    object Home: SearchPageType(
-        route = "input",
+    object Input: SearchPageType(
+        route = INPUT,
     )
 
     object Result: SearchPageType(
-        route = "result"
+        route = RESULT
     )
 
     object Screen: SearchPageType(
-        route = "screen"
+        route = SCREEN
     )
 }
 
-/*
-sealed class SearchPageType(
-    val route: String
-) {
-    object Home: SearchPageType(
-        route = "input",
-    )
-
-    object Result: SearchPageType(
-        route = "result"
-    )
-
-    object Screen: SearchPageType(
-        route = "screen"
-    )
-}*/
