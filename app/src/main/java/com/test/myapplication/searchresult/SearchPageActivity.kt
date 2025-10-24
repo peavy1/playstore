@@ -26,7 +26,6 @@ class SearchPageActivity: ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             val viewModel = SearchPageViewModel(SearchHistoryManager(this))
             Navigation(viewModel)

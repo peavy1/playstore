@@ -40,7 +40,6 @@ import com.test.myapplication.model.ReviewItem
 class DetailActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             val viewModel = DetailViewModel()
             val appId = intent.getStringExtra(EXTRA_APP_ID) ?: ""

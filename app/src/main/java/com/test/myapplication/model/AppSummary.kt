@@ -26,5 +26,11 @@ data class AppSummary(
     val installs: String,
 
     @SerializedName("screenshots")
-    val screenshots: List<String>
+    val screenshots: List<String>,
+
+    @SerializedName("videoImage")
+    val videoImage: String?,
+
+    @SerializedName("video")
+    val video: String?
 )
