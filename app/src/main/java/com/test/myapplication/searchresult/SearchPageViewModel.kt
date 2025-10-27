@@ -1,6 +1,7 @@
 package com.test.myapplication.searchresult
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.test.myapplication.api.RetrofitInstance.api
 import com.test.myapplication.model.SearchUiState
@@ -43,5 +44,18 @@ class SearchPageViewModel(
             }
 
         }
+    }
+}
+
+
+class SearchPageViewModelFactory(
+    private val historyManager: SearchHistoryManager
+) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(SearchPageViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return SearchPageViewModel(historyManager) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

@@ -26,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.test.myapplication.R
 import com.test.myapplication.model.AppDetails
 import com.test.myapplication.util.Constants.EXTRA_APP_ID
@@ -41,7 +42,7 @@ class DetailActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val viewModel = DetailViewModel()
+            val viewModel = viewModel<DetailViewModel>()
             val appId = intent.getStringExtra(EXTRA_APP_ID) ?: ""
             viewModel.appId = appId
 

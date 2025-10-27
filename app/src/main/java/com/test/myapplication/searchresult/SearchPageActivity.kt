@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -27,7 +28,8 @@ class SearchPageActivity: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val viewModel = SearchPageViewModel(SearchHistoryManager(this))
+            val factory = SearchPageViewModelFactory(SearchHistoryManager(this))
+            val viewModel = viewModel<SearchPageViewModel>(factory = factory)
             Navigation(viewModel)
         }
     }

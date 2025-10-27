@@ -17,7 +17,7 @@ class SearchHistoryManager(context: Context) {
 
     companion object {
         private val HISTORY_KEY = stringPreferencesKey("search_history_list")
-        private const val MAX_HISTORY_SIZE = 10
+        private const val MAX_HISTORY_SIZE = 7
     }
 
 
