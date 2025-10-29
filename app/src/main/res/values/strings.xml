@@ -62,12 +62,20 @@
     <string name="search_page_screen">screen</string>
 
     <string name="google_login_client_id">733858185602-u9k0tg65c4g78ppgk7acbvipubf9ulfi.apps.googleusercontent.com</string>
+    <string name="login_info">로그인하고 최신 Android 앱, 게임, 영화 음악 등을 확인하세요.</string>
+    <string name="login">로그인</string>
 
-
-
-
-
-
+    <string name="menu_app_management">앱 및 기기 관리</string>
+    <string name="menu_alarm">알림 및 혜택</string>
+    <string name="menu_payment">결제 및 정기 결제</string>
+    <string name="menu_product">Play 프로젝트</string>
+    <string name="menu_library">라이브러리</string>
+    <string name="menu_play_point">Play Points</string>
+    <string name="menu_personal_setting">Play 앱의 맞춤설정</string>
+    <string name="menu_setting">설정</string>
+    <string name="menu_customer_service">고객센터</string>
+    <string name="management_account">Google 계정 관리</string>
+    <string name="profile_bottom_info">개인정보처리방침&#160;&#160;&#160;•&#160;&#160;&#160;서비스 약관&#160;&#160;&#160;•&#160;&#160;&#160;Google Play 정보</string>
 
     <string name="long_scrollable_text">
         스크롤 테스트를 위한 텍스트입니다. \n\n

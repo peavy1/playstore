@@ -15,7 +15,9 @@
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways|snap">
 
-            <include layout="@layout/layout_top_section"/>
+            <include
+                android:id="@+id/tab_section"
+                layout="@layout/layout_top_section"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

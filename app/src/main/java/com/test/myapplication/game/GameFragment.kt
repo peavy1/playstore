@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.tabs.TabLayoutMediator
+import com.test.myapplication.ProfileBottomSheetFragment
 import com.test.myapplication.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
@@ -25,6 +26,12 @@ class GameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setTabLayout()
+
+        binding.tabSection.icProfile.setOnClickListener {
+
+            val bottomSheet = ProfileBottomSheetFragment()
+            bottomSheet.show(parentFragmentManager, "ProfileBottomSheetTag")
+        }
     }
 
     private fun setTabLayout() {

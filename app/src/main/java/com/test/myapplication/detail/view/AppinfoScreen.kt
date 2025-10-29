@@ -125,7 +125,7 @@ fun Install(context: Context) {
             .height(42.dp),
         shape = RoundedCornerShape(24.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = colorResource(id = R.color.select_tab), // 배경색
+            containerColor = colorResource(id = R.color.select_tab),
             contentColor = Color.White
         )
     ) {

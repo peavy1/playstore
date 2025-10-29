@@ -11,4 +11,5 @@ object Constants {
     const val INPUT = "input"
     const val RESULT = "result"
     const val SCREEN = "screen"
+    const val LOGO_URL = "https://1000logos.net/wp-content/uploads/2021/07/Google-Play-Logo.png"
 }
