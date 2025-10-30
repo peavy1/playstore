@@ -42,6 +42,7 @@ import coil.compose.AsyncImage
 
 @Composable
 fun ProfileBottomSheetContent(
+    onProfileChangeClick: () -> Unit,
     onCloseClick: () -> Unit,
     viewModel: ProfileViewModel = viewModel()
 ) {
@@ -118,7 +119,7 @@ fun ProfileBottomSheetContent(
 
 //
             OutlinedButton(
-                onClick = { },
+                onClick = { onProfileChangeClick.invoke() },
                 shape = RoundedCornerShape(8.dp),
                 border = BorderStroke(1.dp, Color.Black),
                 colors = ButtonDefaults.outlinedButtonColors(

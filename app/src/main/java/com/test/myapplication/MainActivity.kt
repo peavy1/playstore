@@ -1,16 +1,23 @@
 package com.test.myapplication
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.test.myapplication.databinding.ActivityMainBinding
+import com.test.myapplication.login.LoginActivity
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +27,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
 
-    val viewModel: ProfileViewModel by viewModels()
+    val profileViewModel: ProfileViewModel by viewModels()
+    private val mainViewModel: MainViewModel by viewModels()
+
+    private val googleSignInClient: GoogleSignInClient by lazy {
+        (application as PlayStoreApplication).googleSignInClient
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         applyItemForegroundRipple()
         suppressBottomNavLongClick()
+        initObserve()
     }
 
     private fun applyItemForegroundRipple() {
@@ -61,6 +74,27 @@ class MainActivity : AppCompatActivity() {
                 true
             }
         }
+    }
+
+    private fun initObserve() {
+        lifecycleScope.launch {
+            mainViewModel.signOut.collectLatest {
+                googleSignOut()
+            }
+        }
+
+    }
+
+    private fun googleSignOut() {
+        googleSignInClient.signOut()
+        navigateToLoginAndClearStack(this)
+    }
+
+    private fun navigateToLoginAndClearStack(context: Context) {
+        val intent = Intent(context, LauncherActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        context.startActivity(intent)
     }
 
 }

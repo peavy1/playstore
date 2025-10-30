@@ -5,11 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
+import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class ProfileBottomSheetFragment() : BottomSheetDialogFragment() {
+class ProfileBottomSheetFragment : BottomSheetDialogFragment() {
+
+    private val mainViewModel: MainViewModel by activityViewModels()
+
     override fun getTheme(): Int {
         return R.style.MyCustomBottomSheetDialogTheme
     }
@@ -28,6 +32,9 @@ class ProfileBottomSheetFragment() : BottomSheetDialogFragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 ProfileBottomSheetContent(
+                    onProfileChangeClick = {
+                        mainViewModel.onSignOutClicked()
+                    },
                     onCloseClick = { dismiss() }
                 )
             }

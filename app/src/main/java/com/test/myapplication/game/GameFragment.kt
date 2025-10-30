@@ -39,7 +39,7 @@ class GameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setTabLayout()
 
-        profileViewModel = (activity as MainActivity).viewModel
+        profileViewModel = (activity as MainActivity).profileViewModel
 
         binding.tabSection.icProfile.setOnClickListener {
             val bottomSheet = ProfileBottomSheetFragment()
