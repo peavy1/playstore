@@ -1,5 +1,8 @@
 package com.test.myapplication.util
 
+import com.test.myapplication.BuildConfig
+
+
 object Constants {
     const val GAME_LIST_JSON = "game_list.json"
     const val APP_LIST_JSON = "app_list.json"
@@ -11,5 +14,5 @@ object Constants {
     const val INPUT = "input"
     const val RESULT = "result"
     const val SCREEN = "screen"
-    const val LOGO_URL = "https://1000logos.net/wp-content/uploads/2021/07/Google-Play-Logo.png"
+    const val GOOGLE_LOGIN_CLIENT_ID = BuildConfig.googleClientId
 }

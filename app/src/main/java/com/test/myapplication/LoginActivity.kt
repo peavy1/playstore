@@ -31,6 +31,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.test.myapplication.util.Constants
 import com.test.myapplication.util.DataStoreManager
 import kotlinx.coroutines.launch
 
@@ -137,7 +138,7 @@ class LoginActivity: AppCompatActivity() {
 
     private fun getGoogleClient(): GoogleSignInClient {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.google_login_client_id))
+            .requestIdToken(Constants.GOOGLE_LOGIN_CLIENT_ID)
             .requestEmail()
             .requestProfile()
             .build()

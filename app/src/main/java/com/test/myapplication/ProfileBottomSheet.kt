@@ -41,7 +41,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 
 @Composable
-fun ProfileSheetContent(
+fun ProfileBottomSheetContent(
     onCloseClick: () -> Unit,
     viewModel: ProfileViewModel = viewModel()
 ) {

@@ -1,6 +1,7 @@
 package com.test.myapplication.search.view
 
 import android.content.Intent
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -19,6 +20,11 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -26,9 +32,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.AsyncImage
+import com.test.myapplication.ProfileBottomSheetFragment
+import com.test.myapplication.ProfileViewModel
 import com.test.myapplication.R
 import com.test.myapplication.detail.DetailActivity
 import com.test.myapplication.searchresult.SearchPageActivity
@@ -36,7 +48,12 @@ import com.test.myapplication.util.Constants.EXTRA_APP_ID
 
 
 @Composable
-fun SearchHeader() {
+fun SearchHeader(
+    viewModel: ProfileViewModel = viewModel()
+) {
+    val uiState by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -44,10 +61,17 @@ fun SearchHeader() {
         verticalAlignment = Alignment.CenterVertically
     ) {
         SearchBar(modifier = Modifier.weight(1f))
-
         Spacer(modifier = Modifier.width(16.dp))
+        ProfileIcon(uiState.image) {
+            val fragmentManager = (context as? FragmentActivity)?.supportFragmentManager
 
-        ProfileIcon()
+            fragmentManager?.let {
+                ProfileBottomSheetFragment().show(it, "ProfileBottomSheetTag")
+            }
+        }
+
+
+
     }
 }
 
@@ -70,12 +94,12 @@ fun SearchBar(modifier: Modifier = Modifier) {
     ) {
         Image(
             painterResource(id = R.drawable.ic_search),
-            contentDescription = "검색 아이콘",
+            contentDescription = "",
             modifier = Modifier.size(20.dp),
         )
         Spacer(modifier = Modifier.width(8.dp))
         Text(
-            text = "앱 및 게임 검색",
+            text = stringResource(R.string.search_placeholder),
             fontSize = 15.sp,
             fontFamily = FontFamily.SansSerif,
             color = Color.DarkGray,
@@ -84,34 +108,23 @@ fun SearchBar(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.width(8.dp))
         Image(
             painterResource(id = R.drawable.baseline_keyboard_voice_24),
-            contentDescription = "음성 검색 아이콘",
+            contentDescription = "",
             modifier = Modifier.size(20.dp),
         )
     }
 }
 
-
 @Composable
-fun ProfileIcon() {
-    Card(
-        modifier = Modifier.size(35.dp),
-        shape = CircleShape,
-        colors = CardDefaults.cardColors(
-            containerColor = Color(0xFF7E57C2)
-        ),
-        elevation = CardDefaults.cardElevation(
-            defaultElevation = 0.dp
-        )
-    ) {
-        Box(
-            modifier = Modifier.fillMaxSize(),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                text = "P",
-                color = Color.White,
-                fontSize = 20.sp
-            )
-        }
-    }
+fun ProfileIcon(profileImage: String, click:  () -> Unit) {
+    AsyncImage(
+        model = profileImage,
+        contentDescription = "",
+        modifier = Modifier
+            .size(35.dp)
+            .clip(RoundedCornerShape(200.dp))
+            .clickable {
+                click.invoke()
+            }
+    )
 }
+

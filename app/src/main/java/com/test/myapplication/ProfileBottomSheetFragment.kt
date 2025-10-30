@@ -27,7 +27,7 @@ class ProfileBottomSheetFragment() : BottomSheetDialogFragment() {
         expandDialog()
         return ComposeView(requireContext()).apply {
             setContent {
-                ProfileSheetContent(
+                ProfileBottomSheetContent(
                     onCloseClick = { dismiss() }
                 )
             }

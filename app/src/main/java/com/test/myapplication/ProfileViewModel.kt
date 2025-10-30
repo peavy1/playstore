@@ -3,6 +3,7 @@ package com.test.myapplication
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.test.myapplication.model.ProfileUiState
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
@@ -27,8 +28,3 @@ class ProfileViewModel(application: Application): AndroidViewModel(application) 
 
 }
 
-data class ProfileUiState(
-    val name: String = "",
-    val email: String = "",
-    val image: String = ""
-)
