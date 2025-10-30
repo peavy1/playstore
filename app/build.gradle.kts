@@ -68,6 +68,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
 
     implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation ("io.coil-kt:coil:2.6.0")
 
     implementation("androidx.fragment:fragment-ktx:1.8.1")
     implementation("androidx.activity:activity-ktx:1.9.0")

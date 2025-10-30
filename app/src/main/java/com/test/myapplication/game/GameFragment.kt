@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import coil.load
+import coil.transform.CircleCropTransformation
 import com.google.android.material.tabs.TabLayoutMediator
 import com.test.myapplication.ProfileBottomSheetFragment
 import com.test.myapplication.databinding.FragmentGameBinding
@@ -28,9 +30,13 @@ class GameFragment : Fragment() {
         setTabLayout()
 
         binding.tabSection.icProfile.setOnClickListener {
-
             val bottomSheet = ProfileBottomSheetFragment()
             bottomSheet.show(parentFragmentManager, "ProfileBottomSheetTag")
+        }
+
+        binding.tabSection.icProfile.load("https://lh3.googleusercontent.com/a/ACg8ocLFDtq_ejWiqRzKNMo21-2M1gIW20oocH2zZLrZknHHQ0ccTw=s96-c") {
+            transformations(CircleCropTransformation())
+            crossfade(true)
         }
     }
 

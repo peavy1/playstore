@@ -1,7 +1,6 @@
 package com.test.myapplication
 
 import android.content.Intent
-import android.media.Image
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.compose.setContent
@@ -27,14 +26,19 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.AsyncImage
+import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
-import com.test.myapplication.util.Constants.LOGO_URL
+import com.test.myapplication.util.DataStoreManager
+import kotlinx.coroutines.launch
 
 class LoginActivity: AppCompatActivity() {
+
+    private val dataStoreManager: DataStoreManager by lazy {
+        (application as PlayStoreApplication).dataStoreManager
+    }
 
     private val googleSignInClient: GoogleSignInClient by lazy {
         getGoogleClient()
@@ -48,9 +52,15 @@ class LoginActivity: AppCompatActivity() {
             val account = task.getResult(ApiException::class.java)
             val idToken = account.idToken
 
-            val userName = account.displayName
-            val userEmail = account.email
-            val userProfilePic = account.photoUrl
+            val userName = account.displayName ?: ""
+            val userEmail = account.email ?: ""
+            val userProfilePic = account.photoUrl.toString()
+
+            lifecycleScope.launch {
+                dataStoreManager.saveProfileName(userName)
+                dataStoreManager.saveProfileEmail(userEmail)
+                dataStoreManager.saveProfileImage(userProfilePic)
+            }
 
             Log.d("GoogleLogin", "Success: $userName / $userEmail")
             Log.d("GoogleLogin", "Photo URL: $userProfilePic")
