@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.test.myapplication.login.LoginActivity
 
 class LauncherActivity: AppCompatActivity() {
 

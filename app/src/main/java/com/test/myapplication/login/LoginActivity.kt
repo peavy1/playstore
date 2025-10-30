@@ -1,10 +1,11 @@
-package com.test.myapplication
+package com.test.myapplication.login
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -27,23 +28,27 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.test.myapplication.MainActivity
+import com.test.myapplication.PlayStoreApplication
+import com.test.myapplication.ProfileViewModel
+import com.test.myapplication.R
 import com.test.myapplication.util.Constants
 import com.test.myapplication.util.DataStoreManager
 import kotlinx.coroutines.launch
 
 class LoginActivity: AppCompatActivity() {
 
-    private val dataStoreManager: DataStoreManager by lazy {
-        (application as PlayStoreApplication).dataStoreManager
-    }
+    private val loginViewModel: LoginViewModel by viewModels()
 
     private val googleSignInClient: GoogleSignInClient by lazy {
-        getGoogleClient()
+        (application as PlayStoreApplication).googleSignInClient
     }
+
     private val googleAuthLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
@@ -51,20 +56,15 @@ class LoginActivity: AppCompatActivity() {
 
         try {
             val account = task.getResult(ApiException::class.java)
-            val idToken = account.idToken
 
             val userName = account.displayName ?: ""
             val userEmail = account.email ?: ""
-            val userProfilePic = account.photoUrl.toString()
+            val userProfileImage = account.photoUrl.toString()
 
-            lifecycleScope.launch {
-                dataStoreManager.saveProfileName(userName)
-                dataStoreManager.saveProfileEmail(userEmail)
-                dataStoreManager.saveProfileImage(userProfilePic)
-            }
+            loginViewModel.saveProfile(userName, userEmail, userProfileImage)
 
             Log.d("GoogleLogin", "Success: $userName / $userEmail")
-            Log.d("GoogleLogin", "Photo URL: $userProfilePic")
+            Log.d("GoogleLogin", "Photo URL: $userProfileImage")
 
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
@@ -79,6 +79,7 @@ class LoginActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+
             LoginView {
                 requestGoogleLogin()
             }
@@ -95,11 +96,6 @@ class LoginActivity: AppCompatActivity() {
             horizontalAlignment =  Alignment.CenterHorizontally
         ) {
 
-           /* AsyncImage(
-                model = LOGO_URL,
-                contentDescription = "",
-                modifier = Modifier.size(200.dp)
-            )*/
             Image(
                 painterResource(id = R.drawable.google_play_logo),
                 contentDescription = "",
@@ -136,15 +132,6 @@ class LoginActivity: AppCompatActivity() {
         }
     }
 
-    private fun getGoogleClient(): GoogleSignInClient {
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(Constants.GOOGLE_LOGIN_CLIENT_ID)
-            .requestEmail()
-            .requestProfile()
-            .build()
-
-        return GoogleSignIn.getClient(this, gso)
-    }
 
     private fun requestGoogleLogin() {
         val signInIntent = googleSignInClient.signInIntent
