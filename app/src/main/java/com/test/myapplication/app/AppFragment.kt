@@ -12,7 +12,7 @@ import coil.load
 import coil.transform.CircleCropTransformation
 import com.google.android.material.tabs.TabLayoutMediator
 import com.test.myapplication.MainActivity
-import com.test.myapplication.ProfileBottomSheetFragment
+import com.test.myapplication.profilebottomsheet.ProfileBottomSheetFragment
 import com.test.myapplication.ProfileViewModel
 import com.test.myapplication.databinding.FragmentAppBinding
 import kotlinx.coroutines.flow.collectLatest

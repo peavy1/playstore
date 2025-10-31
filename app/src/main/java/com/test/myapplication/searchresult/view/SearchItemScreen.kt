@@ -182,7 +182,6 @@ fun SearchItem(
                 appSummary.video,
                 appSummary.videoImage,
                 screenList = appSummary.screenshots.take(6),
-//                screenList = listOfNotNull(appSummary.videoImage) + appSummary.screenshots.take(6),
                 onScreenshotClick = onScreenshotClick,
                 modifier = Modifier
                     .height(200.dp)

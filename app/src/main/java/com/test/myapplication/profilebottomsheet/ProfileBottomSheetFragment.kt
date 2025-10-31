@@ -1,4 +1,4 @@
-package com.test.myapplication
+package com.test.myapplication.profilebottomsheet
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,8 @@ import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.test.myapplication.MainViewModel
+import com.test.myapplication.R
 
 class ProfileBottomSheetFragment : BottomSheetDialogFragment() {
 

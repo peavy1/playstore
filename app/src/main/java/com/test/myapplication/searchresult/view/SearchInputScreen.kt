@@ -1,5 +1,6 @@
 package com.test.myapplication.searchresult.view
 
+import androidx.activity.OnBackPressedCallback
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -61,7 +62,9 @@ fun SearchInPut(
         topBar = {
             TopAppBar(
                 navigationIcon = {
-                    IconButton(onClick = { }) {
+                    IconButton(onClick = {
+
+                    }) {
                         Icon(
                             painter = painterResource(id = R.drawable.baseline_arrow_back_24),
                             contentDescription = ""

@@ -63,6 +63,7 @@
 
     <string name="login_info">로그인하고 최신 Android 앱, 게임, 영화 음악 등을 확인하세요.</string>
     <string name="login">로그인</string>
+    <string name="logout">로그아웃</string>
 
     <string name="menu_app_management">앱 및 기기 관리</string>
     <string name="menu_alarm">알림 및 혜택</string>

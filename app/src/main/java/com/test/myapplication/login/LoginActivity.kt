@@ -75,27 +75,30 @@ class LoginActivity: AppCompatActivity() {
 
             loginViewModel.saveProfile(userName, userEmail, userProfileImage)
 
-            Log.d("GoogleLogin", "Success: $userName / $userEmail")
-            Log.d("GoogleLogin", "Photo URL: $userProfileImage")
-
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-
+            goToMain()
         } catch (e: ApiException) {
             Log.e("GoogleLogin", "Failed: ${e.statusCode} / ${e.message}")
-            Log.e("GoogleLogin", "Stacktrace: ", e)
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
             LoginView {
                 requestGoogleLogin()
             }
         }
+    }
+
+    private fun requestGoogleLogin() {
+        val signInIntent = googleSignInClient.signInIntent
+        googleAuthLauncher.launch(signInIntent)
+    }
+
+    private fun goToMain() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     @Composable
@@ -144,8 +147,4 @@ class LoginActivity: AppCompatActivity() {
         }
     }
 
-    private fun requestGoogleLogin() {
-        val signInIntent = googleSignInClient.signInIntent
-        googleAuthLauncher.launch(signInIntent)
-    }
 }

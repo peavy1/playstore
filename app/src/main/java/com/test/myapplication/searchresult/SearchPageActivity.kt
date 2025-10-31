@@ -48,7 +48,6 @@ fun Navigation(viewModel: SearchPageViewModel) {
 fun Modifier.autoFocusOnShow(): Modifier = composed {
     val focusRequester = remember { FocusRequester() }
     LaunchedEffect(Unit) {
-        delay(100)
         focusRequester.requestFocus()
     }
     this.focusRequester(focusRequester)

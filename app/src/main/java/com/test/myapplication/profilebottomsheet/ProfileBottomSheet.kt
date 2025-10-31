@@ -1,4 +1,4 @@
-package com.test.myapplication
+package com.test.myapplication.profilebottomsheet
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -6,6 +6,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -17,13 +18,17 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -35,10 +40,13 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
+import com.test.myapplication.ProfileViewModel
+import com.test.myapplication.R
 
 @Composable
 fun ProfileBottomSheetContent(
@@ -48,6 +56,8 @@ fun ProfileBottomSheetContent(
 ) {
 
     val uiState by viewModel.uiState.collectAsState()
+    var expanded by remember { mutableStateOf(false) }
+
 
     Column(
         modifier = Modifier
@@ -91,7 +101,6 @@ fun ProfileBottomSheetContent(
                 verticalAlignment = Alignment.CenterVertically
              ) {
                  AsyncImage(
-//                     model = "https://lh3.googleusercontent.com/a/ACg8ocLx6yurUy_G5qqjPH5swJjD1IzGyVqkGDQf0nj81iugzVhL7Q=s96-c",
                      model = uiState.image,
                      contentDescription = "",
                      modifier = Modifier
@@ -118,27 +127,39 @@ fun ProfileBottomSheetContent(
              }
 
 //
-            OutlinedButton(
-                onClick = { onProfileChangeClick.invoke() },
-                shape = RoundedCornerShape(8.dp),
-                border = BorderStroke(1.dp, Color.Black),
-                colors = ButtonDefaults.outlinedButtonColors(
-                    containerColor = Color.White,
-                    contentColor = Color.Black
-                ),
-                contentPadding = PaddingValues(
-                    horizontal = 18.dp,
-                    vertical = 0.dp
-                ),
+            Box(
                 modifier = Modifier
                     .padding(start = 52.dp, top = 15.dp)
-                    .height(30.dp)
             ) {
-                Text(
-                    text = stringResource(R.string.management_account),
-                    fontSize = 13.sp
+                OutlinedButton(
+                    onClick = { expanded = true },
+                    shape = RoundedCornerShape(8.dp),
+                    border = BorderStroke(1.dp, Color.Black),
+                    colors = ButtonDefaults.outlinedButtonColors(
+                        containerColor = Color.White,
+                        contentColor = Color.Black
+                    ),
+                    contentPadding = PaddingValues(
+                        horizontal = 18.dp,
+                        vertical = 0.dp
+                    ),
+                    modifier = Modifier
+                        .height(30.dp)
+                ) {
+                    Text(
+                        text = stringResource(R.string.management_account),
+                        fontSize = 13.sp
+                    )
+                }
+
+                MinimalDropdownMenu(
+                    onProfileChangeClick = onProfileChangeClick,
+                    expanded = expanded,
+                    onDismissRequest = { expanded = false},
                 )
             }
+
+
 
             Column(
                 modifier = Modifier
@@ -165,6 +186,31 @@ fun ProfileBottomSheetContent(
         )
 
         Spacer(modifier = Modifier.height(20.dp))
+    }
+}
+
+
+@Composable
+fun MinimalDropdownMenu(
+    onProfileChangeClick: () -> Unit,
+    expanded : Boolean,
+    onDismissRequest: () -> Unit) {
+
+    Box(
+        modifier = Modifier
+            .padding(16.dp)
+    ) {
+
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { onDismissRequest.invoke() },
+            offset = DpOffset(x = 50.dp, y = 15.dp)
+        ) {
+            DropdownMenuItem(
+                text = { Text(stringResource(R.string.logout)) },
+                onClick = { onProfileChangeClick.invoke() }
+            )
+        }
     }
 }
 
