@@ -26,6 +26,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -172,7 +173,7 @@ fun ReviewTitle(context: Context) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = context.getString(R.string.review_title),
+                text = stringResource(R.string.review_title),
                 modifier = Modifier.weight(1f),
                 fontSize = 20.sp,
                 fontFamily = FontFamily.SansSerif,
@@ -206,7 +207,7 @@ fun ReviewTitle(context: Context) {
 
 
         Text(
-            text = context.getString(R.string.review_info),
+            text = stringResource(R.string.review_info),
             modifier = Modifier.padding(end = 6.dp),
             fontSize = 13.sp,
             style = createLineSpacingExtraStyle(fontSize = 13.sp, extraSpacing = 4.sp),

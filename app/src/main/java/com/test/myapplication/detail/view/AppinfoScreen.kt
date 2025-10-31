@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -34,25 +35,24 @@ import com.test.myapplication.util.AppUtil.createLineSpacingExtraStyle
 
 @Composable
 fun AppInfoSection(details: AppDetails) {
-    val context = LocalContext.current
     Column {
         Spacer(modifier = Modifier.height(4.dp))
-        Install(context)
+        Install()
         Spacer(modifier = Modifier.height(14.dp))
         screenShot(details.screenshots.take(6))
-        AppInfo(context, details.summary)
-        SecurityInfo(context)
+        AppInfo(details.summary)
+        SecurityInfo()
     }
 
 }
 
 @Composable
-fun AppInfo(context: Context, summary: String) {
+fun AppInfo(summary: String) {
     Column(
         modifier = Modifier.padding(start = 28.dp, end = 12.dp)
     ) {
         Text(
-            text = context.getString(R.string.app_info),
+            text = stringResource(R.string.app_info),
             modifier = Modifier.padding(top = 24.dp, bottom = 12.dp),
             fontSize = 20.sp,
             fontFamily = FontFamily.SansSerif,
@@ -69,12 +69,12 @@ fun AppInfo(context: Context, summary: String) {
 }
 
 @Composable
-fun SecurityInfo(context: Context) {
+fun SecurityInfo() {
     Column(
         modifier = Modifier.padding(start = 28.dp, end = 32.dp)
     ) {
         Text(
-            text = context.getString(R.string.security_title),
+            text = stringResource(R.string.security_title),
             modifier = Modifier.padding(top = 24.dp, bottom = 12.dp),
             fontSize = 20.sp,
             fontFamily = FontFamily.SansSerif,
@@ -83,7 +83,7 @@ fun SecurityInfo(context: Context) {
         )
 
         Text(
-            text = context.getString(R.string.security_info),
+            text = stringResource(R.string.security_info),
             fontSize = 14.sp,
             style = createLineSpacingExtraStyle(fontSize = 14.sp, extraSpacing = 4.sp),
             color = Color.Black,
@@ -115,8 +115,7 @@ fun screenShot(screenList: List<String>) {
 }
 
 @Composable
-fun Install(context: Context) {
-
+fun Install() {
     Button(
         onClick = {},
         modifier = Modifier
@@ -130,7 +129,7 @@ fun Install(context: Context) {
         )
     ) {
         Text(
-            text = context.getString(R.string.install),
+            text = stringResource(R.string.install),
             fontSize = 14.sp
         )
     }

@@ -31,14 +31,15 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.test.myapplication.R
 import com.test.myapplication.searchresult.SearchPageViewModel
-import com.test.myapplication.searchresult.autoFocusOnShow
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.res.stringResource
 import com.test.myapplication.detail.DetailActivity
 import com.test.myapplication.model.SearchUiState
 import com.test.myapplication.searchresult.SearchPageType
+import com.test.myapplication.util.AppUtil.autoFocusOnShow
 import com.test.myapplication.util.Constants.EXTRA_APP_ID
 import com.test.myapplication.util.Formatters.score
 import com.test.myapplication.util.Formatters.toDownloadTier
@@ -47,7 +48,8 @@ import com.test.myapplication.util.Formatters.toDownloadTier
 @Composable
 fun SearchResultScreen(
     viewModel: SearchPageViewModel,
-    navController: NavHostController
+    navController: NavHostController,
+    onClickBack: () -> Unit
 ) {
 
     val uiState by viewModel.uiState.collectAsState()
@@ -56,7 +58,7 @@ fun SearchResultScreen(
         topBar = {
             TopAppBar(
                 navigationIcon = {
-                    IconButton(onClick = { }) {
+                    IconButton(onClick = { onClickBack.invoke() }) {
                         Icon(
                             painter = painterResource(id = R.drawable.baseline_arrow_back_24),
                             contentDescription = ""
@@ -142,7 +144,7 @@ fun SearchResultScreen(
                 }
 
                 is SearchUiState.Error -> {
-                    Text(text = context.getString(R.string.search_request_error))
+                    Text(text = stringResource(R.string.search_request_error))
                 }
             }
         }

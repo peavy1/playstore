@@ -2,6 +2,11 @@ package com.test.myapplication.util
 
 import android.content.Context
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.composed
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
@@ -50,6 +55,12 @@ object AppUtil {
         return numberPart.ifEmpty {
             this
         }
+    }
+
+    fun Modifier.autoFocusOnShow(): Modifier = composed {
+        val focusRequester = remember { FocusRequester() }
+        focusRequester.requestFocus()
+        this.focusRequester(focusRequester)
     }
 
 

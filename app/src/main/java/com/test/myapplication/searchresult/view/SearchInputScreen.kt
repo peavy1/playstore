@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -47,13 +48,14 @@ import androidx.navigation.NavHostController
 import com.test.myapplication.R
 import com.test.myapplication.searchresult.SearchPageType
 import com.test.myapplication.searchresult.SearchPageViewModel
-import com.test.myapplication.searchresult.autoFocusOnShow
+import com.test.myapplication.util.AppUtil.autoFocusOnShow
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchInPut(
     viewModel: SearchPageViewModel,
-    navController: NavHostController
+    navController: NavHostController,
+    onClickBack: () -> Unit
 ) {
     var searchText by remember { mutableStateOf("") }
     val history by viewModel.searchHistory.collectAsStateWithLifecycle()
@@ -63,7 +65,7 @@ fun SearchInPut(
             TopAppBar(
                 navigationIcon = {
                     IconButton(onClick = {
-
+                        onClickBack.invoke()
                     }) {
                         Icon(
                             painter = painterResource(id = R.drawable.baseline_arrow_back_24),
@@ -113,7 +115,7 @@ fun SearchInPut(
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth().height(0.5.dp).background(Color.Black)
-            ) {  }
+            ) {}
 
             LazyColumn{
 
@@ -134,22 +136,24 @@ fun SearchInPut(
                             .padding(vertical = 15.dp, horizontal = 24.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Image(
+                        Icon(
                             painterResource(id = R.drawable.ic_time),
-                            contentDescription = ""
+                            contentDescription = "",
+                            modifier = Modifier.size(20.dp)
                         )
                         Spacer(modifier = Modifier.width(12.dp))
                         Text(
                             text = query,
-                            fontSize = 15.sp,
+                            fontSize = 14.sp,
                             fontFamily = FontFamily.SansSerif,
                             fontWeight = FontWeight.W400,
                             color = Color.Black,
-                            modifier = Modifier.weight(1f)
+                            modifier = Modifier.weight(1f).height(20.dp)
                         )
-                        Image(
+                        Icon(
                             painterResource(id = R.drawable.ic_outward),
-                            contentDescription = ""
+                            contentDescription = "",
+                            modifier = Modifier.size(20.dp)
                         )
                     }
                 }

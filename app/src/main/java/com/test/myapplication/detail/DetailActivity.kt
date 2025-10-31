@@ -21,6 +21,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -43,12 +45,12 @@ class DetailActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val viewModel = viewModel<DetailViewModel>()
-            val appId = intent.getStringExtra(EXTRA_APP_ID) ?: ""
-            viewModel.appId = appId
-
+            viewModel.appId = intent.getStringExtra(EXTRA_APP_ID) ?: ""
             DetailScreen(
                 viewModel = viewModel
-            )
+            ) {
+                finish()
+            }
 
         }
     }
@@ -57,19 +59,26 @@ class DetailActivity : ComponentActivity() {
 
 @Composable
 fun DetailScreen(
-    viewModel: DetailViewModel
+    viewModel: DetailViewModel,
+    onClickBack: () -> Unit
 ) {
     val appData by viewModel.appData.collectAsState()
     LaunchedEffect(key1 = Unit) {
         viewModel.getData()
     }
-    LoadDetailView(details = appData?.appDetails, reviewList = appData?.reviewList ?: emptyList())
+    LoadDetailView(details = appData?.appDetails, reviewList = appData?.reviewList ?: emptyList()) {
+        onClickBack.invoke()
+    }
 }
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LoadDetailView(details: AppDetails?, reviewList: List<ReviewItem>) {
+fun LoadDetailView(
+    details: AppDetails?,
+    reviewList: List<ReviewItem>,
+    onClickBack: () -> Unit
+) {
     Box(
         modifier = Modifier
             .fillMaxSize(),
@@ -84,7 +93,7 @@ fun LoadDetailView(details: AppDetails?, reviewList: List<ReviewItem>) {
         topBar = {
             TopAppBar(
                 navigationIcon = {
-                    IconButton(onClick = {   }) {
+                    IconButton(onClick = { onClickBack.invoke()  }) {
                         Icon(
                             painter = painterResource(id = R.drawable.baseline_arrow_back_24),
                             contentDescription = ""

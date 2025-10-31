@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -107,7 +108,7 @@ fun TopSubSection(details: AppDetails) {
                 fontFamily = FontFamily.SansSerif,
                 fontWeight = FontWeight.Medium,
                 color = Color.Black,
-                text = context.getString(R.string.download)
+                text = stringResource(R.string.download)
             )
         }
 
@@ -127,10 +128,10 @@ fun TopSubSection(details: AppDetails) {
             horizontalAlignment =  Alignment.CenterHorizontally
         ) {
             var ageInfo = ""
-            AgeRatingIcon(context, details.contentRating) {
+            AgeRatingIcon(details.contentRating) {
                 ageInfo = it
             }
-            if(ageInfo != context.getString(R.string.age_all)) {
+            if(ageInfo != stringResource(R.string.age_all)) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
                     fontSize = 12.sp,
@@ -159,12 +160,12 @@ fun Int.toManFormat(context: Context): String {
 
 
 @Composable
-fun AgeRatingIcon(context: Context, rating: String, age: (String) -> Unit) {
+fun AgeRatingIcon(rating: String, age: (String) -> Unit) {
 
     var contentRating = rating.extractLeadingNumber()
 
-    if(contentRating == context.getString(R.string.age_strict)) {
-        contentRating = context.getString(R.string.age_strict_num)
+    if(contentRating == stringResource(R.string.age_strict)) {
+        contentRating = stringResource(R.string.age_strict_num)
     }
 
     val isDigit = contentRating.any { it.isDigit() }

@@ -28,6 +28,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,9 +45,6 @@ fun RankView(
     highestSales: List<List<AppItem>>,
     popularPaidApps: List<List<AppItem>>
 ) {
-
-    val context = LocalContext.current
-
     Column(
         modifier = Modifier.padding(top = 34.dp, bottom = 10.dp)
     ) {
@@ -58,11 +56,11 @@ fun RankView(
         Text(
             text =
             if(buttonFree)
-                context.getString(R.string.popular_free)
+                stringResource(R.string.popular_free)
             else if(buttonHighest)
-                context.getString(R.string.highest_sales)
+                stringResource(R.string.highest_sales)
             else
-                context.getString(R.string.popular_paid),
+                stringResource(R.string.popular_paid),
             fontSize = 15.sp,
             fontFamily = FontFamily.Cursive,
             color = Color.Black,
@@ -86,7 +84,7 @@ fun RankView(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = context.getString(R.string.popular_free),
+                    text = stringResource(R.string.popular_free),
                     fontSize = 13.sp,
                     fontFamily = FontFamily.SansSerif,
                     color = Color.DarkGray,
@@ -108,7 +106,7 @@ fun RankView(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = context.getString(R.string.highest_sales),
+                    text = stringResource(R.string.highest_sales),
                     fontSize = 13.sp,
                     fontFamily = FontFamily.SansSerif,
                     color = Color.DarkGray,
@@ -130,7 +128,7 @@ fun RankView(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = context.getString(R.string.popular_paid),
+                    text = stringResource(R.string.popular_paid),
                     fontSize = 13.sp,
                     fontFamily = FontFamily.SansSerif,
                     color = Color.DarkGray,
