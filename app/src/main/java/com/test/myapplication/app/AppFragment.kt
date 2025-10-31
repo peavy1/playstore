@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -12,6 +13,7 @@ import coil.load
 import coil.transform.CircleCropTransformation
 import com.google.android.material.tabs.TabLayoutMediator
 import com.test.myapplication.MainActivity
+import com.test.myapplication.MainViewModel
 import com.test.myapplication.profilebottomsheet.ProfileBottomSheetFragment
 import com.test.myapplication.ProfileViewModel
 import com.test.myapplication.databinding.FragmentAppBinding
@@ -23,7 +25,7 @@ class AppFragment : Fragment() {
 
     private var _binding: FragmentAppBinding? = null
     private val binding get() = _binding!!
-    private lateinit var profileViewModel: ProfileViewModel
+    private val profileViewModel: ProfileViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,8 +38,6 @@ class AppFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setTabLayout()
-
-        profileViewModel = (activity as MainActivity).profileViewModel
 
         binding.tabSection.icProfile.setOnClickListener {
             val bottomSheet = ProfileBottomSheetFragment()
